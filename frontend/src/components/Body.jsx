@@ -7,7 +7,7 @@ export default function Body() {
   return (
     <div className="Body">
       <Routes>
-        <Route path="Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="Quizz" element={<Quizz />} />
         <Route path="Research" element={<Research />} />
       </Routes>
