@@ -1,3 +1,12 @@
+import HeaderResearchBase from "@components/HeaderResearchBase";
+
 export default function Research() {
-  return <p> Research </p>;
+  return (
+    <div className="research">
+      <HeaderResearchBase />
+      <div className="headerResearch">
+        <p> Research </p>;
+      </div>
+    </div>
+  );
 }
