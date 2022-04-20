@@ -12,19 +12,4 @@ code {
     monospace;
 }
 
-.headerResearch{
-  display: grid;
-  grid-template-columns: 0%;
-  border: solid black 1px;
-  width: 20vw;
-  height: 100vh;
-}
 
-.menuResearch {
-  background-color: #77DF4A;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20vw;
-  height:20vh
-}
