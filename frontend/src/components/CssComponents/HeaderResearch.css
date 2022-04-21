@@ -1,0 +1,26 @@
+.menuResearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 17vw;
+  align-items: center;
+  max-width: 100px;
+}
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #77df4aff;
+  border-radius: 30px;
+}
+.vertical-menu img {
+  width: 8vw;
+  max-width: 70px;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo img {
+  max-width: 150px;
+  width: 22vw;
+}
