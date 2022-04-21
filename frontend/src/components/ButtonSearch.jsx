@@ -13,7 +13,7 @@ export default function ButtonSearch() {
     <div>
         <Link to="../Research" > 
             <button className="buttonImg" type="button" >
-                <img src={sectionStyle.backgroundImage} className="flecheBas" onClick={() => directionBas()}/>
+                <img src={sectionStyle.backgroundImage} className="imgButton" onClick={() => directionBas()}/>
             </button>    
         </Link>
     </div>

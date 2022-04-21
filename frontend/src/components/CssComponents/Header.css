@@ -1,13 +1,11 @@
-  .nav {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .nav img {
-    width: 10vw;
-    max-width: 70px;
-    padding: 1rem;
-  }
+.nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
 
-  
+.nav img {
+  width: 10vw;
+  max-width: 70px;
+  padding: 1rem;
+}

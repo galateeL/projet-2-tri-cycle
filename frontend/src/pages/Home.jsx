@@ -19,38 +19,33 @@ export default function Home() {
           <Header />
         </nav>
       </div>
-      <div >
+      <div className= "logoTitre">
         <img className="logoImage" src={logo}alt="LOGO"></img>
+        <h1 className= "triTitre">Tri'cycle</h1>
       </div>
       <div>
-        <h1 className= "logoTitre">Tri'cycle</h1>
-        <p>
         
-            consectetur adipiscing elit. In ultrices lectus ac condimentum
-          elementum. Nullam nec faucibus libero. Pellentesque ut eros lectus.
-          Nullam ultrices felis eu pellentesque tempus. Pellentesque a sapien
-          enim. Etiam ac lectus quis orci gravida rhoncus. Nulla at pretium
-          turpis. Vestibulum molestie at lacus sit amet congue. Pellentesque
-          habitant morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
+        <p className="presentation">
+        Sous le solum, chantum li zoisum di loremipsum ecolopsum. Birdhitchcock campagnum etangum di fleurum verdum parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que vum etum jolim que vou etum bo. Si votrum ramagum se rapelum a votrum plumagum voum zetum etum le fenixum de se boim.loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que vum etum jolim que vou etum bo. 
+        
         </p>
       </div>
-      <div  >
+      <div className="buttonFleche" >
         <ButtonFleche />
       </div>
-      <div>
+      <div className="triopoubelles">
         <h1>fais ton choix!</h1>
         <img src={trioPoubelles} alt="trioPoubelles"></img>
       </div>
-      <div>
+      <div className="buttonQuizz">
         <ButtonQuizz />
         <h2></h2>
-        <p className="pQ"> loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum.</p>
+        <p className="pQ"> loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que vum etum jolim que vou etum bo. Si votrum ramagum se rapelum a votrum plumagum voum zetum etum le fenixum de se boim.</p>
       </div>
-      <div>
+      <div className="buttonSearch">
         <ButtonSearch />
         <h2></h2>
-        <p className="pS"> loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum.</p>
+        <p className="pS"> loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum.loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que vum etum jolim que vou etum bo. Si votrum ramagum se rapelum a votrum plumagum voum zetum etum le fenixum de se boim.</p>
       </div>
     </div>
   );

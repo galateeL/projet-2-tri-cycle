@@ -11,7 +11,7 @@ export default function ButtonQuizz() {
     <div>
         <Link to="../Quizz" > 
             <button className="buttonImg" type="button" >
-                <img src={sectionStyle.backgroundImage} className="flecheBas" onClick={() => directionBas()}/>
+                <img src={sectionStyle.backgroundImage} className="imgButton" />
             </button>    
         </Link>
     </div>
