@@ -1,0 +1,42 @@
+.logoImage{
+  margin-left: 15%;
+  
+}
+.logoTitre{
+ color: #77df4a;
+ margin-left: 15%;
+ font-size: 450%;
+ font-family: 'georgia';
+}
+
+.flecheBas{
+image-rendering: 10%;
+margin-left: 5%;
+width: 20%;
+max-width: 100px;
+min-width: 90px;
+display: flex;
+justify-content: center;
+
+}
+
+img{
+display: flex;
+justify-content: center;
+
+}
+
+.p{
+  margin: 10px;
+  padding: 10px;
+  display: block;
+}
+
+.ButtonFleche{
+  background:scroll;
+}
+
+.buttonImg{
+  border:0px;
+  background-color: white;
+}

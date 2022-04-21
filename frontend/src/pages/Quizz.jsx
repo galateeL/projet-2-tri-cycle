@@ -1,6 +1,6 @@
 import Header from "@components/Header";
 
-export default function Home() {
+export default function Quizz() {
   return (
     <div>
       <nav>
