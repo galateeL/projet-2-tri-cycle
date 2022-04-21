@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import { NavLink } from "react-router-dom";
 import "./CssComponents/HeaderResearch.css";
 import logo from "../assets/logo-ss-fond.png";

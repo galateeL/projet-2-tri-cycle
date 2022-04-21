@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import { NavLink } from "react-router-dom";
 import "./CssComponents/Header.css";
 import home from "../assets/home-black.png";
