@@ -1,12 +1,11 @@
 import Header from "@components/Header";
+import HeaderResearchBase from "@components/HeaderResearchBase";
 
 export default function Home() {
   return (
-    <div>
-      <nav>
-        <Header />
-      </nav>
-      <p> Home </p>
+    <div className="home">
+      <h1>home</h1>
+      <HeaderResearchBase />
     </div>
   );
 }
