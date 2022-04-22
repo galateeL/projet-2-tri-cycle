@@ -1,4 +1,3 @@
-import Header from "@components/Header";
 import HeaderResearchBase from "@components/HeaderResearchBase";
 
 export default function Home() {
