@@ -1,17 +1,20 @@
 :root {
-    --first-color: #6097eeff;
-    --secondary-color: #77df4aff;
-    --third-color: #418a22ff;
-    --fourth-color: #ff9d00ff;
-    --fifth-color: #7f6000ff;
-    --font-size: 16px;
-    --principal-font: "Grand Hotel", "verdanna", sans-serif;
-    --secondary-font: 'Roboto', "verdanna", sans-serif;
-  }
-  
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
+  --first-color: #6097eeff;
+  --secondary-color: #77df4aff;
+  --third-color: #418a22ff;
+  --fourth-color: #ff9d00ff;
+  --fifth-color: #7f6000ff;
+  --font-size: 16px;
+  --principal-font: "Grand Hotel", "verdanna", sans-serif;
+  --secondary-font: "Roboto", "verdanna", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
