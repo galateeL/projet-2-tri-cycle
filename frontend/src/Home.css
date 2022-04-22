@@ -1,77 +1,75 @@
-.logoImage{
-font-size: 2%;
-max-width: 50%;
-width: 150px;
-height: 250px;
-min-width: 250px;
+.logoImage {
+  font-size: 2%;
+  max-width: 50%;
+  width: 150px;
+  height: 250px;
+  min-width: 250px;
 }
 
-.logoTitre{
-color: #77df4a;
-justify-content: center;
-flex-direction: column;
-text-align: center;
+.logoTitre {
+  color: #77df4a;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.triTitre{
-font-size: 350%;
-font-family: 'georgia';
-justify-content: center;
-margin: 10px 00px 0px 10px; 
+.triTitre {
+  font-size: 350%;
+  font-family: "georgia";
+  justify-content: center;
+  margin: 10px 00px 0px 10px;
 }
 
-.flecheBas{
-image-rendering: 10%;
-margin-left: 5%;
-width: 20%;
-max-width: 100px;
-min-width: 90px;
-display: flex;
-text-align: center;
-justify-items: center;
-}
-
-.imgButton{
+.flecheBas {
   image-rendering: 10%;
-margin-left: 5%;
-width: 10%;
-max-width: 100px;
-min-width: 200px;
-display: flex;
-text-align: center;
-justify-items: center;
-justify-content: space-between;
-
+  margin-left: 5%;
+  width: 20%;
+  max-width: 100px;
+  min-width: 90px;
+  display: flex;
+  text-align: center;
+  justify-items: center;
 }
 
-.presentation{
+.imgButton {
+  image-rendering: 10%;
+  margin-left: 5%;
+  width: 10%;
+  max-width: 100px;
+  min-width: 200px;
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.presentation {
   margin: 20px 0px 30px 20px;
   display: block;
   text-align: justify;
-  font-size: 20px ;
-  font-weight:lighter;
+  font-size: 20px;
+  font-weight: lighter;
 }
 
-.presentation:first-letter{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.presentation:first-letter {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 120px;
-  color:#6097eeff;
+  color: #6097eeff;
 }
 
-.buttonFleche{
-  background:scroll;
+.buttonFleche {
+  background: scroll;
   justify-content: center;
   text-align: center;
-  
 }
 
-.buttonImg{
-  border:0px;
+.buttonImg {
+  border: 0px;
   background-color: white;
   justify-content: center;
 }
 
-.triopoubelles{
+.triopoubelles {
   text-align: center;
   margin: 120px 0px 0px 0px;
   color: #6097eeff;
@@ -79,25 +77,24 @@ justify-content: space-between;
   font-size: larger;
 }
 
-.buttonQuizz{
-display: flex;
-margin: 70px 5% 10px 5%;
-text-align: center;
+.buttonQuizz {
+  display: flex;
+  margin: 70px 5% 10px 5%;
+  text-align: center;
 }
 
-.buttonSearch{
-  
+.buttonSearch {
   display: flex;
   margin: 10px 5% 10px 5%;
   text-align: center;
   flex-direction: row-reverse;
 }
 
-.pQ{
-  text-align:justify;
+.pQ {
+  text-align: justify;
   margin: 20px;
 }
-.pS{
+.pS {
   text-align: justify;
   margin: 20px;
 }

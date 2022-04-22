@@ -20,5 +20,8 @@
     "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.0",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
   }
 }
