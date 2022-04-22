@@ -13,14 +13,17 @@ export default function Header() {
       </div>
       <div className="vertical-menu">
         <NavLink to="/">
-          <img src={home} alt="home" />
+          <p>
+            <img src={home} alt="home" /> Accueil
+          </p>
         </NavLink>
-        <NavLink to="/Quizz">
+        <p>
           <img src={research} alt="home" />
-        </NavLink>
-        <NavLink to="/Research">
+          <input value="entrez votre recherche" />
+        </p>
+        <p>
           <img src={filter} alt="home" />
-        </NavLink>
+        </p>
       </div>
     </nav>
   );
