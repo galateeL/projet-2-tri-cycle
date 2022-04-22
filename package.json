@@ -16,7 +16,10 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "husky": "^7.0.0"
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.0",
+    "prettier": "2.6.2"
   },
   "dependencies": {
     "axios": "^0.26.1"
