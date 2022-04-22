@@ -42,11 +42,10 @@ export default function Home() {
         <ButtonQuizz />
         <h2></h2>
         <p className="pQ">
-          {" "}
-          loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum
+          "loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum
           parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce
           langagum. que vum etum jolim que vou etum bo. Si votrum ramagum se
-          rapelum a votrum plumagum voum zetum etum le fenixum de se boim.
+          rapelum a votrum plumagum voum zetum etum le fenixum de se boim.""
         </p>
       </div>
       <div className="buttonSearch">
@@ -62,6 +61,4 @@ export default function Home() {
           boim.
         </p>
       </div>
-    </div>
-  );
-}
+    </div>)}
