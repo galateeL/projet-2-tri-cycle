@@ -1,15 +1,54 @@
+:root {
+  --first-color: #6097eeff;
+  --secondary-color: #77df4aff;
+  --third-color: #418a22ff;
+  --fourth-color: #ff9d00ff;
+  --fifth-color: #7f6000ff;
+  --font-size: 16px;
+  --principal-font: "Grand Hotel", "verdanna", sans-serif;
+  --secondary-font: "Roboto", "verdanna", sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
+.headerResearch {
+  display: grid;
+  grid-template-columns: 0%;
+  border: solid black 1px;
+  width: 20vw;
+  height: 100vh;
+}
 
+.menuResearch {
+  background-color: #77df4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  height: 20vh;
+}
+
+.headerResearch {
+  display: grid;
+  grid-template-columns: 0%;
+  border: solid black 1px;
+  width: 20vw;
+  height: 100vh;
+}
+
+.menuResearch {
+  background-color: #77df4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  height: 20vh;
+}

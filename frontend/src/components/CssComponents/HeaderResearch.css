@@ -1,12 +1,12 @@
+
  .menuResearch {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 40vw;
-    
   }
 
-  .vertical-menu {
+.vertical-menu {
   display: flex;
   flex-direction: column;
   background-color: #77df4aff;
@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
   }
+
  .vertical-menu img {
     width: 8vw;
     max-width: 70px;
@@ -25,7 +26,7 @@
     padding-bottom: 2rem;
   }
 
-  .logo img {
-    max-width: 150px;
-    width: 22vw;
-  }
+.logo img {
+  max-width: 150px;
+  width: 22vw;
+}
