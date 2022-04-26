@@ -1,11 +1,14 @@
-// import { Link } from "react-router-dom";
-// import styleButton from "../assets/searchImg.png";
+import { Link } from "react-router-dom";
+import "./CssComponents/ButtonQuizz.css";
 
-// export default function ButtonSearch() {
-//   let sectionStyle = {
-//     backgroundImage: styleButton,
-//   };
-
-//   function openSearch() {}
-
-//   return ();
+export default function ButtonQuizz() {
+  return (
+    <div>
+      <Link to="/">
+        <button className="buttonQuiz" type="button">
+          bouton
+        </button>
+      </Link>
+    </div>
+  );
+}
