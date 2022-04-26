@@ -1,4 +1,4 @@
-import "@components/Array.css";
+// import "@components/Array.css";
 
 // function Array({ object }) {
 //   return (
