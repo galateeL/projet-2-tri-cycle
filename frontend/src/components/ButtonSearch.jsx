@@ -1,22 +1,12 @@
 import { Link } from "react-router-dom";
-import styleButton from "../assets/searchImg.png";
+import "./CssComponents/ButtonQuizz.css";
 
-export default function ButtonSearch() {
-  let sectionStyle = {
-    backgroundImage: styleButton,
-  };
-
-  function openSearch() {}
-
+export default function ButtonQuizz() {
   return (
     <div>
-      <Link to="/Research">
-        <button className="buttonImg" type="button">
-          <img
-            src={sectionStyle.backgroundImage}
-            className="imgButton"
-            onClick={() => directionBas()}
-          />
+      <Link to="/">
+        <button className="buttonQuiz" type="button">
+          bouton
         </button>
       </Link>
     </div>
