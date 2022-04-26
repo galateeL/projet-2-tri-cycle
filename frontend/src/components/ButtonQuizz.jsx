@@ -1,19 +1,14 @@
-// import { Link } from "react-router-dom";
-// import styleButton from "../assets/quizzImg.png";
+import { Link } from "react-router-dom";
+import "./CssComponents/ButtonQuizz.css";
 
-// export default function ButtonQuizz() {
-//   const sectionStyle = {
-//     backgroundImage: styleButton,
-//   };
-
-//   return (
-//     <div>
-//       <Link to="/">
-//         <button className="buttonImg" type="button">
-//           <img src={sectionStyle.backgroundImage} className="imgButton" />
-//         </button>
-//       </Link>
-//     </div>
-//   );
-//   li;
-// }
+export default function ButtonQuizz() {
+  return (
+    <div>
+      <Link to="/">
+        <button className="buttonQuiz" type="button">
+          bouton
+        </button>
+      </Link>
+    </div>
+  );
+}
