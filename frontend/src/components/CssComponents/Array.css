@@ -4,11 +4,19 @@
 
   background-color: rgba(249, 250, 252);
 }
-.haha {
+.picturesWaste {
   width: 60px;
   height: 60px;
 }
-.hoho {
+#backjaune{
+  width: 30px;
+  height: 60px;
+}
+.description {
+  display: flex;
+  align-items: center;
+}
+.emptyObject {
   width: 60px;
   height: 60px;
 }

@@ -6,7 +6,6 @@ import trioPoubelles from "@assets/recycling-color.png";
 import logo from "../assets/logo-ss-fond.png";
 import "../Home.css";
 
-
 export default function Home() {
   return (
     <div>
