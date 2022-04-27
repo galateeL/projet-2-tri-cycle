@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Tip({ tip }) {
   return (
     <div className="tip">
-      <img src="assets/idea.png" alt="tip" className="tipImg" />
+      <img src="src/assets/idea.png" alt="tip" className="tipImg" />
       <p className="tipDetail">{tip}</p>
     </div>
   );

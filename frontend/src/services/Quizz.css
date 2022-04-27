@@ -1,22 +1,22 @@
 section {
   background-color: #6097eeff;
-  font-family: var(--principal-font);
+  /* font-family: var(--principal-font); */
   font-size: 1em;
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
 }
 
-button {
+.openModalBtn {
   border: none;
   border-radius: 50px;
   box-shadow: 10px;
   width: 40vw;
   height: 40vw;
-  background-color: rgba(180, 189, 199, 0.863);
+  background-color: rgba(214, 225, 236, 0.863);
   margin: 2vw;
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
 }
@@ -26,24 +26,30 @@ button img {
   height: 25vw;
 }
 
-h1 {
+#play {
   color: white;
   margin-bottom: 3vh;
+  font-family: "Sacramento", cursive;
+  font-size: 4em;
 }
 
-h2 {
+#question {
   color: white;
   background-color: var(--fourth-color);
   border-radius: 30px;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   width: 80vw;
   height: 12vw;
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
+  font-family: "Sacramento", cursive;
+  font-size: 3em;
+  padding: 1em;
 }
 
-.arrosoir {
+.bidon {
   margin-top: 5vw;
   width: 60vw;
   height: 60vw;
@@ -52,7 +58,7 @@ h2 {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-h3 {
+.nameWaste {
   background-color: var(--secondary-color);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -60,4 +66,6 @@ h3 {
   margin: 0 auto;
   color: white;
   font-family: var(--secondary-font);
+  font-size: 2em;
+  padding: 0.5em;
 }

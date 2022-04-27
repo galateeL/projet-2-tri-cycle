@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "./CssComponents/ModalQuizz.css";
+import "./ModalQuiz.css";
+
+// Mettre le bon lien import CSS
 import PropTypes from "prop-types";
 
 import EndGame from "./EndGame";
@@ -45,21 +47,21 @@ function ModalQuiz({
 }
 
 ModalQuiz.propTypes = {
-  closeModal: PropTypes.string,
+  closeModal: PropTypes.func,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   questionNumber: PropTypes.number,
   tip: PropTypes.string,
-  answer: PropTypes.number,
+  answer: PropTypes.string,
 };
 
 ModalQuiz.defaultProps = {
-  closeModal: "Fermeture de la modal",
+  closeModal: () => {},
   correctAnswer: true,
   score: 0,
   questionNumber: 0,
   tip: "Recycling tip",
-  answer: 0,
+  answer: "",
 };
 
 export default ModalQuiz;

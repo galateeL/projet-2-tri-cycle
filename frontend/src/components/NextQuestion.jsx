@@ -10,7 +10,7 @@ function NextQuestion(props) {
           <button type="button" onClick="" classeName="nextQuestionBtn">
             <span>Question suivante</span>
             <img
-              src="assets/next-white.png"
+              src="src/assets/next-white.png"
               alt="next question"
               className="nextQuestionImg"
             />
@@ -34,12 +34,12 @@ function NextQuestion(props) {
 
 NextQuestion.propTypes = {
   questionNumber: PropTypes.number,
-  setIsFinished: PropTypes.bool,
+  setIsFinished: PropTypes.func,
 };
 
 NextQuestion.defaultProps = {
   questionNumber: 0,
-  setIsFinished: false,
+  setIsFinished: () => {},
 };
 
 export default NextQuestion;

@@ -11,7 +11,7 @@ function EndGame({ score }) {
           <div className="congratsContainer">
             <h4>Bravo !</h4>
             <img
-              src="assets/trophee.png"
+              src="src/assets/trophee.png"
               alt="congratulations"
               className="congratsImg"
             />
@@ -26,7 +26,7 @@ function EndGame({ score }) {
           <div className="tryAgainContainer">
             <h4>Tu y es presque, la prochaine fois sera la bonne !</h4>
             <img
-              src="assets/refresh.png"
+              src="src/assets/refresh.png"
               alt="try again"
               className="tryAgainImg"
             />

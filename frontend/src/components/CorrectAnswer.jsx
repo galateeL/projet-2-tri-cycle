@@ -11,7 +11,11 @@ function CorrectAnswer(props) {
     <div>
       {correctAnswer ? (
         <div className="correctAnswer">
-          <img src="assets/validate.png" alt="perfect" className="PerfectImg" />
+          <img
+            src="src/assets/validate.png"
+            alt="perfect"
+            className="PerfectImg"
+          />
           <Score score={score} />
           <Tip tip={tip} />
           <NextQuestion
@@ -23,7 +27,7 @@ function CorrectAnswer(props) {
         <div className="wrongAnswerContainer">
           <div className="wrongAnswer">
             <img
-              src="assets/wrong.png"
+              src="src/assets/wrong.png"
               alt="wrong answer"
               className="wrongAnswerImg"
             />
@@ -45,21 +49,21 @@ function CorrectAnswer(props) {
 }
 
 CorrectAnswer.propTypes = {
-  answer: PropTypes.number,
+  answer: PropTypes.string,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   tip: PropTypes.string,
   questionNumber: PropTypes.number,
-  setIsFinished: PropTypes.bool,
+  setIsFinished: PropTypes.func,
 };
 
 CorrectAnswer.defaultProps = {
-  answer: 0,
+  answer: "",
   correctAnswer: true,
   score: 0,
   tip: "Recycling tip",
   questionNumber: 0,
-  setIsFinished: false,
+  setIsFinished: () => {},
 };
 
 export default CorrectAnswer;
