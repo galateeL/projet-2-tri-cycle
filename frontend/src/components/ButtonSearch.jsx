@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./CssComponents/ButtonQuizz.css";
 
 export default function ButtonQuizz() {
   return (

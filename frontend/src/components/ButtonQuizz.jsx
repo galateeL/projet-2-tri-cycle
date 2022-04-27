@@ -1,7 +1,13 @@
-// import { Link } from "react-router-dom";
-// import styleButton from "../assets/quizzImg.png";
+import { Link } from "react-router-dom";
 
-// export default function ButtonQuizz() {
-//   let sectionStyle = {
-//     backgroundImage: styleButton,
-//   };
+export default function ButtonQuizz() {
+  return (
+    <div>
+      <Link to="/">
+        <button className="buttonQuiz" type="button">
+          bouton
+        </button>
+      </Link>
+    </div>
+  );
+}
