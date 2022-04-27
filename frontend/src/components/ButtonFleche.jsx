@@ -9,14 +9,18 @@ export default function ButtonFleche() {
     });
   }
   return (
-    <div>
-      <button
-        className="buttonFleche"
-        type="button"
-        onClick={() => directionBas()}
-      >
-        bouton
-      </button>
-    </div>
+    <button
+      className="flecheButton"
+      type="button"
+      onClick={() => directionBas()}
+    >
+      <img
+        classeName="flecheImg"
+        src="/src/assets/flecheBas1.png"
+        alt="dechet"
+        height="90"
+        width="90"
+      />
+    </button>
   );
 }

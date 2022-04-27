@@ -1,4 +1,4 @@
-import Header from "@components/Header";
+import Header from "../components/Header";
 import "../services/Quizz.css";
 
 export default function Quizz() {
@@ -18,18 +18,20 @@ export default function Quizz() {
         </div>
         <div className="pictureButton">
           <div className="answer">
-            <button type="button">
+            <button className="quizzButton" type="button">
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/idea.png"
                 alt="dechet"
                 height="90"
                 width="90"
               />
             </button>
-            <button type="button">
+            <button className="quizzButton" type="button">
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/yellow-container.png"
                 alt="dechet"
                 height="90"
@@ -38,18 +40,20 @@ export default function Quizz() {
             </button>
           </div>
           <div className="answer">
-            <button type="button">
+            <button className="quizzButton" type="button">
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/rubbish-bag.png"
                 alt="dechet"
                 height="90"
                 width="90"
               />
             </button>
-            <button type="button">
+            <button className="quizzButton" type="button">
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/glass-blue.png"
                 alt="dechet"
                 height="90"

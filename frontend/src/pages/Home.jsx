@@ -1,9 +1,9 @@
-import ButtonFleche from "@components/ButtonFleche.jsx";
-import trioPoubelles from "@assets/recycling-color.png";
-import Header from "@components/Header.jsx";
-import ButtonQuizz from "@components/ButtonQuizz";
-import ButtonSearch from "@components/ButtonSearch";
+import trioPoubelles from "../assets/recycling-color.png";
 import logo from "../assets/logo-ss-fond.png";
+import Header from "../components/Header";
+import ButtonQuizz from "../components/ButtonQuizz";
+import ButtonSearch from "../components/ButtonSearch";
+import ButtonFleche from "../components/ButtonFleche";
 import "../Home.css";
 
 export default function Home() {
@@ -40,7 +40,6 @@ export default function Home() {
       </div>
       <div className="buttonQuizz">
         <ButtonQuizz />
-
         <p className="pQ">
           loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum
           parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce

@@ -59,14 +59,21 @@
 
 .buttonFleche {
   background: scroll;
-  justify-content: center;
+  border-radius: 50%;
   text-align: center;
 }
 
 .buttonImg {
+  border-radius: 50%;
   border: 0px;
   background-color: white;
-  justify-content: center;
+  box-shadow: 10px;
+  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+}
+
+.flecheButton{
+  border-radius: 50%;
+  border: 0px;
 }
 
 .triopoubelles {
