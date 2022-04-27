@@ -17,7 +17,6 @@ export default function Research() {
         setWaste(data.records);
       });
   };
-
   useEffect(() => {
     getWaste();
   }, []);
@@ -25,7 +24,7 @@ export default function Research() {
     <div className="Research">
       <HeaderResearchBase />
       <div>
-        <FristArray />
+        <FristArray key={waste.id} object={waste.fields} />
         {waste.map((items) => (
           <Array key={items.id} object={items.fields} />
         ))}
