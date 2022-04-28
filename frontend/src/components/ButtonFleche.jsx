@@ -1,14 +1,26 @@
-import { Link } from "react-router-dom";
-import "./CssComponents/ButtonQuizz.css";
+import React from "react";
 
-export default function ButtonQuizz() {
+export default function ButtonFleche() {
+  function directionBas() {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
   return (
-    <div>
-      <Link to="/">
-        <button className="buttonQuiz" type="button">
-          bouton
-        </button>
-      </Link>
-    </div>
+    <button
+      className="flecheButton"
+      type="button"
+      onClick={() => directionBas()}
+    >
+      <img
+        classeName="flecheImg"
+        src="/src/assets/flecheBas1.png"
+        alt="dechet"
+        height="90"
+        width="90"
+      />
+    </button>
   );
 }
