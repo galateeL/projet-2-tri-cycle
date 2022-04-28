@@ -10,7 +10,7 @@ section {
   width: 100vw;
 }
 
-button {
+.quizzButton {
   border: none;
   border-radius: 50px;
   box-shadow: 10px;
@@ -21,12 +21,12 @@ button {
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
 }
 
-button img {
+.quizzButtonImg {
   width: 20vw;
   height: 25vw;
 }
 
-h1 {
+.h1Quizz {
   color: white;
   margin-bottom: 3vh;
 }
