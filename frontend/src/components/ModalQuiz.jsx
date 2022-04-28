@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import "./ModalQuiz.css";
-
-// Mettre le bon lien import CSS
+import "./CssComponents/ModalQuiz.css";
 import PropTypes from "prop-types";
 
 import EndGame from "./EndGame";

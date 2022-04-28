@@ -14,7 +14,7 @@ function CorrectAnswer(props) {
           <img
             src="src/assets/validate.png"
             alt="perfect"
-            className="PerfectImg"
+            className="perfectImg"
           />
           <Score score={score} />
           <Tip tip={tip} />

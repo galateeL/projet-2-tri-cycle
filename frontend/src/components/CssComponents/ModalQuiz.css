@@ -1,33 +1,37 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(230, 230, 230);
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 3.5rem;
+  left: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 5;
 }
 
 .modalContainer {
-  width: 300px;
-  height: auto;
-  border: 12px;
-  border-radius: 15px;
+  width: 80vw;
+  height: 81vh;
+  border: 0.9rem;
+  border-radius: 1rem;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  padding: 18px;
+  padding: 1rem;
+  position: fixed;
 }
 
 .titleCloseBtn button {
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 1rem;
   cursor: pointer;
   color: rgb(189, 189, 189);
-  /* A enlever, uniquement pour faciliter le travail */
 }
+
 .titleCloseBtn {
   display: flex;
   justify-content: flex-end;
@@ -42,28 +46,26 @@
   text-align: center;
 }
 
-/* .modalContainer .footer {
-    flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .correctAnswerContainer {
-  /* background-color: rgba(119, 223, 75, 0.2); */
-  border-radius: 15px;
-  margin: 10px;
+  border-radius: 1rem;
+  margin: 0.6rem;
 }
 
 .correctAnswerContainer h5 {
   font-family: "Sacramento", cursive;
-  font-size: 40px;
+  font-size: 2rem;
   color: rgb(146, 146, 146);
   margin: 5px;
+  text-align: center;
 }
+
 .wrongAnswerImg {
-  max-width: 200px;
-  padding: 15px;
+  height: 10vh;
+  padding: 0.6rem;
+}
+
+.perfectImg {
+  height: 20vh;
 }
 
 .goodAnswerImg {
@@ -74,31 +76,34 @@
 }
 
 .yellowBinImg {
-  padding-top: 15px;
-  width: 65px;
+  padding-top: 0.7rem;
+  width: 11vw;
   filter: drop-shadow(5px 5px 5px rgb(161, 161, 161));
 }
 
 .score h4 {
   font-family: "Sacramento", cursive;
-  font-size: 65px;
-  color: var(--fourth-color);
-  margin: 0;
+  font-size: 2.5rem;
+  color: #ff9d00ff;
 }
+
 .score {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .pointsContainer h5 {
-  font-size: 45px;
+  font-size: 1.5rem;
 }
+
 .pointsContainer {
-  background-color: var(--fourth-color);
-  height: 100px;
-  width: 100px;
-  font-size: 40px;
+  background-color: #ff9d00ff;
+  height: 6vh;
+  width: 15vw;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
   color: white;
   font-weight: bold;
   border-radius: 30%;
@@ -106,42 +111,41 @@
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  margin: 0.5rem;
 }
 
 .tip {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 30px; */
-  margin: 26px 0px;
+  margin: 1rem 0;
   background-color: rgb(231, 233, 235);
-  border-radius: 10px;
+  border-radius: 0.6rem;
+  height: 20vh;
+  padding: 1rem;
 }
 
 .tipImg {
-  width: 100px;
-  margin: 5px;
+  width: 12vw;
+  margin: 0.4rem;
+  padding-bottom: 0.5rem;
   filter: drop-shadow(5px 5px 5px rgb(255, 255, 255));
 }
 
 .tipDetail {
-  margin: auto;
-  padding: 20px;
+  font-family: var(--secondary-font);
+  color: rgb(101, 101, 101);
+  font-size: 0.8rem;
 }
 
-/* .nextQuestionBtn {
-    display: block;
-    padding: 0;
-}  */
-
 .nextQuestionBtnContainer {
-  background-color: var(--first-color);
-  width: 250px;
+  background-color: #6097eeff;
+  width: 60vw;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
-  padding: 9px;
-  font-size: 16px;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
@@ -150,39 +154,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  background-color: var(--first-color);
+  gap: 1.6rem;
+  background-color: #6097eeff;
   border: none;
   font-weight: bold;
   color: white;
-  font-size: 23px;
+  font-size: 1.4rem;
+  height: 6vh;
+  width: 44vw;
 }
+
 .nextQuestionImg {
-  width: 60px;
+  width: 30vw;
+  height: 8vh;
 }
 
 .congratsContainer {
-  padding: 10px;
+  padding: 0.6rem;
 }
 
 .congratsContainer h4 {
   font-family: "Sacramento", cursive;
-  color: var(--fourth-color);
-  font-size: 70px;
-  margin: 0px;
+  color: #ff9d00ff;
+  font-size: 4.6rem;
+  margin: 0;
+  padding-top: 1rem;
 }
 
-.congratsContainer img,
 .tryAgainContainer img {
-  width: 100px;
+  width: 25vw;
+  filter: drop-shadow(5px 5px 5px rgb(158, 158, 158));
+}
+
+.congratsContainer img {
+  width: 40vw;
   filter: drop-shadow(5px 5px 5px rgb(158, 158, 158));
 }
 
 .tryAgainContainer h4 {
   font-family: "Sacramento", cursive;
-  color: var(--first-color);
+  color: #6097eeff;
   font-size: 50px;
-  margin: 0px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -190,32 +203,45 @@
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
-  gap: 20px;
+  gap: 1.2rem;
   margin-top: 40px;
   margin-bottom: 10px;
 }
 
-.btn {
-  background-color: var(--first-color);
+.btnWhite {
+  background-color: #6097eeff;
   color: white;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
   border: none;
-  height: 100px;
-  width: 140px;
+  height: 15vh;
+  width: 14vh;
 }
 
-.btn img {
-  width: 50px;
+.btnWhite img {
+  width: 20vw;
+  padding-bottom: 1rem;
+}
+
+.retryTxt,
+.homeTxt {
+  padding-top: 1.3rem;
+  text-decoration: none;
+}
+
+.endGame {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .endBtn {
-  background-color: var(--first-color);
+  background-color: #6097eeff;
   font-weight: bold;
   color: white;
   font-size: 23px;

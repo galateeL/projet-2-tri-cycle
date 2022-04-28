@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Header from "@components/Header";
 
-import "../services/Quizz.css";
+import "./CssPages/Quizz.css";
 import ModalQuiz from "@components/ModalQuiz";
-import "@components/ModalQuiz.css";
 
 export default function Quizz() {
   const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
@@ -13,13 +12,13 @@ export default function Quizz() {
   return (
     <div>
       <Header />
-      <section>
+      <section className="gameContainer">
         <div>
           <h1 id="play">A toi de jouer !</h1>
           <h2 id="question">Ou jettes-tu...</h2>
           <h3 className="nameWaste">un bidon de lessive vide ?</h3>
           <img
-            className="bidon"
+            className="waste"
             src="/src/assets/bidon-lessive.png"
             alt="dechet"
           />

@@ -14,7 +14,6 @@ function NextQuestion(props) {
               alt="next question"
               className="nextQuestionImg"
             />
-            {/* Lien vers la question suivante page quizzQuestion suivante<img src="assets/next-white.png" alt="next question" className="nextQuestionImg"/> */}
           </button>
         </div>
       ) : (
