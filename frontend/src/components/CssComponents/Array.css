@@ -1,15 +1,27 @@
+.Array, .firstName{
+  max-width: 100%;
+}
+
+.Array, .firstName{
+  width: 100%;
+margin-left: 13rem;
+}
+
+@media screen and (min-width:500px) {
+  .Array, .firstName{
+    margin-left : 20rem;
+  }
+}
+
 .Array:nth-child(odd) {
   border-top: solid;
   border-bottom: solid;
 
   background-color: rgba(249, 250, 252);
 }
-.Array {
-  width: 80vw;
-}
 
 .Array p {
-  width: 100px;
+  width: 40%;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
