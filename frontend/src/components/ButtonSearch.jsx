@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 
-export default function ButtonQuizz() {
+export default function ButtonSearch() {
   return (
-    <div>
-      <Link to="/">
-        <button className="buttonQuiz" type="button">
-          bouton
-        </button>
-      </Link>
-    </div>
+    <Link className="linkButton" to="/Research">
+      <button className="buttonSearch" type="button">
+        recherche
+      </button>
+    </Link>
   );
 }

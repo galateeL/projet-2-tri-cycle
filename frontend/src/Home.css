@@ -1,30 +1,32 @@
 .logoImage {
-  font-size: 2%;
-  max-width: 50%;
-  width: 150px;
-  height: 250px;
-  min-width: 250px;
+  width: 70%;
+  max-width: 600px;
+  min-width: 50px;
 }
 
 .logoTitre {
-  color: #77df4a;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
 
 .triTitre {
-  font-size: 350%;
+  font-size: 450%;
   font-family: "georgia";
-  justify-content: center;
-  margin: 10px 00px 0px 10px;
+  justify-content: center; 
+  color: #77df4a;
+  margin: 0px 0px 0px 25%;
+  width: 50%;
+  min-width: 100px;
+  max-width: 1000px;
+
 }
 
-.flecheBas {
+.flecheImg {
   image-rendering: 10%;
   margin-left: 5%;
   width: 20%;
-  max-width: 100px;
+  max-width: 20px;
   min-width: 90px;
   display: flex;
   text-align: center;
@@ -32,28 +34,27 @@
 }
 
 .imgButton {
-  image-rendering: 10%;
   margin-left: 5%;
-  width: 10%;
-  max-width: 100px;
-  min-width: 200px;
-  display: flex;
+  width: 40%;
+  max-width: 300px;
+  min-width: 100px;
   text-align: center;
   justify-items: center;
   justify-content: space-between;
+
 }
 
 .presentation {
-  margin: 20px 0px 30px 20px;
+  margin: 0px 5% 30px 5%;
   display: block;
   text-align: justify;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: lighter;
 }
 
 .presentation:first-letter {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 120px;
+  font-size: 100px;
   color: #6097eeff;
 }
 
@@ -78,30 +79,209 @@
 
 .triopoubelles {
   text-align: center;
-  margin: 120px 0px 0px 0px;
+  margin: 5% 0px 0px 10%;
   color: #6097eeff;
   font-family: Georgia;
   font-size: larger;
+  width: 80%;
+  height:800%;
+  min-width: 100px;
+}
+
+.divQuizz {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 50vw;
+  
 }
 
 .buttonQuizz {
-  display: flex;
-  margin: 70px 5% 10px 5%;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #ff9d00ff ;
+  border: none;
+  color: white;
+  font-size: 8vw;
+  font-size-adjust: 0.5;
+  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px;
+  padding-bottom: 20%;
+  font-family:cursive;
+  margin-left: 5px;
+}.buttonQuizz:hover {
+  background-color: #fae56f; /* Green */
+  color: white;
 }
 
+
 .buttonSearch {
-  display: flex;
-  margin: 10px 5% 10px 5%;
-  text-align: center;
-  flex-direction: row-reverse;
+  width: 100%;
+  height: 175%;
+  border-radius: 100px;
+  background-color: #6097eeff ;
+  border: none;
+  color: white;
+  font-size: 7vw;
+  font-size-adjust: 0.5;
+  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px;
+  padding-bottom: 20%;
+  font-family:cursive;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-right: 5px;
+  
+  }.buttonSearch:hover {
+    background-color: #cbcff7; /* Green */
+    color: white;
+}
+
+.linkButton {
+  width: 60%;
 }
 
 .pQ {
   text-align: justify;
-  margin: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 110%;
 }
 .pS {
   text-align: justify;
-  margin: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 110%;
+}
+
+.divButtonQuizz {
+  width: 400%;
+  max-width: 30%;
+  height: 70%;
+  max-height: 50%;
+  position: relative;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.divButtonSearch {
+  width: 400%;
+  max-width: 30%;
+  height: 120%;
+  max-height: 50%;
+  position: relative;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.imgQuizzButton {
+  position: relative;
+  top: -45%;
+  left: 28%;
+  width: 55%;
+}
+
+.divSearch {
+  display: flex;
+  margin: 70px 0% 10px 0%;
+  text-align: center;
+  height: 30vw;
+  flex-direction: row-reverse;
+}
+
+.imgSearchButton {
+  position: relative;
+  top: -50%;
+  left: -20%;
+  width: 55%;
+}
+
+
+@media screen and (min-width: 900px) {
+  .presentation {
+    margin: 50px 5% 90px 5%;
+    display: block;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+  .pQ {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 200%;
+  }
+  .pS {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 200%;
+  }
+
+  .divSearch {
+    display: flex;
+    margin: 0% 0% 10px 0%;
+    text-align: center;
+    height: 30vw;
+    flex-direction: row-reverse;
+  }
+
+  .divQuizz {
+    display: flex;
+    text-align: center;
+    height: 25vw;
+  }
+
+  .buttonQuizz {
+    width: 85%;
+    height: 150%;
+    border-radius: 100px;
+    background-color: #ff9d00ff ;
+    border: none;
+    color: white;
+    font-size: 6vw;
+    font-size-adjust: 0.5;
+    box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px;
+    padding-bottom: 20%;
+    font-family:cursive;
+    margin-left: 5px;
+  }
+
+  .imgQuizzButton {
+    position: relative;
+    top: -60%;
+    left: 30%;
+    width: 30%;
+  }
+
+
+  .imgSearchButton {
+    position: relative;
+    top: -75%;
+    left: -20%;
+    width: 55%;
+  }
+
+  .buttonSearch {
+    width: 85%;
+    height: 150%;
+    border-radius: 100px;
+    background-color: #6097eeff ;
+    border: none;
+    color: white;
+    font-size: 4vw;
+    font-size-adjust: 0.5;
+    box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px;
+    padding-bottom: 20%;
+    font-family:cursive;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-right: 5px;
+  }
+  
+  
 }

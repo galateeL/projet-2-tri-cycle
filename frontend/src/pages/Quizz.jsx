@@ -7,7 +7,7 @@ export default function Quizz() {
       <Header />
       <section>
         <div>
-          <h1>A toi de jouer !</h1>
+          <h1 className="h1Quizz">A toi de jouer !</h1>
           <h2 id="question">Ou jettes-tu...</h2>
           <h3>Mais quel dommage de jeter ce si bel arrosoir...</h3>
           <img
