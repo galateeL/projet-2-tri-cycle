@@ -1,7 +1,6 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  /* background-color: rgba(245, 135, 135, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +31,6 @@
   font-size: 20px;
   cursor: pointer;
   color: rgb(189, 189, 189);
-  /* A enlever, uniquement pour faciliter le travail */
 }
 .titleCloseBtn {
   display: flex;
@@ -48,15 +46,7 @@
   text-align: center;
 }
 
-/* .modalContainer .footer {
-    flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .correctAnswerContainer {
-  /* background-color: rgba(119, 223, 75, 0.2); */
   border-radius: 15px;
   margin: 10px;
 }
@@ -121,7 +111,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 30px; */
   margin: 26px 0px;
   background-color: rgb(231, 233, 235);
   border-radius: 10px;
@@ -139,11 +128,6 @@
   font-family: var(--secondary-font);
   color: rgb(101, 101, 101);
 }
-
-/* .nextQuestionBtn {
-    display: block;
-    padding: 0;
-}  */
 
 .nextQuestionBtnContainer {
   background-color: #6097eeff;

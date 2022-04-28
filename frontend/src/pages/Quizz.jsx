@@ -6,8 +6,6 @@ import ModalQuiz from "@components/ModalQuiz";
 import "@components/ModalQuiz.css";
 
 export default function Quizz() {
-  // const [openModalRightAnswer, setOpenModalRightAnswer] = useState(false);
-  // const [openModalWrongAnswer, setOpenModalWrongAnswer] = useState(false);
   const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
   const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
   const [openModalQuiz3, setOpenModalQuiz3] = useState(false);

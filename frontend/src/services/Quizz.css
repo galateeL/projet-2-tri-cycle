@@ -1,12 +1,10 @@
 section {
   background-color: #6097eeff;
-  /* font-family: var(--principal-font); */
   font-size: 1em;
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
-  /* height: 100vh; */
   width: 100vw;
 }
 
@@ -37,7 +35,6 @@ button img {
   color: white;
   background-color: var(--fourth-color);
   border-radius: 30px;
-  /* padding-top: 5px; */
   width: 80vw;
   height: 12vw;
   display: flex;
