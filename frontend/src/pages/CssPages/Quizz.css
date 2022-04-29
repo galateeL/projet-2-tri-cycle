@@ -14,6 +14,8 @@
   margin-top: 1rem;
   font-family: "Sacramento", cursive;
   font-size: 4em;
+  min-width: 360px;
+  margin: 0.5rem;
 }
 
 #question {
@@ -29,6 +31,8 @@
   font-family: "Sacramento", cursive;
   font-size: 3rem;
   padding: 2.4rem;
+  min-width: 300px;
+  margin : 0 auto;
 }
 
 .waste {
@@ -50,6 +54,7 @@
   font-family: var(--secondary-font);
   font-size: 1.7rem;
   padding: 0.5em;
+  min-width: 200px;
 }
 
 .openModalBtn {
