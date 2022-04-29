@@ -12,7 +12,7 @@ export default function Quizz() {
   return (
     <div>
       <Header />
-      <section className="gameContainer">
+      <section className="playContainer">
         <div>
           <h1 id="play">A toi de jouer !</h1>
           <h2 id="question">Ou jettes-tu...</h2>
@@ -24,7 +24,7 @@ export default function Quizz() {
           />
         </div>
         <div className="pictureButton">
-          <div className="answer">
+          <div className="answerBtnContainer">
             <button
               type="button"
               className="openModalBtn"
@@ -32,9 +32,9 @@ export default function Quizz() {
                 setOpenModalQuiz1(true);
               }}
             >
-              {" "}
               <img
                 src="/src/assets/bennes-decheterie.png"
+                className="quizzButtonImgDechetterie"
                 alt="dechet"
                 height="90"
                 width="90"
@@ -66,7 +66,7 @@ export default function Quizz() {
             >
               {" "}
               <img
-                className="quizzButtonImg"
+                className="quizzButtonImgYellowContainer"
                 src="/src/assets/yellow-container.png"
                 alt="dechet"
                 height="90"
@@ -90,7 +90,7 @@ export default function Quizz() {
               />
             ) : null}
           </div>
-          <div className="answer">
+          <div className="answerBtnContainer">
             <button
               type="button"
               className="openModalBtn"
@@ -132,6 +132,7 @@ export default function Quizz() {
             >
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/other-waste-icon.png"
                 alt="dechet"
                 height="90"
