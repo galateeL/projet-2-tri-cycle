@@ -34,7 +34,11 @@ function CorrectAnswer(props) {
           </div>
           <div className="correctAnswerContainer">
             <h5>la bonne réponse était</h5>
-            {answer}
+            <img
+              src={answer.src}
+              alt={answer.alt}
+              className={answer.className}
+            />
           </div>
           <Score score={score} />
           <Tip tip={tip} />
@@ -49,7 +53,11 @@ function CorrectAnswer(props) {
 }
 
 CorrectAnswer.propTypes = {
-  answer: PropTypes.string,
+  answer: PropTypes.shape({
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    className: PropTypes.string,
+  }),
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   tip: PropTypes.string,
@@ -58,7 +66,11 @@ CorrectAnswer.propTypes = {
 };
 
 CorrectAnswer.defaultProps = {
-  answer: "",
+  answer: {
+    src: "",
+    alt: "",
+    className: "",
+  },
   correctAnswer: true,
   score: 0,
   tip: "Recycling tip",

@@ -47,13 +47,11 @@ export default function Quizz() {
                 score={4}
                 questionNumber={5}
                 tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={
-                  <img
-                    src="src/assets/yellow-container.png"
-                    alt="yellow bin"
-                    className="yellowBinImg"
-                  />
-                }
+                answer={{
+                  src: "src/assets/yellow-container.png",
+                  alt: "yellow bin",
+                  className: "yellowBinImg",
+                }}
               />
             ) : null}
 
@@ -114,13 +112,11 @@ export default function Quizz() {
                 score={2}
                 questionNumber={5}
                 tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={
-                  <img
-                    src="src/assets/yellow-container.png"
-                    alt="yellow bin"
-                    className="yellowBinImg"
-                  />
-                }
+                answer={{
+                  src: "src/assets/yellow-container.png",
+                  alt: "yellow bin",
+                  className: "yellowBinImg",
+                }}
               />
             ) : null}
             <button
@@ -146,13 +142,11 @@ export default function Quizz() {
                 score={2}
                 questionNumber={5}
                 tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={
-                  <img
-                    src="src/assets/yellow-container.png"
-                    alt="yellow bin"
-                    className="yellowBinImg"
-                  />
-                }
+                answer={{
+                  src: "src/assets/yellow-container.png",
+                  alt: "yellow bin",
+                  className: "yellowBinImg",
+                }}
               />
             ) : null}
           </div>
