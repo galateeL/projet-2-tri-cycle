@@ -10,6 +10,20 @@
 }
 
 #play {
+  border-radius: 50px;
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  min-width: 300px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.quizzButtonImg {
+  width: 20vw;
+  height: 25vw;
+}
+
+.play {
   color: white;
   margin-top: 1rem;
   font-family: "Sacramento", cursive;
@@ -32,7 +46,7 @@
   font-size: 3rem;
   padding: 2.4rem;
   min-width: 300px;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 .waste {

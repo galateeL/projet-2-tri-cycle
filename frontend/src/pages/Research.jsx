@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Array from "@components/Array";
 import axios from "axios";
-import FristArray from "@components/FirstArray";
-import HeaderResearchBase from "@components/HeaderResearchBase";
+import FristArray from "../components/FirstArray";
+import HeaderResearchBase from "../components/HeaderResearchBase";
+import Array from "../components/Array";
 
 export default function Research() {
   const [waste, setWaste] = useState([]);

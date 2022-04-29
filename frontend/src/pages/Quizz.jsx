@@ -66,6 +66,7 @@ export default function Quizz() {
             >
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/yellow-container.png"
                 alt="dechet"
                 height="90"
@@ -99,6 +100,7 @@ export default function Quizz() {
             >
               {" "}
               <img
+                className="quizzButtonImg"
                 src="/src/assets/rubbish-bag.png"
                 alt="dechet"
                 height="90"
