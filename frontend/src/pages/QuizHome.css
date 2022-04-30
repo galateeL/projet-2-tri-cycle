@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+.containerQuizHome {
+  background-color: var(--first-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.titleQuizHome {
+  font-family: "Sacramento", cursive;
+  font-size: 4rem;
+  color: white;
+  background-color: var(--fourth-color);
+  min-width: 180px;
+  max-width: 300px;
+  height: 6rem;
+  border-radius: 2rem;
+  margin-top: 50px;
+  margin-bottom: 0.2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rubikIcon {
+  position: relative;
+  width: 25%;
+  top: -85px;
+  left: 217px;
+}
+
+.btnContainerQuizHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnContainerQuizHome img {
+  width: 150px;
+}
+
+.playBtnContainer button {
+  width: 170px;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  margin-bottom: 3rem;
+}
+.exitBtnContainer button {
+  width: 130px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
