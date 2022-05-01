@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import ButtonQuizz from "../components/ButtonQuizz";
 import ButtonSearch from "../components/ButtonSearch";
 import ButtonFleche from "../components/ButtonFleche";
-import "../Home.css";
+import "./PagesCss/Home.css";
 
 export default function Home() {
   return (
@@ -33,7 +33,11 @@ export default function Home() {
       </div>
       <div className="triopoubelles">
         <h1>fais ton choix!</h1>
-        <img src={trioPoubelles} alt="trioPoubelles" />
+        <img
+          className="logoTriPoubelles"
+          src={trioPoubelles}
+          alt="trioPoubelles"
+        />
       </div>
       <div className="divQuizz">
         <div className="divButtonQuizz">

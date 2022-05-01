@@ -8,17 +8,17 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-block-end: auto;
 }
 
 .triTitre {
-  font-size: 450%;
+  position: relative;
+  font-size: 10vw;
   font-family: "georgia";
   justify-content: center;
   color: #77df4a;
-  margin: 0px 0px 0px 25%;
-  width: 50%;
-  min-width: 100px;
-  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flecheImg {
@@ -43,11 +43,16 @@
 }
 
 .presentation {
-  margin: 0px 5% 30px 5%;
+  margin: 25% 5% 10% 5%;
   display: block;
   text-align: justify;
   font-size: 10px;
   font-weight: lighter;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
 }
 
 .presentation:first-letter {
@@ -80,10 +85,17 @@
   margin: 5% 0px 0px 10%;
   color: #6097eeff;
   font-family: Georgia;
-  font-size: larger;
+  font-size: 4vw;
   width: 80%;
   height: 800%;
-  min-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logoTriPoubelles {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .divQuizz {
@@ -97,7 +109,9 @@
 .buttonQuizz {
   width: 100%;
   height: 100%;
-  border-radius: 100px;
+  min-width: 70%;
+  min-height: 70%;
+  border-radius: 8vw;
   background-color: #ff9d00ff;
   border: none;
   color: white;
@@ -117,11 +131,11 @@
 .buttonSearch {
   width: 100%;
   height: 175%;
-  border-radius: 100px;
+  border-radius: 8vw;
   background-color: #6097eeff;
   border: none;
   color: white;
-  font-size: 7vw;
+  font-size: 5vw;
   font-size-adjust: 0.5;
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
   box-shadow: 10px;
@@ -129,7 +143,6 @@
   font-family: cursive;
   padding-left: 3vw;
   padding-right: 3vw;
-  margin-right: 5px;
 }
 .buttonSearch:hover {
   background-color: #cbcff7; /* Green */
@@ -145,12 +158,31 @@
   margin-left: 5%;
   margin-right: 5%;
   font-size: 110%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow: hidden;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
 }
 .pS {
   text-align: justify;
   margin-left: 5%;
   margin-right: 5%;
   font-size: 110%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow: hidden;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
 }
 
 .divButtonQuizz {
@@ -197,7 +229,7 @@
 
 @media screen and (min-width: 900px) {
   .presentation {
-    margin: 50px 5% 90px 5%;
+    margin: 20% 5% 90px 5%;
     display: block;
     text-align: justify;
     font-size: 30px;
@@ -222,6 +254,8 @@
     text-align: center;
     height: 30vw;
     flex-direction: row-reverse;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .divQuizz {
@@ -233,7 +267,7 @@
   .buttonQuizz {
     width: 85%;
     height: 150%;
-    border-radius: 100px;
+    border-radius: 8vw;
     background-color: #ff9d00ff;
     border: none;
     color: white;
@@ -263,7 +297,7 @@
   .buttonSearch {
     width: 85%;
     height: 150%;
-    border-radius: 100px;
+    border-radius: 8vw;
     background-color: #6097eeff;
     border: none;
     color: white;
