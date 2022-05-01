@@ -1,0 +1,87 @@
+.playContainer {
+  height: initial;
+  background-color: #6097eeff;
+  font-size: 1em;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+.quizzButtonImg {
+  width: 19vw;
+  height: 20vw;
+}
+
+.quizzButtonImgYellowContainer {
+  width: initial;
+  height: initial;
+  width: 15vw;
+  height: 25vw;
+}
+.quizzButtonImgDechetterie {
+  width: initial;
+  height: initial;
+  width: 23vw;
+  height: 25vw;
+}
+
+#play {
+  color: white;
+  margin-top: 1rem;
+  font-family: "Sacramento", cursive;
+  font-size: 4em;
+  min-width: 360px;
+  margin: 0.5rem;
+}
+
+#question {
+  color: white;
+  background-color: var(--fourth-color);
+  border-radius: 1.5rem;
+  width: 80vw;
+  height: 12vw;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  padding: 2.4rem;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.waste {
+  margin-top: 5vw;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 30px;
+  margin-bottom: 5vw;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.nameWaste {
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 60vw;
+  margin: 0 auto;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1.7rem;
+  padding: 0.5em;
+  min-width: 200px;
+}
+
+.openModalBtn {
+  border: none;
+  border-radius: 1rem;
+  width: 30vw;
+  height: 30vw;
+  background-color: rgba(214, 225, 236, 0.863);
+  margin: 2vw;
+  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+}
