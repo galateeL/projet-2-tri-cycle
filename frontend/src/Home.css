@@ -32,28 +32,18 @@
   justify-items: center;
 }
 
-.imgButton {
-  margin-left: 5%;
-  width: 40%;
-  max-width: 300px;
-  min-width: 100px;
-  text-align: center;
-  justify-items: center;
-  justify-content: space-between;
-}
-
 .presentation {
   margin: 0px 5% 30px 5%;
   display: block;
   text-align: justify;
-  font-size: 10px;
-  font-weight: lighter;
+  font-size: 15vw;
 }
 
 .presentation:first-letter {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 100px;
   color: #6097eeff;
+  overflow: hidden;
 }
 
 .buttonFleche {
@@ -200,7 +190,7 @@
     margin: 50px 5% 90px 5%;
     display: block;
     text-align: justify;
-    font-size: 30px;
+    font-size: 12vw;
     font-weight: lighter;
   }
   .pQ {

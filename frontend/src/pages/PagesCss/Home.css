@@ -14,7 +14,7 @@
 .triTitre {
   position: relative;
   font-size: 10vw;
-  font-family: "georgia";
+  font-family: var(--third-font);
   justify-content: center;
   color: #77df4a;
   margin-left: auto;
@@ -43,10 +43,10 @@
 }
 
 .presentation {
-  margin: 25% 5% 10% 5%;
+  margin: 5% 5% 10% 5%;
   display: block;
   text-align: justify;
-  font-size: 10px;
+  font-size: 5vw;
   font-weight: lighter;
   overflow-y: auto;
   overflow-x: hidden;
@@ -56,8 +56,8 @@
 }
 
 .presentation:first-letter {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 100px;
+  font-family: var(--third-font);
+  font-size: 13vw;
   color: #6097eeff;
 }
 
@@ -90,6 +90,7 @@
   height: 800%;
   margin-left: auto;
   margin-right: auto;
+  font-family: var(--third-font);
 }
 .logoTriPoubelles {
   text-align: center;
@@ -101,7 +102,7 @@
 .divQuizz {
   display: flex;
   margin-top: 10%;
-  margin-bottom: 10px;
+  margin-bottom: -20vw;
   text-align: center;
   height: 50vw;
 }
@@ -120,7 +121,7 @@
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
   box-shadow: 10px;
   padding-bottom: 20%;
-  font-family: cursive;
+  font-family: var(--third-font);
   margin-left: 5px;
 }
 .buttonQuizz:hover {
@@ -130,19 +131,21 @@
 
 .buttonSearch {
   width: 100%;
-  height: 175%;
+  height: 100%;
   border-radius: 8vw;
   background-color: #6097eeff;
   border: none;
   color: white;
-  font-size: 5vw;
+  font-size: 8vw;
   font-size-adjust: 0.5;
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
   box-shadow: 10px;
   padding-bottom: 20%;
-  font-family: cursive;
+  font-family: var(--third-font);
   padding-left: 3vw;
   padding-right: 3vw;
+  margin-right: 10px;
+  text-align: center;
 }
 .buttonSearch:hover {
   background-color: #cbcff7; /* Green */
@@ -157,32 +160,26 @@
   text-align: justify;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 110%;
+  font-size: 5vw;
   overflow-y: auto;
   overflow-x: hidden;
   top: 20px;
   right: 20px;
   bottom: 20px;
-  overflow: hidden;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
+  height: 25vw;
 }
+
 .pS {
   text-align: justify;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 110%;
+  font-size: 5vw;
   overflow-y: auto;
   overflow-x: hidden;
   top: 20px;
   right: 20px;
   bottom: 20px;
-  overflow: hidden;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
+  height: 25vw;
 }
 
 .divButtonQuizz {
@@ -214,9 +211,9 @@
 
 .divSearch {
   display: flex;
-  margin: 70px 0% 10px 0%;
+  margin: 50px 0% 5px 0%;
   text-align: center;
-  height: 30vw;
+  height: 50vw;
   flex-direction: row-reverse;
 }
 
@@ -250,7 +247,7 @@
 
   .divSearch {
     display: flex;
-    margin: 0% 0% 10px 0%;
+    margin: 0% 0% 5vw 0%;
     text-align: center;
     height: 30vw;
     flex-direction: row-reverse;
@@ -262,6 +259,7 @@
     display: flex;
     text-align: center;
     height: 25vw;
+    margin: 10vw 0% 10vw 0%;
   }
 
   .buttonQuizz {
@@ -271,12 +269,12 @@
     background-color: #ff9d00ff;
     border: none;
     color: white;
-    font-size: 6vw;
+    font-size: 10vw;
     font-size-adjust: 0.5;
     box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
     box-shadow: 10px;
     padding-bottom: 20%;
-    font-family: cursive;
+    font-family: var(--third-font);
     margin-left: 5px;
   }
 
@@ -301,14 +299,14 @@
     background-color: #6097eeff;
     border: none;
     color: white;
-    font-size: 4vw;
+    font-size: 7vw;
     font-size-adjust: 0.5;
     box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
     box-shadow: 10px;
     padding-bottom: 20%;
-    font-family: cursive;
+    font-family: var(--third-font);
     padding-left: 3vw;
     padding-right: 3vw;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 }
