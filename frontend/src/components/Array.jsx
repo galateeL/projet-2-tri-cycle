@@ -1,4 +1,4 @@
-import "./CssComponents/Array.css";
+import "./CssComponents/WasteTable.css";
 import PropTypes from "prop-types";
 
 function Array({ object }) {
