@@ -1,7 +1,7 @@
-import Home from "@pages/Home";
-import Quizz from "@pages/Quizz";
-import Research from "@pages/Research";
 import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import Quizz from "../pages/Quizz";
+import Research from "../pages/Research";
 
 export default function Body() {
   return (
@@ -14,3 +14,4 @@ export default function Body() {
     </div>
   );
 }
+/* changement "?" ici */

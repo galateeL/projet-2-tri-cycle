@@ -7,7 +7,7 @@ import home from "../assets/home-white.png";
 import research from "../assets/search-white.png";
 import filter from "../assets/filter-white.png";
 import arrowMenu from "../assets/flechevertemenu.png";
-import Dropdown from "./DropDownFilter";
+import Dropdown from "./dropDownFilter";
 
 export default function HeaderResearchBase(props) {
   const [inactive, setInactive] = useState(false);

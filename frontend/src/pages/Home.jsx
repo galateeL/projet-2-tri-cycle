@@ -1,10 +1,10 @@
-import Header from "@components/Header";
-import ButtonQuizz from "@components/ButtonQuizz";
-import ButtonSearch from "@components/ButtonSearch";
-import ButtonFleche from "@components/ButtonFleche";
-import trioPoubelles from "@assets/recycling-color.png";
+import trioPoubelles from "../assets/recycling-color.png";
 import logo from "../assets/logo-ss-fond.png";
-import "../Home.css";
+import Header from "../components/Header";
+import ButtonQuizz from "../components/ButtonQuizz";
+import ButtonSearch from "../components/ButtonSearch";
+import ButtonFleche from "../components/ButtonFleche";
+import "./PagesCss/Home.css";
 
 export default function Home() {
   return (
@@ -13,21 +13,16 @@ export default function Home() {
         <nav>
           <Header />
         </nav>
-      </div>
-      <div className="logoTitre">
-        <img className="logoImage" src={logo} alt="LOGO" />
-        <h1 className="triTitre">Tri`&apos`Cycle</h1>
-      </div>
-      <div>
+        <div className="logoTitre">
+          <img className="logoImage" src={logo} alt="LOGO" />
+          <h1 className="triTitre">Tri&apos;Cycle</h1>
+        </div>
         <p className="presentation">
-          Sous le solum, chantum li zoisum di loremipsum ecolopsum.
-          Birdhitchcock campagnum etangum di fleurum verdum parcum pum.
-          Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que
-          vum etum jolim que vou etum bo. Si votrum ramagum se rapelum a votrum
-          plumagum voum zetum etum le fenixum de se boim.loremipsum ecolopsum
-          birdhitchcock campagnum etangum di fleurum verdum parcum pum.
-          Maitrumcorbum sur un arbrum perchum, lum tin api pre ce langagum. que
-          vum etum jolim que vou etum bo.
+          Salut! Bienvenue sur Tri&apos;Cycle! Vous pourrez apprendre sur
+          l&apos;écologie, tout en vous amusant en famille! Cliquez sur le jeux
+          pour commencer votre Quizz favori, ou bien, cliquez sur recherche pour
+          accéder directement aux fiches informatives et devenir un expert du
+          tri! A vous de jouer!
         </p>
       </div>
       <div className="buttonFleche">
@@ -35,26 +30,44 @@ export default function Home() {
       </div>
       <div className="triopoubelles">
         <h1>fais ton choix!</h1>
-        <img src={trioPoubelles} alt="trioPoubelles" />
+        <img
+          className="logoTriPoubelles"
+          src={trioPoubelles}
+          alt="trioPoubelles"
+        />
       </div>
-      <div className="buttonQuizz">
-        <ButtonQuizz />
+      <div className="divQuizz">
+        <div className="divButtonQuizz">
+          <ButtonQuizz />
+          <img
+            src="../src/assets/rubik-game.png"
+            className="imgQuizzButton"
+            alt="QuizzImg"
+          />
+        </div>
+
         <p className="pQ">
-          loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum
-          parcum pum. Maitrumcorbum sur un arbrum perchum, lum tin api pre ce
-          langagum. que vum etum jolim que vou etum bo. Si votrum ramagum se
-          rapelum a votrum plumagum voum zetum etum le fenixum de se boim.
+          Entrez dans notre quizz écologique, où de nombreuses questions sur le
+          tri des déchets vous attendent. Des fiches explicatives viendront
+          compléter votre curiosité et votre culture. Les questions sont
+          accessibles aux plus jeunes! Alors, êtes vous prêt à devenir
+          imbattable sur le tri?
         </p>
       </div>
-      <div className="buttonSearch">
-        <ButtonSearch />
+      <div className="divSearch">
+        <div className="divButtonSearch">
+          <ButtonSearch />
+          <img
+            src="../src/assets/glass-blue.png"
+            className="imgSearchButton"
+            alt="SearchImg"
+          />
+        </div>
         <p className="pS">
-          loremipsum ecolopsum birdhitchcock campagnum etangum di fleurum verdum
-          parcum pum.loremipsum ecolopsum birdhitchcock campagnum etangum di
-          fleurum verdum parcum pum. Maitrumcorbum sur un arbrum perchum, lum
-          tin api pre ce langagum. que vum etum jolim que vou etum bo. Si votrum
-          ramagum se rapelum a votrum plumagum voum zetum etum le fenixum de se
-          boim.
+          Vous voulez jeter votre bidon de lessive, votre ampoule, votre clef à
+          molette, ou votre chaussette? Mais vous ne savez plus très bien où
+          vous en débarasser? Vous êtes au bon endroit! Ici vous trouverez votre
+          bonheur, et plus encore! Bienvenue dans la culture écologique du tri!
         </p>
       </div>
     </div>
