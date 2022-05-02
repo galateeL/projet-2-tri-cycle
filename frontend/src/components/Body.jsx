@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Quizz from "../pages/Quizz";
 import Research from "../pages/Research";
+import ContactForm from "./ContactForm";
 
 export default function Body() {
   return (
@@ -10,8 +11,8 @@ export default function Body() {
         <Route path="/" element={<Home />} />
         <Route path="Quizz" element={<Quizz />} />
         <Route path="Research" element={<Research />} />
+        <Route path="ContactForm" element={<ContactForm />} />
       </Routes>
     </div>
   );
 }
-/* changement "?" ici */

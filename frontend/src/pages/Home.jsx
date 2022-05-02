@@ -15,7 +15,7 @@ export default function Home() {
         </nav>
         <div className="logoTitre">
           <img className="logoImage" src={logo} alt="LOGO" />
-          <h1 className="triTitre">Tri&apos;Cycle</h1>
+          <h1 className="triTitre">Tri&apos;cycle</h1>
         </div>
         <p className="presentation">
           Salut! Bienvenue sur Tri&apos;Cycle! Vous pourrez apprendre sur
