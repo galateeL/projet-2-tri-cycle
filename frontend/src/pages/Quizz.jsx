@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "@components/Header";
+import Header from "../components/Header";
 
 import "./CssPages/Quizz.css";
-import ModalQuiz from "@components/ModalQuiz";
+import ModalQuiz from "../components/ModalQuiz";
 
 export default function Quizz() {
   const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
