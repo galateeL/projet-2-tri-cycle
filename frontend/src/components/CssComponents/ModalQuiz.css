@@ -1,0 +1,255 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 3.5rem;
+  left: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 5;
+}
+
+.modalContainer {
+  width: 80vw;
+  height: 90vh;
+  border: 0.9rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: fixed;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(189, 189, 189);
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.correctAnswerContainer {
+  border-radius: 1rem;
+  margin: 0.2vh;
+}
+
+.correctAnswerContainer h5 {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  color: rgb(146, 146, 146);
+  margin: 5px;
+  text-align: center;
+}
+
+.wrongAnswerImg {
+  height: 10vh;
+  margin: 0.2vh;
+}
+
+.perfectImg {
+  height: 20vh;
+}
+
+.goodAnswerImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(5px 5px 5px rgb(255, 255, 255));
+}
+
+.yellowBinImg {
+  padding-top: 0.7rem;
+  width: 11vw;
+  filter: drop-shadow(5px 5px 5px rgb(161, 161, 161));
+}
+
+.score h4 {
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+  color: #ff9d00ff;
+  height: 7vh;
+}
+
+.score {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pointsContainer h5 {
+  font-size: 1.5rem;
+}
+
+.pointsContainer {
+  background-color: #ff9d00ff;
+  height: 15vw;
+  width: 15vw;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  color: white;
+  font-weight: bold;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  margin: 0.5rem;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  background-color: rgb(231, 233, 235);
+  border-radius: 0.6rem;
+  height: 20vh;
+  padding: 1rem;
+}
+
+.tipImg {
+  width: 12vw;
+  margin: 0.4rem;
+  padding-bottom: 0.5rem;
+  filter: drop-shadow(5px 5px 5px rgb(255, 255, 255));
+}
+
+.tipDetail {
+  font-family: var(--secondary-font);
+  color: rgb(101, 101, 101);
+  font-size: 0.8rem;
+}
+
+.nextQuestionBtnContainer {
+  background-color: #6097eeff;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.nextQuestionBtnContainer button {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: #6097eeff;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4rem;
+  height: 6vh;
+  width: 44vw;
+}
+
+.nextQuestionImg {
+  width: 30vw;
+  height: 8vh;
+}
+
+.congratsContainer {
+  padding: 0.6rem;
+}
+
+.congratsContainer h4 {
+  font-family: "Sacramento", cursive;
+  color: #ff9d00ff;
+  font-size: 4.6rem;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.tryAgainContainer img {
+  width: 25vw;
+  filter: drop-shadow(5px 5px 5px rgb(158, 158, 158));
+}
+
+.congratsContainer img {
+  width: 40vw;
+  filter: drop-shadow(5px 5px 5px rgb(158, 158, 158));
+}
+
+.tryAgainContainer h4 {
+  font-family: "Sacramento", cursive;
+  color: #6097eeff;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 20px;
+  min-width: 250px;
+}
+
+.doubleBtn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  gap: 1.2rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.btnWhite {
+  background-color: #6097eeff;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  height: 15vh;
+  width: 14vh;
+}
+
+.btnWhite img {
+  width: 20vw;
+  padding-bottom: 1rem;
+}
+
+.retryTxt,
+.homeTxt {
+  padding-top: 1.3rem;
+  text-decoration: none;
+}
+
+.endGame {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.endBtn {
+  background-color: #6097eeff;
+  font-weight: bold;
+  color: white;
+  font-size: 23px;
+  border: none;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
