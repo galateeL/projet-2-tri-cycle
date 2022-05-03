@@ -4,6 +4,7 @@ import ButtonSearch from "@components/ButtonSearch";
 import ButtonFleche from "@components/ButtonFleche";
 import trioPoubelles from "@assets/recycling-color.png";
 import logo from "../assets/logo-ss-fond.png";
+import "./PagesCss/Home.css";
 
 export default function Home() {
   return (

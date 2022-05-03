@@ -19,9 +19,53 @@ export default function Research() {
         setWaste(data.records);
       });
   };
+  const [house, setHouse] = useState([]);
   useEffect(() => {
+    setHouse(waste.map((item) => item));
     getWaste();
   }, []);
+
+  function handlevalue(e) {
+    const wasteCollection = e.nativeEvent.target.value;
+    if (wasteCollection === "En déchèterie ou écopoint") {
+      setHouse(
+        waste
+          .filter((ele) => ele.fields.reponse1 === "En déchèterie ou écopoint")
+          .map((item) => item)
+      );
+    }
+    if (wasteCollection === "Dans le sac ou bac jaune") {
+      setHouse(
+        waste
+          .filter((ele) => ele.fields.reponse1 === "Dans le sac ou bac jaune")
+          .map((item) => item)
+      );
+    }
+    if (wasteCollection === "Dans le sac d’ordures ménagères") {
+      setHouse(
+        waste
+          .filter(
+            (ele) => ele.fields.reponse1 === "Dans le sac d’ordures ménagères"
+          )
+          .map((item) => item)
+      );
+    }
+    if (wasteCollection === "autre") {
+      setHouse(
+        waste
+          .filter(
+            (ele) =>
+              ele.fields.reponse1 !== "Dans le sac d’ordures ménagères" &&
+              ele.fields.reponse1 !== "Dans le sac ou bac jaune" &&
+              ele.fields.reponse1 !== "En déchèterie ou écopoint"
+          )
+          .map((item) => item)
+      );
+    }
+    if (wasteCollection === "Totalité") {
+      setHouse(waste.map((item) => item));
+    }
+  }
   return (
     <div className="Research">
       <HeaderResearchBase />
@@ -30,12 +74,43 @@ export default function Research() {
           <thead>
             <tr>
               <th>name</th>
-              <th>amount</th>
+              <th>
+                <select onChange={handlevalue}>
+                  <option value="Totalité">tous les déchets</option>
+                  <option value="En déchèterie ou écopoint">déchettrie</option>
+                  <option value="Dans le sac ou bac jaune">
+                    poubelle jaune
+                  </option>
+                  <option value="Dans le sac d’ordures ménagères">
+                    ordures menagere{" "}
+                  </option>
+                  <option value="autre">autre</option>
+                </select>
+              </th>
               <th>more</th>
             </tr>
           </thead>
           <tbody>
-            {waste.map((items) => (
+            {/* {waste.map((items) => (
+              <tr>
+                <td>
+                  <WasteTable
+                    key={items.id}
+                    object={items.fields.description}
+                  />
+                </td>
+                <td>
+                  <Amount key={items.id} object={items.fields.reponse1} />
+                </td>
+                <td>
+                  <More
+                    key={items.id}
+                    object={items.fields.conseil_zero_dechet}
+                  />
+                </td>
+              </tr>
+            ))} */}
+            {house.map((items) => (
               <tr>
                 <td>
                   <WasteTable
