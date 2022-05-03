@@ -1,42 +1,30 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import DataSheetContext from "../contexts/DataSheetContext";
 
-function WasteDetails({ nomImage, description, matiere, reponse1, conseil }) {
+function WasteDetails() {
+  const { foo } = useContext(DataSheetContext);
+  const { id } = useParams();
+
+  function searchId() {
+    const array = foo.waste.find((item) => item.recordid === id);
+    return array;
+  }
+
   return (
     <div>
-      <div className="wasteImgContainer">{nomImage}</div>
-      <h1 className="wasteName">{description}</h1>
-      <h2 className="matiereTitle">Matière</h2>
-      <div className="matiere">{matiere}</div>
+      <div className="wasteImgContainer">
+        <img className="wasteImg" src={searchId().fields.nom_image} alt="" />
+      </div>
+      <h1 className="wasteName">{searchId().fields.description}</h1>
+
+      <div className="matiere">{searchId().fields.matiere}</div>
       <h2 className="disposeOfWasteTitle">Où le jeter/recycler ?</h2>
-      <div className="disposeOfWaste">{reponse1}</div>
+      <div className="disposeOfWaste">{searchId().fields.reponse1}</div>
       <h2 className="tipWasteTitle">Conseil zéro déchet</h2>
-      <div className="tipWaste">{conseil}</div>
+      <div className="tipWaste">{searchId().fields.conseil_zero_dechet}</div>
     </div>
   );
 }
-
-WasteDetails.propTypes = {
-  description: PropTypes.string,
-  matiere: PropTypes.string,
-  reponse1: PropTypes.string,
-  conseil: PropTypes.string,
-  nomImage: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    className: PropTypes.string,
-  }),
-};
-
-WasteDetails.defaultProps = {
-  description: "",
-  matiere: "",
-  reponse1: "",
-  conseil: "",
-  nomImage: {
-    src: "",
-    alt: "",
-    className: "",
-  },
-};
 
 export default WasteDetails;
