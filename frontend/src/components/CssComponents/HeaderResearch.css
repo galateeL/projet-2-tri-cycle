@@ -1,36 +1,33 @@
-
 .menu {
   position: fixed;
   width: 52vw;
   max-width: 300px;
   box-sizing: border-box;
-  transition: width .2s ease-in;
+  transition: width 0.2s ease-in;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.menu.inactive{
+.menu.inactive {
   width: 0px;
 }
 
-.menu.inactive .open-close{
+.menu.inactive .open-close {
   transform: rotate(360deg);
-  transition: all .3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
 }
-.menu .open-close{
+.menu .open-close {
   transform: rotate(180deg);
-  transition: all .3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
 }
 
-.link-home a{
+.link-home a {
   display: flex;
   text-decoration: none;
   width: 40%;
 }
 
-
-
-.menu.inactive .link-home p{
+.menu.inactive .link-home p {
   display: none;
   outline: none;
   opacity: 0;
@@ -40,45 +37,42 @@
   padding-right: 40px;
 }
 
-.menu.inactive .filter-inactive{
+.menu.inactive .filter-inactive {
   opacity: 0;
 }
-@media screen and (min-width:600px) {
-
+@media screen and (min-width: 600px) {
   .menu {
     font-size: 1.3rem;
   }
-  .menu.inactive{
+  .menu.inactive {
     width: 52vw;
   }
 
-  .menu.inactive .link-home p{
+  .menu.inactive .link-home p {
     opacity: 1;
   }
 
-  .menu.inactive .link-home a{
+  .menu.inactive .link-home a {
     align-items: center;
   }
 
-  .menu.inactive .filter-inactive{
+  .menu.inactive .filter-inactive {
     opacity: 1;
   }
 
   .navbar_open {
     display: none;
-    }
-  
+  }
 }
 
-
 .navbar_open {
-width:40px;
-height:40px;
+  width: 40px;
+  height: 40px;
 }
 
 .navbar_open img {
   width: 100px;
-  height:40px;
+  height: 40px;
 }
 
 .vertical-menu {
@@ -88,25 +82,25 @@ height:40px;
   border-radius: 30px;
   height: 85vh;
   top: 150px;
-  }
+}
 
-  .vertical-menu p {
-    display: flex;
-    align-items: center;
-    text-decoration:none;
-    color: white;
-  }
+.vertical-menu p {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
 
- .vertical-menu img {
-    width: 8vw;
-    max-width: 70px;
-    min-width: 70px;
-    padding: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+.vertical-menu img {
+  width: 8vw;
+  max-width: 70px;
+  min-width: 70px;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
-  .logo {
+.logo {
   position: fixed;
   max-width: 300px;
   min-width: 100px;
@@ -124,7 +118,7 @@ height:40px;
   min-width: 80px;
 }
 
-.open-close{
+.open-close {
   position: absolute;
   right: 0;
   top: 0;
@@ -136,10 +130,10 @@ height:40px;
   width: 3vw;
   height: 3vh;
   border: 0;
-  background-color:#77df4aff;
+  background-color: #77df4aff;
 }
 
-.open-close button img{
+.open-close button img {
   width: 3vw;
   height: 3vw;
   min-width: 30px;
@@ -148,7 +142,7 @@ height:40px;
   background-color: white;
 }
 
-.vertical-menu .search input{
+.vertical-menu .search input {
   border: 0;
   outline: none;
   height: 35px;

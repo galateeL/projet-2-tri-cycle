@@ -1,16 +1,16 @@
 .dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
 }
 
-.list-filter{
-    position: absolute;
-    list-style: none;
+.list-filter {
+  position: absolute;
+  list-style: none;
 }
 
-.list-filter li{
-padding: 1rem;
+.list-filter li {
+  padding: 1rem;
 }

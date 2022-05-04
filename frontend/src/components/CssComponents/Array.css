@@ -1,15 +1,18 @@
-.Array, .firstName{
+.Array,
+.firstName {
   max-width: 100%;
 }
 
-.Array, .firstName{
+.Array,
+.firstName {
   width: 100%;
-margin-left: 13rem;
+  margin-left: 13rem;
 }
 
-@media screen and (min-width:500px) {
-  .Array, .firstName{
-    margin-left : 20rem;
+@media screen and (min-width: 500px) {
+  .Array,
+  .firstName {
+    margin-left: 20rem;
   }
 }
 
