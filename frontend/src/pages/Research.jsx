@@ -2,16 +2,13 @@ import React, { useContext } from "react";
 import WasteTable from "@components/WasteTable";
 import Amount from "@components/Amount";
 import More from "@components/More";
-// import axios from "axios";
 import "../components/CssComponents/WasteTable.css";
 import HeaderResearchBase from "@components/HeaderResearchBase";
 import { Link } from "react-router-dom";
 import DataSheetContext from "../contexts/DataSheetContext";
-// import WasteDataSheet from "./WasteDataSheet";
 
 export default function Research() {
-  const { foo } = useContext(DataSheetContext);
-  console.warn(foo);
+  const { waste } = useContext(DataSheetContext);
   return (
     <div className="Research">
       <HeaderResearchBase />
@@ -25,7 +22,7 @@ export default function Research() {
             </tr>
           </thead>
           <tbody>
-            {foo.waste.map((items) => (
+            {waste.map((items) => (
               <tr>
                 <Link to={`/WasteDataSheet/${items.recordid}`}>
                   <td>

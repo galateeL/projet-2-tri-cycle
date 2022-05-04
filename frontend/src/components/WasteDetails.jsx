@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import DataSheetContext from "../contexts/DataSheetContext";
 
 function WasteDetails() {
-  const { foo } = useContext(DataSheetContext);
+  const { waste } = useContext(DataSheetContext);
   const { id } = useParams();
 
   function searchId() {
-    const array = foo.waste.find((item) => item.recordid === id);
+    const array = waste.find((item) => item.recordid === id);
     return array;
   }
 

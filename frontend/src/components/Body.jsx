@@ -8,10 +8,7 @@ import Research from "../pages/Research";
 import WasteDataSheet from "../pages/WasteDataSheet";
 
 export default function Body() {
-  // definition state vide
-  // remonter API ici
   const [waste, setWaste] = useState([]);
-  // a remplacer par le use context (import)
   const getWaste = () => {
     axios
       .get(
@@ -25,10 +22,7 @@ export default function Body() {
   useEffect(() => {
     getWaste();
   }, []);
-  const foo = useMemo(() => ({ foo: { waste } }));
-  console.warn(waste);
-  console.warn(foo);
-
+  const foo = useMemo(() => ({ waste }), [waste]);
   return (
     <div>
       <DataSheetContext.Provider value={foo}>
@@ -42,4 +36,3 @@ export default function Body() {
     </div>
   );
 }
-/* changement "?" ici */
