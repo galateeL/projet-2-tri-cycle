@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from "react";
-import WasteTable from "@components/WasteTable";
-import Amount from "@components/Amount";
-import More from "@components/More";
-import axios from "axios";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import WasteTable from "../components/WasteTable";
+import Amount from "../components/Amount";
+import More from "../components/More";
 import "../components/CssComponents/WasteTable.css";
-import HeaderResearchBase from "@components/HeaderResearchBase";
+import HeaderResearchBase from "../components/HeaderResearchBase";
+import DataSheetContext from "../contexts/DataSheetContext";
 
 export default function Research() {
-  const [waste, setWaste] = useState([]);
-
-  const getWaste = () => {
-    axios
-      .get(
-        "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_jeter-dechet-nantes-metropole&q=&rows=116"
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setWaste(data.records);
-      });
-  };
-  useEffect(() => {
-    getWaste();
-  }, []);
+  const { waste } = useContext(DataSheetContext);
   return (
     <div className="Research">
       <HeaderResearchBase />
@@ -37,18 +24,25 @@ export default function Research() {
           <tbody>
             {waste.map((items) => (
               <tr>
+                <Link to={`/WasteDataSheet/${items.recordid}`}>
+                  <td>
+                    <WasteTable
+                      key={`W_${items.recordid}`}
+                      object={items.fields.description}
+                    />
+                  </td>
+                </Link>
+
                 <td>
-                  <WasteTable
-                    key={items.id}
-                    object={items.fields.description}
+                  <Amount
+                    key={`A_${items.recordid}`}
+                    object={items.fields.reponse1}
                   />
                 </td>
-                <td>
-                  <Amount key={items.id} object={items.fields.reponse1} />
-                </td>
+
                 <td>
                   <More
-                    key={items.id}
+                    key={`M_${items.recordid}`}
                     object={items.fields.conseil_zero_dechet}
                   />
                 </td>

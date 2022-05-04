@@ -51,7 +51,7 @@ export default function Home() {
           tri des déchets vous attendent. Des fiches explicatives viendront
           compléter votre curiosité et votre culture. Les questions sont
           accessibles aux plus jeunes! Alors, êtes vous prêt à devenir
-          imbattable sur le tri?
+          imbattable sur le tri ?
         </p>
       </div>
       <div className="divSearch">

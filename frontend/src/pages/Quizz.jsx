@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Header from "../components/Header";
+import DataSheetContext from "../contexts/DataSheetContext";
 
 import "./CssPages/Quizz.css";
 import ModalQuiz from "../components/ModalQuiz";
 
 export default function Quizz() {
+  const { waste } = useContext(DataSheetContext);
+  const [randomObject, setRandomObject] = useState();
+  function randomQuizz() {
+    const randomtoto = Math.floor(Math.random() * waste.length);
+    return setRandomObject(waste[randomtoto]);
+  }
+
+  useEffect(() => {
+    randomQuizz();
+  }, [waste]);
+
   const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
   const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
   const [openModalQuiz3, setOpenModalQuiz3] = useState(false);
@@ -15,11 +27,15 @@ export default function Quizz() {
       <section className="playContainer">
         <div>
           <h1 id="play">A toi de jouer !</h1>
-          <h2 id="question">Ou jettes-tu...</h2>
-          <h3 className="nameWaste">un bidon de lessive vide ?</h3>
+          <h2 id="question">Où jettes-tu...</h2>
+          <h3 className="nameWaste">
+            {randomObject !== undefined ? randomObject.fields.description : ""}
+          </h3>
           <img
             className="waste"
-            src="/src/assets/bidon-lessive.png"
+            src={
+              randomObject !== undefined ? randomObject.fields.nom_image : ""
+            }
             alt="dechet"
           />
         </div>
