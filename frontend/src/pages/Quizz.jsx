@@ -44,9 +44,10 @@ export default function Quizz() {
       <section className="playContainer">
         <div>
           <h1 id="play">A toi de jouer !</h1>
-          <h2 id="question">Où jettes-tu...</h2>
+          <h2 id="question">Où jettes-tu cet objet ...</h2>
           <h3 className="nameWaste">
-            {randomObject !== undefined ? randomObject.fields.description : ""}
+            {randomObject !== undefined ? randomObject.fields.description : ""}{" "}
+            ?
           </h3>
           <img
             className="waste"
@@ -96,7 +97,7 @@ export default function Quizz() {
                 correctAnswer={openModalQuiz1}
                 score={2}
                 questionNumber={4}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
+                tip={randomObject.fields.conseil_zero_dechet}
                 answer={
                   <img
                     src="src/assets/yellow-container.png"
@@ -114,7 +115,7 @@ export default function Quizz() {
               onClick={handleQuiz}
               value="Dans le sac d’ordures ménagères"
             >
-              Ordure ménagère{" "}
+              Ordures ménagères{" "}
             </button>
             {openModalQuiz3 ? (
               <ModalQuiz
@@ -122,7 +123,7 @@ export default function Quizz() {
                 correctAnswer={openModalQuiz1}
                 score={2}
                 questionNumber={5}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
+                tip={randomObject.fields.conseil_zero_dechet}
                 answer={{
                   src: "src/assets/yellow-container.png",
                   alt: "yellow bin",
@@ -146,7 +147,7 @@ export default function Quizz() {
                 correctAnswer={openModalQuiz1}
                 score={2}
                 questionNumber={4}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
+                tip={randomObject.fields.conseil_zero_dechet}
                 answer={{
                   src: "src/assets/yellow-container.png",
                   alt: "yellow bin",
