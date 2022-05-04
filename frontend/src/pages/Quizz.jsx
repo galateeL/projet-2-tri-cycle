@@ -7,35 +7,7 @@ import ModalQuiz from "../components/ModalQuiz";
 
 export default function Quizz() {
   const { waste } = useContext(DataSheetContext);
-  const [randomObject, setRandomObject] = useState({
-    datasetid: "244400404_jeter-dechet-nantes-metropole",
-    recordid: "29043c1c95ae8b5b1b546a9f8874bb661dbd5a1d",
-    fields: {
-      reponse1: "En déchèterie ou écopoint",
-      commentaire: 'A déposer dans la benne "autres déchets"',
-      image: {
-        id: "9b75f79d24a716da9542662aeff7389a",
-        mimetype: "image/jpeg",
-        height: 1080,
-        width: 1080,
-        filename: "arrosoir.jpg",
-        thumbnail: true,
-        format: "JPEG",
-        color_summary: [
-          "rgba(242, 242, 241, 1.00)",
-          "rgba(175, 176, 175, 1.00)",
-          "rgba(203, 203, 205, 1.00)",
-        ],
-      },
-      nom_image:
-        "https://metropole.nantes.fr/banque/public/images/dechets/media/arrosoir.jpg",
-      licence:
-        "Photos utilisables en France sans limite de temps, pour l'édition, internet et l'opendata de Nantes Métropole, dans un objectif de sensibilisation ou d'information sur le tri et le recyclage des déchets. Utilisation à des fins commerciales et publicitaires interdite.",
-      description: "Arrosoir",
-      credit_photo: "François DARBÉ / argentic & numéric productions",
-    },
-    record_timestamp: "2022-04-30T02:00:00Z",
-  });
+  const [randomObject, setRandomObject] = useState();
   function randomQuizz() {
     const randomtoto = Math.floor(Math.random() * waste.length);
     return setRandomObject(waste[randomtoto]);
