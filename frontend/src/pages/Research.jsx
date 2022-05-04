@@ -9,7 +9,7 @@ import HeaderResearchBase from "@components/HeaderResearchBase";
 
 export default function Research() {
   const [waste, setWaste] = useState([]);
-  const [filterWord, setFilterWord] = useState("");
+  const { filterWord, setFilterWord } = useState("");
 
   function handleFilter(event) {
     setFilterWord(event);
@@ -30,7 +30,7 @@ export default function Research() {
   }, []);
   return (
     <div className="Research">
-      <HeaderResearchBase />
+      <HeaderResearchBase filterWord={filterWord} handleFilter={handleFilter} />
       <div className="table">
         <table>
           <thead>
@@ -41,25 +41,27 @@ export default function Research() {
             </tr>
           </thead>
           <tbody>
-            {waste.map((items) => (
-              <tr>
-                <td>
-                  <WasteTable
-                    key={items.id}
-                    object={items.fields.description}
-                  />
-                </td>
-                <td>
-                  <Amount key={items.id} object={items.fields.reponse1} />
-                </td>
-                <td>
-                  <More
-                    key={items.id}
-                    object={items.fields.conseil_zero_dechet}
-                  />
-                </td>
-              </tr>
-            ))}
+            {waste
+              .filter((items) => items.includes(filterWord))
+              .map((items) => (
+                <tr>
+                  <td>
+                    <WasteTable
+                      key={items.id}
+                      object={items.fields.description}
+                    />
+                  </td>
+                  <td>
+                    <Amount key={items.id} object={items.fields.reponse1} />
+                  </td>
+                  <td>
+                    <More
+                      key={items.id}
+                      object={items.fields.conseil_zero_dechet}
+                    />
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>

@@ -48,8 +48,8 @@ export default function HeaderResearchBase(props) {
                 value={filterWord}
                 type="text"
                 placeholder="Type here ..."
-                onChange={(e) => {
-                  handleFilter(e.target.value);
+                onChange={(event) => {
+                  handleFilter(event.target.value);
                 }}
               />
             </div>
