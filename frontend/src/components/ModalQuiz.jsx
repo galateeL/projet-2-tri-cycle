@@ -62,7 +62,7 @@ ModalQuiz.defaultProps = {
   correctAnswer: true,
   score: 0,
   questionNumber: 0,
-  tip: "Recycling tip",
+  tip: "",
   answer: {
     src: "",
     alt: "",
