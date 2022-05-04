@@ -1,71 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import Header from "./Header";
+import "./CssComponents/ContactForm.css";
 
-export default class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", firstName: "", mail: "", message: "" };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export default function ContactForm() {
+  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [mail, setMail] = useState("");
+  const [message, setMessage] = useState("");
 
-  handleChange(event) {
-    this.setState({ name: event.target.value.name });
-    this.setState({ firstName: event.target.value.firstName });
-    this.setState({ mail: event.target.value.mail });
-    this.setState({ message: event.target.value.message });
-  }
-
-  handleSubmit(event) {
-    this.alert("Votre message a bien été prit en compte ");
-    event.preventDefault();
-  }
-
-  render() {
-    const { name } = this.state;
-    const { firstName } = this.state;
-    const { mail } = this.state;
-    const { message } = this.state;
-
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">
-          Nom :
+  return (
+    <div className="contactform">
+      <form
+        onSubmit={() => {
+          console.warn(
+            `Merci pour votre inscription ${name} ${firstName} ${mail} ${message}`
+          );
+        }}
+      >
+        <Header />
+        <label className="labelform" htmlFor="name">
+          <h2 className="stringform">Nom :</h2>
           <input
+            className="inputform"
             id="name"
             type="text"
             value={name}
-            onChange={this.handleChange}
+            onChange={(e) => setName(e.target.value)}
           />
         </label>
-        <label htmlFor="firstName">
-          Prénom :
+        <label className="labelform" htmlFor="firstName">
+          <h2 className="stringform">Prénom :</h2>
           <input
+            className="inputform"
             id="firstName"
             type="text"
             value={firstName}
-            onChange={this.handleChange}
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </label>
-        <label htmlFor="mail">
-          Email :
+        <label className="labelform" htmlFor="mail">
+          <h2 className="stringform">Email :</h2>
           <input
+            className="inputform"
             id="mail"
             type="text"
             value={mail}
-            onChange={this.handleChange}
+            onChange={(e) => setMail(e.target.value)}
           />
         </label>
-        <label htmlFor="message">
-          Message:
+        <label className="labelform" htmlFor="message">
+          <h2 className="stringform">Message:</h2>
           <input
+            className="inputform"
             id="message"
             type="text"
             value={message}
-            onChange={this.handleChange}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </label>
-        <input type="submit" value="Envoyer" />
+        <input className="inputformsubmit" type="submit" value="Envoyer" />
       </form>
-    );
-  }
+    </div>
+  );
 }
