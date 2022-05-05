@@ -1,0 +1,63 @@
+.contactform {
+  margin-left: 10vw;
+  margin-right: 20vw;
+  margin-top: 10vw;
+  justify-content: space-around;
+  background-color: rgb(220, 247, 243);
+  background-size: auto;
+}
+
+.inputform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 50vw;
+  padding: 12px;
+  margin: 5vw 5vw 5vw 5vw;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.stringform {
+  margin-left: 5vw;
+  margin-top: 5vw;
+  font-family: var(--third-font);
+  font-size: 200px;
+  color: darkgray;
+}
+
+.labelform {
+  padding: 5vw 5vw 5vw 5vw;
+  margin: 10vw 5vw 5vw 5vw;
+  border-radius: 30px;
+  display: inline-block;
+  background-color: cadetblue;
+}
+.inputformsubmit {
+  background-color: cadetblue;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 8vw;
+  margin-right: 3vw;
+  margin-bottom: 10vw;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  float: right;
+  width: 50%;
+  height: 10vw;
+  justify-content: center;
+  font-size: 5vw;
+}
+
+@media screen and (max-width: 600px) {
+  .inputformsubmit {
+    width: 50%;
+    margin-top: 5vw;
+    justify-content: center;
+  }
+}

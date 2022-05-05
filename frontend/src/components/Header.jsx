@@ -17,7 +17,7 @@ export default function Header() {
           </NavLink>
         </div>
         <div className="second-container-nav">
-          <NavLink to="/QuizHome">
+          <NavLink to="/contactForm">
             <img src={help} alt="help" />
           </NavLink>
         </div>

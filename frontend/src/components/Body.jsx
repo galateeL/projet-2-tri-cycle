@@ -1,4 +1,3 @@
-import Quizz from "@pages/Quizz";
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
@@ -7,6 +6,8 @@ import DataSheetContext from "../contexts/DataSheetContext";
 import Home from "../pages/Home";
 import QuizHome from "../pages/QuizHome";
 import Research from "../pages/Research";
+import ContactForm from "./ContactForm";
+
 
 export default function Body() {
   const [waste, setWaste] = useState([]);
@@ -31,8 +32,8 @@ export default function Body() {
           <Route path="/" element={<Home />} />
           <Route path="QuizHome" element={<QuizHome />} />
           <Route path="Research" element={<Research />} />
-          <Route path="Quizz" element={<Quizz />} />
-          <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
+          <Route path="ContactForm" element={<ContactForm />} />
+           <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
         </Routes>
       </DataSheetContext.Provider>
     </div>
