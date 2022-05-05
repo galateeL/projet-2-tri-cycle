@@ -2,6 +2,7 @@ import Quizz from "@pages/Quizz";
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
+import WasteDataSheet from "@pages/WasteDataSheet";
 import DataSheetContext from "../contexts/DataSheetContext";
 import Home from "../pages/Home";
 import QuizHome from "../pages/QuizHome";
@@ -31,6 +32,7 @@ export default function Body() {
           <Route path="QuizHome" element={<QuizHome />} />
           <Route path="Research" element={<Research />} />
           <Route path="Quizz" element={<Quizz />} />
+          <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
         </Routes>
       </DataSheetContext.Provider>
     </div>

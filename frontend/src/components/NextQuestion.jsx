@@ -7,7 +7,7 @@ function NextQuestion(props) {
     <div className="endGame">
       {questionNumber < 5 ? (
         <div className="nextQuestionBtnContainer">
-          <button type="button" onClick="" classeName="nextQuestionBtn">
+          <button type="button" onClick="" className="nextQuestionBtn">
             <span>Question suivante</span>
             <img
               src="src/assets/next-white.png"
