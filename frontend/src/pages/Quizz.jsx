@@ -7,9 +7,12 @@ import ModalQuiz from "../components/ModalQuiz";
 
 export default function Quizz() {
   const { waste } = useContext(DataSheetContext);
+  const [counterScore, setCounterScore] = useState(0);
+  const [counter, setCounter] = useState(1);
   const [randomObject, setRandomObject] = useState();
   function randomQuizz() {
     const randomtoto = Math.floor(Math.random() * waste.length);
+
     return setRandomObject(waste[randomtoto]);
   }
 
@@ -17,25 +20,42 @@ export default function Quizz() {
     randomQuizz();
   }, [waste]);
 
+  useEffect(() => {
+    if (counter > 6) {
+      setCounter(1);
+    }
+  }, [counter]);
+
   const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
   const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
   const [openModalQuiz3, setOpenModalQuiz3] = useState(false);
   const [openModalQuiz4, setOpenModalQuiz4] = useState(false);
 
+  useEffect(() => {
+    randomQuizz();
+  }, [openModalQuiz1, openModalQuiz2, openModalQuiz3, openModalQuiz4]);
+
   function handleQuiz(e) {
     if (e.nativeEvent.target.value === randomObject.fields.reponse1) {
       setOpenModalQuiz1(true);
+      setCounter(counter + 1);
+      setCounterScore(counterScore + 1);
     } else setOpenModalQuiz2(true);
+    setCounter(counter + 1);
   }
 
   function handleQuiz1(e) {
+    const buttonValue = e.nativeEvent.target.value;
     if (
-      e.nativeEvent.target.value === waste[30].fields.reponse1 ||
-      e.nativeEvent.target.value === waste[8].fields.reponse1 ||
-      e.nativeEvent.target.value === waste[65].fields.reponse1
+      buttonValue === waste[30].fields.reponse1 ||
+      buttonValue === waste[8].fields.reponse1 ||
+      buttonValue === waste[65].fields.reponse1
     ) {
       setOpenModalQuiz2(true);
+      setCounter(counter + 1);
     } else setOpenModalQuiz1(true);
+    setCounter(counter + 1);
+    setCounterScore(counterScore + 1);
   }
 
   return (
@@ -49,6 +69,7 @@ export default function Quizz() {
             {randomObject !== undefined ? randomObject.fields.description : ""}{" "}
             ?
           </h3>
+          <h4 className="counter">{counter}/4</h4>
           <img
             className="waste"
             src={
@@ -72,8 +93,8 @@ export default function Quizz() {
                 title={randomObject.fields.description}
                 closeModal={setOpenModalQuiz1}
                 correctAnswer={openModalQuiz1}
-                score={4}
-                questionNumber={5}
+                score={counterScore}
+                questionNumber={counter}
                 tip={randomObject.fields.conseil_zero_dechet}
                 answer={{
                   src: "src/assets/yellow-container.png",
@@ -95,8 +116,8 @@ export default function Quizz() {
               <ModalQuiz
                 closeModal={setOpenModalQuiz2}
                 correctAnswer={openModalQuiz1}
-                score={2}
-                questionNumber={4}
+                score={counterScore}
+                questionNumber={counter}
                 tip={randomObject.fields.conseil_zero_dechet}
                 answer={
                   <img
@@ -121,8 +142,8 @@ export default function Quizz() {
               <ModalQuiz
                 closeModal={setOpenModalQuiz3}
                 correctAnswer={openModalQuiz1}
-                score={2}
-                questionNumber={5}
+                score={counterScore}
+                questionNumber={counter}
                 tip={randomObject.fields.conseil_zero_dechet}
                 answer={{
                   src: "src/assets/yellow-container.png",
@@ -145,8 +166,8 @@ export default function Quizz() {
               <ModalQuiz
                 closeModal={setOpenModalQuiz4}
                 correctAnswer={openModalQuiz1}
-                score={2}
-                questionNumber={4}
+                score={counterScore}
+                questionNumber={counter}
                 tip={randomObject.fields.conseil_zero_dechet}
                 answer={{
                   src: "src/assets/yellow-container.png",

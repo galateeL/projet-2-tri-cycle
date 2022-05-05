@@ -18,14 +18,16 @@ function DoubleBtn() {
       </div>
 
       <div className="retryBtnContainer">
-        <button type="button" className="btnWhite" onClick="retryBtn">
-          <span className="retryTxt">Rejouer</span>
-          <img
-            src="src/assets/next-white.png"
-            alt="retry"
-            className="retryImg"
-          />
-        </button>
+        <Link to="/quizHome" style={{ textDecoration: "none" }}>
+          <button type="button" className="btnWhite" onClick="retryBtn">
+            <span className="retryTxt">Rejouer</span>
+            <img
+              src="src/assets/next-white.png"
+              alt="retry"
+              className="retryImg"
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );
