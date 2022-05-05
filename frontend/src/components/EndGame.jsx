@@ -6,7 +6,7 @@ import DoubleBtn from "./DoubleBtn";
 function EndGame({ score }) {
   return (
     <div className="endGameContainer">
-      {score > 3 ? (
+      {score > 1 ? (
         <div>
           <div className="congratsContainer">
             <h4>Bravo !</h4>

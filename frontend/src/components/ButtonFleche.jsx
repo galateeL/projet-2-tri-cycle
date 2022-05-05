@@ -1,9 +1,4 @@
 import React from "react";
-import flecheBas from "../assets/flecheBas1.png";
-
-const sectionStyle = {
-  backgroundImage: flecheBas,
-};
 
 export default function ButtonFleche() {
   function directionBas() {
@@ -13,13 +8,18 @@ export default function ButtonFleche() {
       behavior: "smooth",
     });
   }
-
   return (
-    <button className="buttonImg">
+    <button
+      className="flecheButton"
+      type="button"
+      onClick={() => directionBas()}
+    >
       <img
-        src={sectionStyle.backgroundImage}
-        className="flecheBas"
-        onClick={() => directionBas()}
+        className="flecheImg"
+        src="/src/assets/flecheBas1.png"
+        alt="dechet"
+        height="60"
+        width="60"
       />
     </button>
   );

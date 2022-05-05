@@ -1,26 +1,162 @@
-.menuResearch {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 17vw;
-  align-items: center;
-  max-width: 100px;
+.menu {
+  position: fixed;
+  width: 52vw;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: width 0.2s ease-in;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
-.vertical-menu {
+
+.menu.inactive {
+  width: 0px;
+}
+
+.menu.inactive .open-close {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
+}
+.menu .open-close {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.link-home a {
   display: flex;
+  text-decoration: none;
+  width: 40%;
+}
+
+.menu.inactive .link-home p {
+  display: none;
+  outline: none;
+  opacity: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 40px;
+}
+
+.menu.inactive .filter-inactive {
+  opacity: 0;
+}
+@media screen and (min-width: 600px) {
+  .menu {
+    font-size: 1.3rem;
+  }
+  .menu.inactive {
+    width: 52vw;
+  }
+
+  .menu.inactive .link-home p {
+    opacity: 1;
+  }
+
+  .menu.inactive .link-home a {
+    align-items: center;
+  }
+
+  .menu.inactive .filter-inactive {
+    opacity: 1;
+  }
+
+  .navbar_open {
+    display: none;
+  }
+}
+
+.navbar_open {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar_open img {
+  width: 100px;
+  height: 40px;
+}
+
+.vertical-menu {
+  max-width: 300px;
   flex-direction: column;
   background-color: #77df4aff;
   border-radius: 30px;
+  height: 85vh;
+  top: 150px;
 }
+
+.vertical-menu p {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
 .vertical-menu img {
   width: 8vw;
   max-width: 70px;
+  min-width: 70px;
   padding: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+.logo {
+  position: fixed;
+  max-width: 300px;
+  min-width: 100px;
+}
 .logo img {
+  width: 15vw;
   max-width: 150px;
-  width: 22vw;
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.menu .vertical-menu {
+  position: relative;
+  display: flex;
+  min-width: 80px;
+}
+
+.open-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+}
+
+.open-close button {
+  margin: 0;
+  width: 3vw;
+  height: 3vh;
+  border: 0;
+  background-color: #77df4aff;
+}
+
+.open-close button img {
+  width: 3vw;
+  height: 3vw;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  background-color: white;
+}
+
+.vertical-menu .search input {
+  border: 0;
+  outline: none;
+  height: 35px;
+  background-color: rgb(208, 204, 204);
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+
+.search {
+  margin-right: 2rem;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
 }

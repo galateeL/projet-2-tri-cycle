@@ -18,19 +18,14 @@ function ModalQuiz({
   return (
     <div className="modalBackground">
       <div className="modalContainer">
-        <div className="titleCloseBtn">
-          <button type="button" onClick={() => closeModal(false)}>
-            {" "}
-            X{" "}
-          </button>
-        </div>
-
+        <div className="titleCloseBtn" />
         <div className="modalBody">
           {isFinished ? (
             <EndGame score={score} />
           ) : (
             <CorrectAnswer
               answer={answer}
+              closeModal={closeModal}
               correctAnswer={correctAnswer}
               score={score}
               tip={tip}
@@ -62,7 +57,7 @@ ModalQuiz.defaultProps = {
   correctAnswer: true,
   score: 0,
   questionNumber: 0,
-  tip: "Recycling tip",
+  tip: "",
   answer: {
     src: "",
     alt: "",
