@@ -4,8 +4,15 @@ import Score from "./Score";
 import Tip from "./Tip";
 
 function CorrectAnswer(props) {
-  const { answer, correctAnswer, score, tip, questionNumber, setIsFinished } =
-    props;
+  const {
+    answer,
+    closeModal,
+    correctAnswer,
+    score,
+    tip,
+    questionNumber,
+    setIsFinished,
+  } = props;
   return (
     <div>
       {correctAnswer ? (
@@ -20,6 +27,7 @@ function CorrectAnswer(props) {
           <NextQuestion
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
+            closeModal={closeModal}
           />
         </div>
       ) : (
@@ -44,6 +52,7 @@ function CorrectAnswer(props) {
           <NextQuestion
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
+            closeModal={closeModal}
           />
         </div>
       )}
@@ -57,6 +66,7 @@ CorrectAnswer.propTypes = {
     alt: PropTypes.string,
     className: PropTypes.string,
   }),
+  closeModal: PropTypes.func,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   tip: PropTypes.string,
@@ -70,6 +80,7 @@ CorrectAnswer.defaultProps = {
     alt: "",
     className: "",
   },
+  closeModal: () => {},
   correctAnswer: true,
   score: 0,
   tip: "Recycling tip",
