@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+
 import WasteTable from "@components/WasteTable";
 import Amount from "@components/Amount";
 import More from "@components/More";

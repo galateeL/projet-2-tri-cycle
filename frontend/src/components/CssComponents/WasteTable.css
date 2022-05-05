@@ -15,7 +15,7 @@ tr:nth-child(even) {
 }
 .table {
   display: flex;
-  justify-content: flex-end;
+  margin-left: 20rem;
 }
 thead {
   background-color: rgba(127, 96, 0, 0.5);
