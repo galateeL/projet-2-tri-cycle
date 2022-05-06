@@ -59,7 +59,6 @@ export default function Quizz() {
     setCounterScore(counterScore + 1);
   }
   const QuestRand = useMemo(() => randomQuizz, []);
-  console.warn(QuestRand);
   return (
     <div>
       <Header />
@@ -74,7 +73,7 @@ export default function Quizz() {
                 : ""}{" "}
               ?
             </h3>
-            <h4 className="counter">{counter}/4</h4>
+            <h4 className="counter">{counter}/5</h4>
             <img
               className="waste"
               src={
@@ -101,11 +100,7 @@ export default function Quizz() {
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
-                  answer={{
-                    src: "src/assets/yellow-container.png",
-                    alt: "yellow bin",
-                    className: "yellowBinImg",
-                  }}
+                  answer={randomObject.fields.reponse1}
                 />
               ) : null}
 
@@ -124,13 +119,7 @@ export default function Quizz() {
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
-                  answer={
-                    <img
-                      src="src/assets/yellow-container.png"
-                      alt="yellow bin"
-                      className="yellowBinImg"
-                    />
-                  }
+                  answer={randomObject.fields.reponse1}
                 />
               ) : null}
             </div>

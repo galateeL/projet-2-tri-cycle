@@ -11,7 +11,7 @@ function NextQuestion(props) {
   }
   return (
     <div className="endGame">
-      {questionNumber < 5 ? (
+      {questionNumber < 6 ? (
         <div className="nextQuestionBtnContainer">
           <button
             type="button"
