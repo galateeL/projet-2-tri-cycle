@@ -10,7 +10,7 @@ function More({ object }) {
       </div>
     );
   }
-  return <div />;
+  return <div className="wasteTable" />;
 }
 
 More.propTypes = {

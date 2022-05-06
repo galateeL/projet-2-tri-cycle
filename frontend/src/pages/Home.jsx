@@ -1,9 +1,9 @@
-import trioPoubelles from "../assets/recycling-color.png";
+import Header from "@components/Header";
+import ButtonQuizz from "@components/ButtonQuizz";
+import ButtonSearch from "@components/ButtonSearch";
+import ButtonFleche from "@components/ButtonFleche";
+import trioPoubelles from "@assets/recycling-color.png";
 import logo from "../assets/logo-ss-fond.png";
-import Header from "../components/Header";
-import ButtonQuizz from "../components/ButtonQuizz";
-import ButtonSearch from "../components/ButtonSearch";
-import ButtonFleche from "../components/ButtonFleche";
 import "./PagesCss/Home.css";
 
 export default function Home() {
