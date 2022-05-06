@@ -2,11 +2,20 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  background-color: var(--third-color);
+  padding: 2vw;
 }
 
 .nav img {
-  width: 10vw;
-  max-width: 70px;
-  min-width: 70px;
-  padding: 1rem;
+  min-width: 10vw;
+  max-width: 10vw;
+  min-height: 10vw;
+}
+
+.first-container-nav img {
+  margin-right: 5vw;
+}
+
+.second-container-nav img {
+  margin-right: 3vw;
 }
