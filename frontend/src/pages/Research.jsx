@@ -4,13 +4,7 @@ import Amount from "@components/Amount";
 import More from "@components/More";
 import "../components/CssComponents/WasteTable.css";
 import HeaderResearchBase from "@components/HeaderResearchBase";
-
 import { Link } from "react-router-dom";
-import WasteTable from "../components/WasteTable";
-import Amount from "../components/Amount";
-import More from "../components/More";
-import "../components/CssComponents/WasteTable.css";
-import HeaderResearchBase from "../components/HeaderResearchBase";
 import DataSheetContext from "../contexts/DataSheetContext";
 
 export default function Research() {
