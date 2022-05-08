@@ -8,7 +8,6 @@ import QuizHome from "../pages/QuizHome";
 import Research from "../pages/Research";
 import ContactForm from "./ContactForm";
 
-
 export default function Body() {
   const [waste, setWaste] = useState([]);
   const getWaste = () => {
@@ -33,7 +32,7 @@ export default function Body() {
           <Route path="QuizHome" element={<QuizHome />} />
           <Route path="Research" element={<Research />} />
           <Route path="ContactForm" element={<ContactForm />} />
-           <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
+          <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
         </Routes>
       </DataSheetContext.Provider>
     </div>
