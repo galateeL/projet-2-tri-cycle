@@ -48,17 +48,13 @@
   text-align: justify;
   font-size: 5vw;
   font-weight: lighter;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
 }
 
 .presentation:first-letter {
   font-family: var(--third-font);
   font-size: 13vw;
   color: #6097eeff;
+  line-height: 0.3;
 }
 
 .buttonFleche {
@@ -161,12 +157,6 @@
   margin-left: 5%;
   margin-right: 5%;
   font-size: 5vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  height: 25vw;
 }
 
 .pS {
@@ -174,12 +164,6 @@
   margin-left: 5%;
   margin-right: 5%;
   font-size: 5vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  height: 25vw;
 }
 
 .divButtonQuizz {
@@ -224,7 +208,7 @@
   width: 55%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
   .presentation {
     margin: 20% 5% 90px 5%;
     display: block;
@@ -251,10 +235,7 @@
     text-align: center;
     height: 30vw;
     flex-direction: row-reverse;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
-
   .divQuizz {
     display: flex;
     text-align: center;
