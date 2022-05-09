@@ -1,8 +1,6 @@
-import React, { useState, useContext, useEffect, useMemo } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Header from "../components/Header";
 import DataSheetContext from "../contexts/DataSheetContext";
-import QuizContext from "../contexts/QuizContext";
-
 import "./CssPages/Quizz.css";
 import ModalQuiz from "../components/ModalQuiz";
 import AnswerButton from "../components/AnswerButton";
@@ -18,11 +16,9 @@ export default function Quizz() {
 
     return setRandomObject(waste[randomQuestion]);
   }
-
   useEffect(() => {
     randomQuizz();
   }, [waste]);
-
   useEffect(() => {
     if (counter > 6) {
       setCounter(1);
@@ -42,7 +38,6 @@ export default function Quizz() {
     } else setOpenModalQuizFalse(true);
     setCounter(counter + 1);
   }
-
   function handleQuiz1(e) {
     const buttonValue = e.nativeEvent.target.value;
     if (
@@ -56,29 +51,15 @@ export default function Quizz() {
     setCounter(counter + 1);
     setCounterScore(counterScore + 1);
   }
-  const QuestRand = useMemo(() => randomQuizz, []);
   return (
     <div>
       <Header />
-      <QuizContext.Provider value={QuestRand}>
-        <section className="playContainer">
-          <div>
-            <h1 id="play">A toi de jouer !</h1>
+      <section className="playContainer">
+        <div>
+          <h1 id="play">A toi de jouer !</h1>
+          <div className="Container">
+            <h4 className="counter">{counter}/4</h4>
             <h2 id="question">Où jettes-tu cet objet ...</h2>
-            <h3 className="nameWaste">
-              {randomObject !== undefined
-                ? randomObject.fields.description
-                : ""}{" "}
-              ?
-            </h3>
-            <h4 className="counter">{counter}/5</h4>
-            <img
-              className="waste"
-              src={
-                randomObject !== undefined ? randomObject.fields.nom_image : ""
-              }
-              alt="dechet"
-            />
           </div>
           <div className="pictureButton">
             <div className="answerBtnContainer">
@@ -158,8 +139,8 @@ export default function Quizz() {
               ) : null}
             </div>
           </div>
-        </section>
-      </QuizContext.Provider>
+        </div>
+      </section>
     </div>
   );
 }
