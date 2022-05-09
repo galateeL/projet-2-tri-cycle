@@ -15,17 +15,15 @@
   margin-right: 3vw;
 }
 
-@media screen and (max-width: 320px){
-
+@media screen and (max-width: 320px) {
   .nav img {
-  min-width: 10vw;
-  max-width: 10vw;
-  min-height: 10vw;
+    min-width: 10vw;
+    max-width: 10vw;
+    min-height: 10vw;
   }
 }
 
 @media screen and (min-width: 320px) {
-
   .second-container-nav img {
     margin-right: 2vw;
   }
@@ -36,18 +34,14 @@
   }
 }
 
-
 .second-container-nav img {
   margin-right: 3vw;
 }
 
-
 @media screen and (min-width: 768px) {
-
   .second-container-nav img {
     margin-right: 0.5vw;
   }
-
 
   .nav img {
     min-width: 70px;

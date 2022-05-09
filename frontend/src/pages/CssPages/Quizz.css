@@ -9,9 +9,29 @@
   width: 100vw;
   height: 100%;
 }
-
+#En_decheterie {
+  background-image: url("../../assets/bennes-decheterie.png");
+  background-size: contain;
+}
+#bac-jaune {
+  background-image: url("../../assets/yellow-container.png");
+  background-position: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+#sac_d-ordures_menageres {
+  background-image: url("../../assets/rubbish-bag.png");
+  background-size: contain;
+}
+#autres {
+  background-image: url("../../assets/other-waste-icon.png");
+  background-size: contain;
+}
 .openModalBtn {
   font-size: 0.7rem;
+}
+.answerBtnContainer {
+  display: flex;
 }
 
 .quizzButtonImg {

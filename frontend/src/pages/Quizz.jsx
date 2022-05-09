@@ -5,16 +5,18 @@ import QuizContext from "../contexts/QuizContext";
 
 import "./CssPages/Quizz.css";
 import ModalQuiz from "../components/ModalQuiz";
+import AnswerButton from "../components/AnswerButton";
 
 export default function Quizz() {
   const { waste } = useContext(DataSheetContext);
   const [counterScore, setCounterScore] = useState(0);
   const [counter, setCounter] = useState(1);
   const [randomObject, setRandomObject] = useState();
-  function randomQuizz() {
-    const randomtoto = Math.floor(Math.random() * waste.length);
 
-    return setRandomObject(waste[randomtoto]);
+  function randomQuizz() {
+    const randomQuestion = Math.floor(Math.random() * waste.length);
+
+    return setRandomObject(waste[randomQuestion]);
   }
 
   useEffect(() => {
@@ -27,34 +29,30 @@ export default function Quizz() {
     }
   }, [counter]);
 
-  const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
-  const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
-  const [openModalQuiz3, setOpenModalQuiz3] = useState(false);
-  const [openModalQuiz4, setOpenModalQuiz4] = useState(false);
-
-  // useEffect(() => {
-  //   randomQuizz();
-  // }, [openModalQuiz1, openModalQuiz2, openModalQuiz3, openModalQuiz4]);
+  const [openModalQuizTrue, setOpenModalQuizTrue] = useState(false);
+  const [openModalQuizFalse, setOpenModalQuizFalse] = useState(false);
+  const [openModalQuizFinishGame, setOpenModalQuizFinishGame] = useState(false);
+  const [openModalQuizFinalScore, setOpenModalQuizFinalScore] = useState(false);
 
   function handleQuiz(e) {
     if (e.nativeEvent.target.value === randomObject.fields.reponse1) {
-      setOpenModalQuiz1(true);
+      setOpenModalQuizTrue(true);
       setCounter(counter + 1);
       setCounterScore(counterScore + 1);
-    } else setOpenModalQuiz2(true);
+    } else setOpenModalQuizFalse(true);
     setCounter(counter + 1);
   }
 
   function handleQuiz1(e) {
     const buttonValue = e.nativeEvent.target.value;
     if (
-      buttonValue === waste[30].fields.reponse1 ||
-      buttonValue === waste[8].fields.reponse1 ||
-      buttonValue === waste[65].fields.reponse1
+      buttonValue === "En déchèterie ou écopoint" ||
+      buttonValue === "Dans le sac ou bac jaune" ||
+      buttonValue === "Dans le sac d’ordures ménagères"
     ) {
-      setOpenModalQuiz2(true);
+      setOpenModalQuizFalse(true);
       setCounter(counter + 1);
-    } else setOpenModalQuiz1(true);
+    } else setOpenModalQuizTrue(true);
     setCounter(counter + 1);
     setCounterScore(counterScore + 1);
   }
@@ -84,19 +82,16 @@ export default function Quizz() {
           </div>
           <div className="pictureButton">
             <div className="answerBtnContainer">
-              <button
-                type="submit"
-                className="openModalBtn"
-                onClick={handleQuiz}
+              <AnswerButton
+                id="En_decheterie"
+                onClick={(e) => handleQuiz(e)}
                 value="En déchèterie ou écopoint"
-              >
-                Déchèterie
-              </button>
-              {openModalQuiz1 ? (
+              />
+              {openModalQuizTrue ? (
                 <ModalQuiz
                   title={randomObject.fields.description}
-                  closeModal={setOpenModalQuiz1}
-                  correctAnswer={openModalQuiz1}
+                  closeModal={setOpenModalQuizTrue}
+                  correctAnswer={openModalQuizTrue}
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
@@ -104,18 +99,15 @@ export default function Quizz() {
                 />
               ) : null}
 
-              <button
-                type="submit"
-                className="openModalBtn"
-                onClick={handleQuiz}
+              <AnswerButton
+                id="bac-jaune"
+                onClick={(e) => handleQuiz(e)}
                 value="Dans le sac ou bac jaune"
-              >
-                Poubelle jaune{" "}
-              </button>
-              {openModalQuiz2 ? (
+              />
+              {openModalQuizFalse ? (
                 <ModalQuiz
-                  closeModal={setOpenModalQuiz2}
-                  correctAnswer={openModalQuiz1}
+                  closeModal={setOpenModalQuizFalse}
+                  correctAnswer={openModalQuizTrue}
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
@@ -124,18 +116,15 @@ export default function Quizz() {
               ) : null}
             </div>
             <div className="answerBtnContainer">
-              <button
-                type="button"
-                className="openModalBtn"
-                onClick={handleQuiz}
+              <AnswerButton
+                id="sac_d-ordures_menageres"
+                onClick={(e) => handleQuiz(e)}
                 value="Dans le sac d’ordures ménagères"
-              >
-                Ordures ménagères{" "}
-              </button>
-              {openModalQuiz3 ? (
+              />
+              {openModalQuizFinishGame ? (
                 <ModalQuiz
-                  closeModal={setOpenModalQuiz3}
-                  correctAnswer={openModalQuiz1}
+                  closeModal={setOpenModalQuizFinishGame}
+                  correctAnswer={openModalQuizTrue}
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
@@ -146,20 +135,17 @@ export default function Quizz() {
                   }}
                 />
               ) : null}
-              <button
-                type="submit"
+              <AnswerButton
+                id="autres"
+                onClick={(e) => handleQuiz1(e)}
                 value={
                   randomObject !== undefined ? randomObject.fields.reponse1 : ""
                 }
-                className="openModalBtn"
-                onClick={handleQuiz1}
-              >
-                Autre{" "}
-              </button>
-              {openModalQuiz4 ? (
+              />
+              {openModalQuizFinalScore ? (
                 <ModalQuiz
-                  closeModal={setOpenModalQuiz4}
-                  correctAnswer={openModalQuiz1}
+                  closeModal={setOpenModalQuizFinalScore}
+                  correctAnswer={openModalQuizTrue}
                   score={counterScore}
                   questionNumber={counter}
                   tip={randomObject.fields.conseil_zero_dechet}
