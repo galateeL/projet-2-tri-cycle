@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "../components/CssComponents/WasteTable.css";
-
 import { Link } from "react-router-dom";
 import WasteTable from "../components/WasteTable";
 import Amount from "../components/Amount";
