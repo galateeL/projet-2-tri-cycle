@@ -1,8 +1,9 @@
-import Header from "../components/Header";
-import ButtonQuizz from "../components/ButtonQuizz";
+
+import trioPoubelles from "../assets/recycling-color.png";
 import ButtonSearch from "../components/ButtonSearch";
 import ButtonFleche from "../components/ButtonFleche";
-import trioPoubelles from "../assets/recycling-color.png";
+import ButtonQuizz from "../components/ButtonQuizz";
+import Header from "../components/Header";
 import logo from "../assets/logo-ss-fond.png";
 import "./PagesCss/Home.css";
 
