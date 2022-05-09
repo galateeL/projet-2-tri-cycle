@@ -2,8 +2,7 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  background-color: var(--third-color);
-  opacity: 65%;
+  background-color: rgba(65, 138, 34, 0.65);
   padding-left: 3vw;
   padding-right: 2vw;
   padding-top: 10px;
