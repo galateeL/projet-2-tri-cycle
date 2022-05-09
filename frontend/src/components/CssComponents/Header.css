@@ -34,14 +34,15 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-.second-container-nav img {
+<<<<<<< HEAD ======= .second-container-nav img {
   margin-right: 3vw;
 }
 
->>>>>>> 3b995190ac84efcc7a8a6b33675b1f332d03db2e
-@media screen and (min-width: 768px) {
+>>>>>>>3b995190ac84efcc7a8a6b33675b1f332d03db2e
+  @media
+  screen
+  and
+  (min-width: 768px) {
   .second-container-nav img {
     margin-right: 0.5vw;
   }

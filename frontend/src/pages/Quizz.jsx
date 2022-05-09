@@ -55,12 +55,23 @@ export default function Quizz() {
     <div>
       <Header />
       <section className="playContainer">
-        <div>
+        <div className="playContainer2" >
           <h1 id="play">A toi de jouer !</h1>
           <div className="Container">
             <h4 className="counter">{counter}/5</h4>
             <h2 id="question">Où jettes-tu cet objet ...</h2>
           </div>
+          <h3 className="nameWaste">
+            {randomObject !== undefined ? randomObject.fields.description : ""}{" "}
+            ?
+          </h3>
+          <img
+            className="waste"
+            src={
+              randomObject !== undefined ? randomObject.fields.nom_image : ""
+            }
+            alt="dechet"
+          />
           <div className="pictureButton">
             <div className="answerBtnContainer">
               <AnswerButton
