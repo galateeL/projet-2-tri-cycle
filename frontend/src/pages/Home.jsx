@@ -1,4 +1,3 @@
-
 import trioPoubelles from "../assets/recycling-color.png";
 import ButtonSearch from "../components/ButtonSearch";
 import ButtonFleche from "../components/ButtonFleche";

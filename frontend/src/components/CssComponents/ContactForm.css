@@ -83,7 +83,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .inputformsubmit {
     width: 50%;
     margin-top: 5vw;
@@ -154,5 +153,4 @@
     box-sizing: border-box;
     resize: vertical;
   }
-
 }
