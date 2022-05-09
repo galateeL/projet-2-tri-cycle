@@ -64,10 +64,7 @@ export default function Quizz() {
       <Header />
       <section className="playContainer">
         <div>
-          <h1 id="play">
-            A toi de jouer !
-            {randomObject !== undefined ? randomObject.fields.reponse1 : ""}
-          </h1>
+          <h1 id="play">A toi de jouer !</h1>
           <h2 id="question">Où jettes-tu cet objet ...</h2>
           <h3 className="nameWaste">
             {randomObject !== undefined ? randomObject.fields.description : ""}{" "}
@@ -85,7 +82,7 @@ export default function Quizz() {
         <div className="pictureButton">
           <div className="answerBtnContainer">
             <AnswerButton
-              id="En_déchèterie"
+              id="En_decheterie"
               onClick={(e) => handleQuiz(e)}
               value="En déchèterie ou écopoint"
             />
@@ -129,7 +126,7 @@ export default function Quizz() {
           </div>
           <div className="answerBtnContainer">
             <AnswerButton
-              id="sac_d’ordures_ménagères"
+              id="sac_d’ordures_menageres"
               onClick={(e) => handleQuiz(e)}
               value="Dans le sac d’ordures ménagères"
             />
