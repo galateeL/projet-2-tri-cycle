@@ -1,3 +1,4 @@
+
 import trioPoubelles from "../assets/recycling-color.png";
 import ButtonSearch from "../components/ButtonSearch";
 import ButtonFleche from "../components/ButtonFleche";
@@ -47,9 +48,8 @@ export default function Home() {
         </div>
 
         <p className="pQ">
-          Entrez dans notre quizz écologique, où de nombreuses questions sur le
-          tri des déchets vous attendent. Alors, êtes vous prêt à devenir
-          imbattable sur le tri ?
+          Entrez dans le quizz écologique! Prêt à devenir imbattable sur le ? ?
+          ? Go!
         </p>
       </div>
       <div className="divSearch">
@@ -62,9 +62,8 @@ export default function Home() {
           />
         </div>
         <p className="pS">
-          Vous voulez jeter votre bidon de lessive, votre ampoule, ou votre
-          chaussette? Mais vous ne savez plus très bien où vous en débarasser?
-          Vous êtes au bon endroit! Bienvenue dans la culture écologique du tri!
+          Jeter votre bidon, ou votre chaussette? Oui, mais où?... Ici vous
+          toutes nos informations sur le tri, et des astuces!
         </p>
       </div>
     </div>

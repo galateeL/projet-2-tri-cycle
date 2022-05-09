@@ -82,7 +82,8 @@
   font-size: 8vw;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (max-width: 768px) {
+
   .inputformsubmit {
     width: 50%;
     margin-top: 5vw;
