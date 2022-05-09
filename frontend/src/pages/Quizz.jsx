@@ -117,7 +117,7 @@ export default function Quizz() {
             </div>
             <div className="answerBtnContainer">
               <AnswerButton
-                id="sac_d’ordures_menageres"
+                id="sac_d-ordures_menageres"
                 onClick={(e) => handleQuiz(e)}
                 value="Dans le sac d’ordures ménagères"
               />
@@ -136,7 +136,7 @@ export default function Quizz() {
                 />
               ) : null}
               <AnswerButton
-                id="autes"
+                id="autres"
                 onClick={(e) => handleQuiz1(e)}
                 value={
                   randomObject !== undefined ? randomObject.fields.reponse1 : ""

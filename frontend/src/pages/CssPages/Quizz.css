@@ -19,11 +19,11 @@
   background-size: 60%;
   background-repeat: no-repeat;
 }
-#sac_d’ordures_menageres {
+#sac_d-ordures_menageres {
   background-image: url("../../assets/rubbish-bag.png");
   background-size: contain;
 }
-#autes {
+#autres {
   background-image: url("../../assets/other-waste-icon.png");
   background-size: contain;
 }
