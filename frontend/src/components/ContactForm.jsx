@@ -21,9 +21,10 @@ export default function ContactForm() {
         <div className="contact">
           <div className="emailone">
             <img className="emailimg1" src={emailimg1} alt="emailimg1" />
+            <p>Une suggestion, une remarque ou une question?</p>
             <p>
-              Une suggestion, une remarque ou une question? N&apos;hésitez pas à
-              contacter l&apos;équipe <span>tri&apos;cycle</span> !
+              N&apos;hésitez pas à contacter l&apos;équipe{" "}
+              <span> tri&apos;cycle</span> !
             </p>
           </div>
           <label className="labelform" htmlFor="name">
