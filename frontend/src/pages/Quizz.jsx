@@ -12,9 +12,9 @@ export default function Quizz() {
   const [randomObject, setRandomObject] = useState();
 
   function randomQuizz() {
-    const randomtoto = Math.floor(Math.random() * waste.length);
+    const randomQuestion = Math.floor(Math.random() * waste.length);
 
-    return setRandomObject(waste[randomtoto]);
+    return setRandomObject(waste[randomQuestion]);
   }
   useEffect(() => {
     randomQuizz();
@@ -24,19 +24,18 @@ export default function Quizz() {
       setCounter(1);
     }
   }, [counter]);
-  const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
-  const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
-  const [openModalQuiz3, setOpenModalQuiz3] = useState(false);
-  const [openModalQuiz4, setOpenModalQuiz4] = useState(false);
-  useEffect(() => {
-    randomQuizz();
-  }, [openModalQuiz1, openModalQuiz2, openModalQuiz3, openModalQuiz4]);
+
+  const [openModalQuizTrue, setOpenModalQuizTrue] = useState(false);
+  const [openModalQuizFalse, setOpenModalQuizFalse] = useState(false);
+  const [openModalQuizFinishGame, setOpenModalQuizFinishGame] = useState(false);
+  const [openModalQuizFinalScore, setOpenModalQuizFinalScore] = useState(false);
+
   function handleQuiz(e) {
     if (e.nativeEvent.target.value === randomObject.fields.reponse1) {
-      setOpenModalQuiz1(true);
+      setOpenModalQuizTrue(true);
       setCounter(counter + 1);
       setCounterScore(counterScore + 1);
-    } else setOpenModalQuiz2(true);
+    } else setOpenModalQuizFalse(true);
     setCounter(counter + 1);
   }
   function handleQuiz1(e) {
@@ -46,9 +45,9 @@ export default function Quizz() {
       buttonValue === "Dans le sac ou bac jaune" ||
       buttonValue === "Dans le sac d’ordures ménagères"
     ) {
-      setOpenModalQuiz2(true);
+      setOpenModalQuizFalse(true);
       setCounter(counter + 1);
-    } else setOpenModalQuiz1(true);
+    } else setOpenModalQuizTrue(true);
     setCounter(counter + 1);
     setCounterScore(counterScore + 1);
   }
@@ -59,107 +58,86 @@ export default function Quizz() {
         <div>
           <h1 id="play">A toi de jouer !</h1>
           <div className="Container">
-            <h4 className="counter">{counter}/4</h4>
+            <h4 className="counter">{counter}/5</h4>
             <h2 id="question">Où jettes-tu cet objet ...</h2>
           </div>
-          <h3 className="nameWaste">
-            {randomObject !== undefined ? randomObject.fields.description : ""}{" "}
-            ?
-          </h3>
-          <img
-            className="waste"
-            src={
-              randomObject !== undefined ? randomObject.fields.nom_image : ""
-            }
-            alt="dechet"
-          />
-        </div>
-        <div className="pictureButton">
-          <div className="answerBtnContainer">
-            <AnswerButton
-              id="En_déchèterie"
-              onClick={(e) => handleQuiz(e)}
-              value="En déchèterie ou écopoint"
-            />
-            {openModalQuiz1 ? (
-              <ModalQuiz
-                title={randomObject.fields.description}
-                closeModal={setOpenModalQuiz1}
-                correctAnswer={openModalQuiz1}
-                score={counterScore}
-                questionNumber={counter}
-                tip={randomObject.fields.conseil_zero_dechet}
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
+          <div className="pictureButton">
+            <div className="answerBtnContainer">
+              <AnswerButton
+                id="En_decheterie"
+                onClick={(e) => handleQuiz(e)}
+                value="En déchèterie ou écopoint"
               />
-            ) : null}
+              {openModalQuizTrue ? (
+                <ModalQuiz
+                  title={randomObject.fields.description}
+                  closeModal={setOpenModalQuizTrue}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={randomObject.fields.reponse1}
+                />
+              ) : null}
 
-            <AnswerButton
-              id="bac-jaune"
-              onClick={(e) => handleQuiz(e)}
-              value="Dans le sac ou bac jaune"
-            />
-            {openModalQuiz2 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz2}
-                correctAnswer={openModalQuiz1}
-                score={counterScore}
-                questionNumber={counter}
-                tip={randomObject.fields.conseil_zero_dechet}
-                answer={
-                  <img
-                    src="src/assets/yellow-container.png"
-                    alt="yellow bin"
-                    className="yellowBinImg"
-                  />
+              <AnswerButton
+                id="bac-jaune"
+                onClick={(e) => handleQuiz(e)}
+                value="Dans le sac ou bac jaune"
+              />
+              {openModalQuizFalse ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFalse}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={randomObject.fields.reponse1}
+                />
+              ) : null}
+            </div>
+            <div className="answerBtnContainer">
+              <AnswerButton
+                id="sac_d-ordures_menageres"
+                onClick={(e) => handleQuiz(e)}
+                value="Dans le sac d’ordures ménagères"
+              />
+              {openModalQuizFinishGame ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFinishGame}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={{
+                    src: "src/assets/yellow-container.png",
+                    alt: "yellow bin",
+                    className: "yellowBinImg",
+                  }}
+                />
+              ) : null}
+              <AnswerButton
+                id="autres"
+                onClick={(e) => handleQuiz1(e)}
+                value={
+                  randomObject !== undefined ? randomObject.fields.reponse1 : ""
                 }
               />
-            ) : null}
-          </div>
-          <div className="answerBtnContainer">
-            <AnswerButton
-              id="sac_d’ordures_ménagères"
-              onClick={(e) => handleQuiz(e)}
-              value="Dans le sac d’ordures ménagères"
-            />
-            {openModalQuiz3 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz3}
-                correctAnswer={openModalQuiz1}
-                score={counterScore}
-                questionNumber={counter}
-                tip={randomObject.fields.conseil_zero_dechet}
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
-              />
-            ) : null}
-            <AnswerButton
-              id="autes"
-              onClick={(e) => handleQuiz1(e)}
-              value={
-                randomObject !== undefined ? randomObject.fields.reponse1 : ""
-              }
-            />
-            {openModalQuiz4 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz4}
-                correctAnswer={openModalQuiz1}
-                score={counterScore}
-                questionNumber={counter}
-                tip={randomObject.fields.conseil_zero_dechet}
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
-              />
-            ) : null}
+              {openModalQuizFinalScore ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFinalScore}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={{
+                    src: "src/assets/yellow-container.png",
+                    alt: "yellow bin",
+                    className: "yellowBinImg",
+                  }}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
       </section>

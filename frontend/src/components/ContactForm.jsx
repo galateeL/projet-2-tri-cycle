@@ -7,9 +7,9 @@ export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
-
   return (
     <div className="contactform">
+      <Header />
       <form
         onSubmit={() => {
           console.warn(
@@ -17,7 +17,6 @@ export default function ContactForm() {
           );
         }}
       >
-        <Header />
         <label className="labelform" htmlFor="name">
           <h2 className="stringform">Nom :</h2>
           <input
@@ -48,10 +47,10 @@ export default function ContactForm() {
             onChange={(e) => setMail(e.target.value)}
           />
         </label>
-        <label className="labelform" htmlFor="message">
+        <label className="labelaeraform" htmlFor="message">
           <h2 className="stringform">Message:</h2>
           <input
-            className="inputform"
+            className="inputaeraform"
             id="message"
             type="text"
             value={message}

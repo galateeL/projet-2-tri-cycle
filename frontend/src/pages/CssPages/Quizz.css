@@ -12,11 +12,14 @@
   height: 100%;
 }
 
-#En_déchèterie {
+#En_decheterie {
   background-image: url("../../assets/bennes-decheterie.png");
   background-size: 90%;
   background-position: 50%;
   background-repeat: no-repeat;
+}
+.answerBtnContainer {
+  display: flex;
 }
 
 #bac-jaune {
@@ -26,14 +29,14 @@
   background-repeat: no-repeat;
 }
 
-#sac_d’ordures_ménagères {
+#sac_d-ordures_menageres {
   background-image: url("../../assets/rubbish-bag.png");
   background-size: 80%;
   background-position: 50%;
   background-repeat: no-repeat;
 }
 
-#autes {
+#autres {
   background-image: url("../../assets/other-waste-icon.png");
   background-size: 80%;
   background-position: 50%;

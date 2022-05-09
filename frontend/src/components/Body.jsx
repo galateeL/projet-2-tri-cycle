@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import WasteDataSheet from "@pages/WasteDataSheet";
 import Quizz from "@pages/Quizz";
+import WasteDataSheet from "../pages/WasteDataSheet";
 import DataSheetContext from "../contexts/DataSheetContext";
 import Home from "../pages/Home";
 import QuizHome from "../pages/QuizHome";
