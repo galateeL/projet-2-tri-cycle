@@ -5,17 +5,18 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  height: 100%;
 }
 
 .titleQuizHome {
-  font-family: "Sacramento", cursive;
+  font-family: var(--third-font);
   font-size: 4rem;
   color: white;
   background-color: var(--fourth-color);
-  min-width: 180px;
-  max-width: 300px;
+  width: 70vw;
+  max-width: 500px;
   height: 6rem;
-  border-radius: 2rem;
+  border-radius: 30px;
   margin-top: 50px;
   margin-bottom: 0.2rem;
   text-align: center;
@@ -24,11 +25,20 @@
   justify-content: center;
 }
 
-.rubikIcon {
+.titleQuizHomeContainer {
   position: relative;
-  width: 25%;
-  top: -85px;
-  left: 217px;
+}
+
+.rubikIcon {
+  z-index: 1;
+  position: absolute;
+  min-width: initial;
+  max-width: initial;
+  width: 5rem;
+  height:5rem;
+  max-height: 6rem;
+  top: 40%;
+  right: -7%;
 }
 
 .btnContainerQuizHome {
@@ -38,31 +48,36 @@
   align-items: center;
 }
 
-.btnContainerQuizHome img {
-  width: 150px;
-}
 
 .playBtnContainer button {
-  width: 170px;
-  height: 80px;
+  margin-top: 5vw;
+  width: 45vw;
+  min-height: 80px;
+  height: 15vw;
+  max-height: 100px;
   font-size: 2rem;
   font-weight: bold;
   color: white;
   background-color: var(--secondary-color);
   border: none;
-  border-radius: 1rem;
+  border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   margin-bottom: 3rem;
 }
+
+
 .exitBtnContainer button {
-  width: 130px;
-  height: 60px;
+  width: 35vw;
+  height: 20vw;
+  min-width: 150px;
+  max-width: 45vw;
+  max-height: 100px;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
   background-color: red;
   border: none;
-  border-radius: 1rem;
+  border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   margin-bottom: 3rem;
   margin-top: 3rem;
