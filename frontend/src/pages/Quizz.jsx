@@ -55,7 +55,7 @@ export default function Quizz() {
     <div>
       <Header />
       <section className="playContainer">
-        <div className="playContainer2" >
+        <div className="playContainerCounter">
           <h1 id="play">A toi de jouer !</h1>
           <div className="Container">
             <h4 className="counter">{counter}/5</h4>
