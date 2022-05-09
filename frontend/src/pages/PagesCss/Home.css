@@ -1,36 +1,86 @@
-.logoImage {
-  width: 70%;
-  max-width: 600px;
-  min-width: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
+
+.topPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.logoTitre {
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin-block-end: auto;
+.logoImage {
+  width: 70vw;
+  max-width: 400px;
 }
 
 .triTitre {
-  position: relative;
-  font-size: 10vw;
+  font-size: 5rem;
   font-family: var(--third-font);
-  justify-content: center;
-  color: #77df4a;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--secondary-color);
+}
+
+.presentation:first-letter {
+  font-family: var(--third-font);
+  font-size: 13vw;
+  color: var(--first-color);
+  line-height: 0.3;
+}
+
+.presentation {
+  font-family: "Roboto, Verdana, sans-serif";
+  margin-top: 50px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: justify;
+  font-size: 5vw;
 }
 
 .flecheImg {
-  image-rendering: 10%;
-  margin-left: 5%;
-  width: 20%;
-  max-width: 20px;
-  min-width: 90px;
-  display: flex;
-  text-align: center;
-  justify-items: center;
+  margin-top: 10px;
+  width: 15vw;
+  height: 15vw;
 }
+
+.flecheButton {
+  border-radius: 50%;
+  border: 0px;
+}
+
+.tripoubelles {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: var(--first-color);
+  font-family: var(--third-font);
+  font-size: 1.2rem;
+}
+
+.logoTriPoubelles {
+  margin-top: 5px;
+  width: 40vw;
+}
+
+.buttonQuizz {
+  width: 100%;
+  height: 100%;
+  min-width: 70%;
+  min-height: 70%;
+  border-radius: 30px;
+  background-color: var(--fourth-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  font-size-adjust: 0.5;
+  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+  padding-bottom: 20%;
+  font-family: var(--third-font);
+  margin-left: 5px;
+}
+
+
 
 .imgButton {
   margin-left: 5%;
@@ -42,60 +92,14 @@
   justify-content: space-between;
 }
 
-.presentation {
-  margin: 5% 5% 10% 5%;
-  display: block;
-  text-align: justify;
-  font-size: 5vw;
-  font-weight: lighter;
-}
-
-.presentation:first-letter {
-  font-family: var(--third-font);
-  font-size: 13vw;
-  color: #6097eeff;
-  line-height: 0.3;
-}
-
-.buttonFleche {
-  background: scroll;
-  border-radius: 50%;
-  text-align: center;
-}
-
 .buttonImg {
   border-radius: 50%;
   border: 0px;
   background-color: white;
-  box-shadow: 10px;
-  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
-}
-
-.flecheButton {
-  border-radius: 50%;
-  border: 0px;
-}
-
-.triopoubelles {
-  text-align: center;
-  margin: 5% 0px 0px 10%;
-  color: #6097eeff;
-  font-family: Georgia;
-  font-size: 4vw;
-  width: 80%;
-  height: 800%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: var(--third-font);
-}
-.logoTriPoubelles {
-  text-align: center;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .divQuizz {
+  font-family: "Roboto, Verdana, sans-serif";
   display: flex;
   margin-top: 10%;
   margin-bottom: -20vw;
@@ -103,36 +107,15 @@
   height: 50vw;
 }
 
-.buttonQuizz {
-  width: 100%;
-  height: 100%;
-  min-width: 70%;
-  min-height: 70%;
-  border-radius: 8vw;
-  background-color: #ff9d00ff;
-  border: none;
-  color: white;
-  font-size: 8vw;
-  font-size-adjust: 0.5;
-  box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
-  box-shadow: 10px;
-  padding-bottom: 20%;
-  font-family: var(--third-font);
-  margin-left: 5px;
-}
-.buttonQuizz:hover {
-  background-color: #fae56f; /* Green */
-  color: white;
-}
-
 .buttonSearch {
   width: 100%;
   height: 100%;
   border-radius: 8vw;
-  background-color: #6097eeff;
+  background-color: var(--first-color);
   border: none;
   color: white;
-  font-size: 8vw;
+  font-size: 2rem;
+  font-weight: bold;
   font-size-adjust: 0.5;
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
   box-shadow: 10px;
@@ -142,10 +125,6 @@
   padding-right: 3vw;
   margin-right: 10px;
   text-align: center;
-}
-.buttonSearch:hover {
-  background-color: #cbcff7; /* Green */
-  color: white;
 }
 
 .linkButton {
@@ -194,6 +173,7 @@
 }
 
 .divSearch {
+  font-family: "Roboto, Verdana, sans-serif";
   display: flex;
   margin: 50px 0% 5px 0%;
   text-align: center;
@@ -247,13 +227,12 @@
     width: 85%;
     height: 150%;
     border-radius: 8vw;
-    background-color: #ff9d00ff;
+    background-color: var(--fourth-color);
     border: none;
     color: white;
     font-size: 10vw;
     font-size-adjust: 0.5;
     box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
-    box-shadow: 10px;
     padding-bottom: 20%;
     font-family: var(--third-font);
     margin-left: 5px;
@@ -277,10 +256,10 @@
     width: 85%;
     height: 150%;
     border-radius: 8vw;
-    background-color: #6097eeff;
+    background-color: var(--first-color);
     border: none;
     color: white;
-    font-size: 7vw;
+    font-size: 2rem;
     font-size-adjust: 0.5;
     box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
     box-shadow: 10px;
