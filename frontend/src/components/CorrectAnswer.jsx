@@ -22,8 +22,11 @@ function CorrectAnswer(props) {
             alt="perfect"
             className="perfectImg"
           />
-          <h5>Bien joué, la bonne réponse est :</h5>
-          <p>{answer}</p>
+          <p className="goodGame">
+            Bien joué ! <br />
+            la bonne réponse est :
+          </p>
+          <p className="rightAnswerWas">{answer}</p>
           <Score score={score} />
           <Tip tip={tip} />
           <NextQuestion
@@ -43,7 +46,7 @@ function CorrectAnswer(props) {
           </div>
           <div className="correctAnswerContainer">
             <h5>la bonne réponse était</h5>
-            <p>{answer}</p>
+            <p className="rightAnswerWas">{answer}</p>
           </div>
           <Score score={score} />
           <Tip tip={tip} />
