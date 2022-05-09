@@ -1,12 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import Header from "../components/Header";
 import DataSheetContext from "../contexts/DataSheetContext";
-
+import CounterContext from "../contexts/CounterContext";
 import "./CssPages/Quizz.css";
 import ModalQuiz from "../components/ModalQuiz";
 
 export default function Quizz() {
   const { waste } = useContext(DataSheetContext);
+  const { count } = useContext(CounterContext);
   const [randomObject, setRandomObject] = useState();
   function randomQuizz() {
     const randomtoto = Math.floor(Math.random() * waste.length);
@@ -27,7 +28,10 @@ export default function Quizz() {
       <section className="playContainer">
         <div>
           <h1 id="play">A toi de jouer !</h1>
-          <h2 id="question">Où jettes-tu...</h2>
+          <div>
+            <span className="counter"> {count} </span>
+            <h2 id="question">Où jettes-tu...</h2>
+          </div>
           <h3 className="nameWaste">
             {randomObject !== undefined ? randomObject.fields.description : ""}
           </h3>
