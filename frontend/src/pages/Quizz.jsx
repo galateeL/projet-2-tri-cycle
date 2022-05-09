@@ -1,177 +1,165 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useMemo } from "react";
 import Header from "../components/Header";
 import DataSheetContext from "../contexts/DataSheetContext";
-import CounterContext from "../contexts/CounterContext";
+import QuizContext from "../contexts/QuizContext";
+
 import "./CssPages/Quizz.css";
 import ModalQuiz from "../components/ModalQuiz";
+import AnswerButton from "../components/AnswerButton";
 
 export default function Quizz() {
   const { waste } = useContext(DataSheetContext);
-  const { count } = useContext(CounterContext);
+  const [counterScore, setCounterScore] = useState(0);
+  const [counter, setCounter] = useState(1);
   const [randomObject, setRandomObject] = useState();
+
   function randomQuizz() {
-    const randomtoto = Math.floor(Math.random() * waste.length);
-    return setRandomObject(waste[randomtoto]);
+    const randomQuestion = Math.floor(Math.random() * waste.length);
+
+    return setRandomObject(waste[randomQuestion]);
   }
 
   useEffect(() => {
     randomQuizz();
   }, [waste]);
 
-  const [openModalQuiz1, setOpenModalQuiz1] = useState(false);
-  const [openModalQuiz2, setOpenModalQuiz2] = useState(false);
-  const [openModalQuiz3, setOpenModalQuiz3] = useState(false);
-  const [openModalQuiz4, setOpenModalQuiz4] = useState(false);
+  useEffect(() => {
+    if (counter > 6) {
+      setCounter(1);
+    }
+  }, [counter]);
+
+  const [openModalQuizTrue, setOpenModalQuizTrue] = useState(false);
+  const [openModalQuizFalse, setOpenModalQuizFalse] = useState(false);
+  const [openModalQuizFinishGame, setOpenModalQuizFinishGame] = useState(false);
+  const [openModalQuizFinalScore, setOpenModalQuizFinalScore] = useState(false);
+
+  function handleQuiz(e) {
+    if (e.nativeEvent.target.value === randomObject.fields.reponse1) {
+      setOpenModalQuizTrue(true);
+      setCounter(counter + 1);
+      setCounterScore(counterScore + 1);
+    } else setOpenModalQuizFalse(true);
+    setCounter(counter + 1);
+  }
+
+  function handleQuiz1(e) {
+    const buttonValue = e.nativeEvent.target.value;
+    if (
+      buttonValue === "En déchèterie ou écopoint" ||
+      buttonValue === "Dans le sac ou bac jaune" ||
+      buttonValue === "Dans le sac d’ordures ménagères"
+    ) {
+      setOpenModalQuizFalse(true);
+      setCounter(counter + 1);
+    } else setOpenModalQuizTrue(true);
+    setCounter(counter + 1);
+    setCounterScore(counterScore + 1);
+  }
+  const QuestRand = useMemo(() => randomQuizz, []);
   return (
     <div>
       <Header />
-      <section className="playContainer">
-        <div>
-          <h1 id="play">A toi de jouer !</h1>
+      <QuizContext.Provider value={QuestRand}>
+        <section className="playContainer">
           <div>
-            <span className="counter"> {count} </span>
-            <h2 id="question">Où jettes-tu...</h2>
+            <h1 id="play">A toi de jouer !</h1>
+            <h2 id="question">Où jettes-tu cet objet ...</h2>
+            <h3 className="nameWaste">
+              {randomObject !== undefined
+                ? randomObject.fields.description
+                : ""}{" "}
+              ?
+            </h3>
+            <h4 className="counter">{counter}/5</h4>
+            <img
+              className="waste"
+              src={
+                randomObject !== undefined ? randomObject.fields.nom_image : ""
+              }
+              alt="dechet"
+            />
           </div>
-          <h3 className="nameWaste">
-            {randomObject !== undefined ? randomObject.fields.description : ""}
-          </h3>
-          <img
-            className="waste"
-            src={
-              randomObject !== undefined ? randomObject.fields.nom_image : ""
-            }
-            alt="dechet"
-          />
-        </div>
-        <div className="pictureButton">
-          <div className="answerBtnContainer">
-            <button
-              type="button"
-              className="openModalBtn"
-              onClick={() => {
-                setOpenModalQuiz1(true);
-              }}
-            >
-              <img
-                src="/src/assets/bennes-decheterie.png"
-                className="quizzButtonImgDechetterie"
-                alt="dechet"
-                height="90"
-                width="90"
+          <div className="pictureButton">
+            <div className="answerBtnContainer">
+              <AnswerButton
+                id="En_decheterie"
+                onClick={(e) => handleQuiz(e)}
+                value="En déchèterie ou écopoint"
               />
-            </button>
-            {openModalQuiz1 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz1}
-                correctAnswer={false}
-                score={4}
-                questionNumber={5}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
-              />
-            ) : null}
+              {openModalQuizTrue ? (
+                <ModalQuiz
+                  title={randomObject.fields.description}
+                  closeModal={setOpenModalQuizTrue}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={randomObject.fields.reponse1}
+                />
+              ) : null}
 
-            <button
-              type="button"
-              className="openModalBtn"
-              onClick={() => {
-                setOpenModalQuiz2(true);
-              }}
-            >
-              {" "}
-              <img
-                className="quizzButtonImgYellowContainer"
-                src="/src/assets/yellow-container.png"
-                alt="dechet"
-                height="90"
-                width="90"
+              <AnswerButton
+                id="bac-jaune"
+                onClick={(e) => handleQuiz(e)}
+                value="Dans le sac ou bac jaune"
               />
-            </button>
-            {openModalQuiz2 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz2}
-                correctAnswer
-                score={2}
-                questionNumber={4}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={
-                  <img
-                    src="src/assets/yellow-container.png"
-                    alt="yellow bin"
-                    className="yellowBinImg"
-                  />
+              {openModalQuizFalse ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFalse}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={randomObject.fields.reponse1}
+                />
+              ) : null}
+            </div>
+            <div className="answerBtnContainer">
+              <AnswerButton
+                id="sac_d-ordures_menageres"
+                onClick={(e) => handleQuiz(e)}
+                value="Dans le sac d’ordures ménagères"
+              />
+              {openModalQuizFinishGame ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFinishGame}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={{
+                    src: "src/assets/yellow-container.png",
+                    alt: "yellow bin",
+                    className: "yellowBinImg",
+                  }}
+                />
+              ) : null}
+              <AnswerButton
+                id="autres"
+                onClick={(e) => handleQuiz1(e)}
+                value={
+                  randomObject !== undefined ? randomObject.fields.reponse1 : ""
                 }
               />
-            ) : null}
+              {openModalQuizFinalScore ? (
+                <ModalQuiz
+                  closeModal={setOpenModalQuizFinalScore}
+                  correctAnswer={openModalQuizTrue}
+                  score={counterScore}
+                  questionNumber={counter}
+                  tip={randomObject.fields.conseil_zero_dechet}
+                  answer={{
+                    src: "src/assets/yellow-container.png",
+                    alt: "yellow bin",
+                    className: "yellowBinImg",
+                  }}
+                />
+              ) : null}
+            </div>
           </div>
-          <div className="answerBtnContainer">
-            <button
-              type="button"
-              className="openModalBtn"
-              onClick={() => {
-                setOpenModalQuiz3(true);
-              }}
-            >
-              {" "}
-              <img
-                className="quizzButtonImg"
-                src="/src/assets/rubbish-bag.png"
-                alt="dechet"
-                height="90"
-                width="90"
-              />
-            </button>
-            {openModalQuiz3 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz3}
-                correctAnswer={false}
-                score={2}
-                questionNumber={5}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
-              />
-            ) : null}
-            <button
-              type="button"
-              className="openModalBtn"
-              onClick={() => {
-                setOpenModalQuiz4(true);
-              }}
-            >
-              {" "}
-              <img
-                className="quizzButtonImg"
-                src="/src/assets/other-waste-icon.png"
-                alt="dechet"
-                height="90"
-                width="90"
-              />
-            </button>
-            {openModalQuiz4 ? (
-              <ModalQuiz
-                closeModal={setOpenModalQuiz4}
-                correctAnswer={false}
-                score={2}
-                questionNumber={5}
-                tip="Réutilisez votre bidon de lessive pour le remplir auprès d’un magasin de vrac ou pour y mettre votre lessive faite maison"
-                answer={{
-                  src: "src/assets/yellow-container.png",
-                  alt: "yellow bin",
-                  className: "yellowBinImg",
-                }}
-              />
-            ) : null}
-          </div>
-        </div>
-      </section>
+        </section>
+      </QuizContext.Provider>
     </div>
   );
 }

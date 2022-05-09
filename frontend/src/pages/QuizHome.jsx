@@ -1,6 +1,6 @@
-import Header from "@components/Header";
-import PlayQuizBtn from "@components/PlayQuizBtn";
-import ExitQuizBtn from "@components/ExitQuizBtn";
+import Header from "../components/Header";
+import PlayQuizBtn from "../components/PlayQuizBtn";
+import ExitQuizBtn from "../components/ExitQuizBtn";
 import rubikIcon from "../assets/rubik-game.png";
 import planetEarth from "../assets/planet-earth.png";
 import "./CssPages/QuizHome.css";

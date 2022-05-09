@@ -9,6 +9,30 @@
   width: 100vw;
   height: 100%;
 }
+#En_decheterie {
+  background-image: url("../../assets/bennes-decheterie.png");
+  background-size: contain;
+}
+#bac-jaune {
+  background-image: url("../../assets/yellow-container.png");
+  background-position: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+#sac_d-ordures_menageres {
+  background-image: url("../../assets/rubbish-bag.png");
+  background-size: contain;
+}
+#autres {
+  background-image: url("../../assets/other-waste-icon.png");
+  background-size: contain;
+}
+.openModalBtn {
+  font-size: 0.7rem;
+}
+.answerBtnContainer {
+  display: flex;
+}
 
 .quizzButtonImg {
   width: 19vw;
@@ -48,9 +72,9 @@
   justify-content: center;
   align-items: center;
   font-family: "Sacramento", cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 2.4rem;
-  min-width: 300px;
+  min-width: 370px;
   margin: 0 auto;
 }
 
@@ -84,4 +108,10 @@
   background-color: rgba(214, 225, 236, 0.863);
   margin: 2vw;
   box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.25);
+}
+
+.counter {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
 }

@@ -1,18 +1,22 @@
-import { React, useContext } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import CounterContext from "../contexts/CounterContext";
+import QuizContext from "../contexts/QuizContext";
 
 function NextQuestion(props) {
-  const { questionNumber, setIsFinished } = props;
-  const { count, setCount } = useContext(CounterContext);
+  const { closeModal, questionNumber, setIsFinished } = props;
+  const QuestRand = useContext(QuizContext);
+  function handleClickCloseModalRandomQuiz() {
+    closeModal(false);
+    QuestRand();
+  }
   return (
     <div className="endGame">
-      {questionNumber < 5 ? (
+      {questionNumber < 6 ? (
         <div className="nextQuestionBtnContainer">
           <button
             type="button"
-            onClick={() => setCount(count + 1)}
-            classeName="nextQuestionBtn"
+            onClick={handleClickCloseModalRandomQuiz}
+            className="nextQuestionBtn"
           >
             <span>Question suivante</span>
             <img
@@ -38,11 +42,13 @@ function NextQuestion(props) {
 }
 
 NextQuestion.propTypes = {
+  closeModal: PropTypes.func,
   questionNumber: PropTypes.number,
   setIsFinished: PropTypes.func,
 };
 
 NextQuestion.defaultProps = {
+  closeModal: () => {},
   questionNumber: 0,
   setIsFinished: () => {},
 };

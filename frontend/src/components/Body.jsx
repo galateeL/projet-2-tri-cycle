@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import Quizz from "../pages/Quizz";
+import Quizz from "@pages/Quizz";
+import WasteDataSheet from "../pages/WasteDataSheet";
 import DataSheetContext from "../contexts/DataSheetContext";
-import CounterContext from "../contexts/CounterContext";
 import Home from "../pages/Home";
 import QuizHome from "../pages/QuizHome";
 import Research from "../pages/Research";
+import ContactForm from "./ContactForm";
 
 export default function Body() {
   const [waste, setWaste] = useState([]);
-  const [count, setCount] = useState(1);
   const getWaste = () => {
     axios
       .get(
@@ -28,14 +28,14 @@ export default function Body() {
   return (
     <div>
       <DataSheetContext.Provider value={foo}>
-        <CounterContext.Provider value={(count, setCount)}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="QuizHome" element={<QuizHome />} />
-            <Route path="Research" element={<Research />} />
-            <Route path="Quizz" element={<Quizz />} />
-          </Routes>
-        </CounterContext.Provider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="QuizHome" element={<QuizHome />} />
+          <Route path="Quizz" element={<Quizz />} />
+          <Route path="Research" element={<Research />} />
+          <Route path="ContactForm" element={<ContactForm />} />
+          <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
+        </Routes>
       </DataSheetContext.Provider>
     </div>
   );

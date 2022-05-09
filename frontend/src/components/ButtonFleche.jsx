@@ -15,7 +15,7 @@ export default function ButtonFleche() {
       onClick={() => directionBas()}
     >
       <img
-        classeName="flecheImg"
+        className="flecheImg"
         src="/src/assets/flecheBas1.png"
         alt="dechet"
         height="60"

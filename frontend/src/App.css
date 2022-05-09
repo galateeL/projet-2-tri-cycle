@@ -19,37 +19,3 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
-
-.headerResearch {
-  display: grid;
-  grid-template-columns: 0%;
-  border: solid black 1px;
-  width: 20vw;
-  height: 100vh;
-}
-
-.menuResearch {
-  background-color: #77df4a;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20vw;
-  height: 20vh;
-}
-
-.headerResearch {
-  display: grid;
-  grid-template-columns: 0%;
-  border: solid black 1px;
-  width: 20vw;
-  height: 100vh;
-}
-
-.menuResearch {
-  background-color: #77df4a;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20vw;
-  height: 20vh;
-}
