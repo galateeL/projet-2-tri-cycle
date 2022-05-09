@@ -1,8 +1,8 @@
-import Header from "@components/Header";
-import ButtonQuizz from "@components/ButtonQuizz";
-import ButtonSearch from "@components/ButtonSearch";
-import ButtonFleche from "@components/ButtonFleche";
-import trioPoubelles from "@assets/recycling-color.png";
+import trioPoubelles from "../assets/recycling-color.png";
+import ButtonSearch from "../components/ButtonSearch";
+import ButtonFleche from "../components/ButtonFleche";
+import ButtonQuizz from "../components/ButtonQuizz";
+import Header from "../components/Header";
 import logo from "../assets/logo-ss-fond.png";
 import "./PagesCss/Home.css";
 
@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="triTitre">Tri&apos;cycle</h1>
         </div>
         <p className="presentation">
-          Salut! Bienvenue sur Tri&apos;Cycle! Vous pourrez apprendre sur
+          Salut! Bienvenue sur Tri&apos;cycle! Vous pourrez apprendre sur
           l&apos;écologie, tout en vous amusant en famille! Cliquez sur le jeux
           pour commencer votre Quizz favori, ou bien, cliquez sur recherche pour
           accéder directement aux fiches informatives et devenir un expert du
@@ -48,9 +48,7 @@ export default function Home() {
 
         <p className="pQ">
           Entrez dans notre quizz écologique, où de nombreuses questions sur le
-          tri des déchets vous attendent. Des fiches explicatives viendront
-          compléter votre curiosité et votre culture. Les questions sont
-          accessibles aux plus jeunes! Alors, êtes vous prêt à devenir
+          tri des déchets vous attendent. Alors, êtes vous prêt à devenir
           imbattable sur le tri ?
         </p>
       </div>
@@ -64,10 +62,9 @@ export default function Home() {
           />
         </div>
         <p className="pS">
-          Vous voulez jeter votre bidon de lessive, votre ampoule, votre clef à
-          molette, ou votre chaussette? Mais vous ne savez plus très bien où
-          vous en débarasser? Vous êtes au bon endroit! Ici vous trouverez votre
-          bonheur, et plus encore! Bienvenue dans la culture écologique du tri!
+          Vous voulez jeter votre bidon de lessive, votre ampoule, ou votre
+          chaussette? Mais vous ne savez plus très bien où vous en débarasser?
+          Vous êtes au bon endroit! Bienvenue dans la culture écologique du tri!
         </p>
       </div>
     </div>
