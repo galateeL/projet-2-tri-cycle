@@ -83,34 +83,33 @@
 }
 
 @media screen and (min-width: 850px) {
+  .btnContainerQuizHome {
+    margin-top: 20vh;
+    display: initial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.btnContainerQuizHome {
-  margin-top : 20vh;
-  display: initial;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .exitBtnContainer button {
+    margin: initial;
+    margin-left: 4vw;
+    font-size: 3.5rem;
+    width: 25vw;
+    min-height: initial;
+    max-height: initial;
+    height: initial;
+    height: 10vh;
+  }
 
-.exitBtnContainer button {
-  margin: initial;
-  margin-left: 4vw;
-  font-size: 3.5rem;
-  width: 25vw;
-  min-height: initial;
-  max-height: initial;
-  height: initial;
-  height: 10vh;
-}
-
-.playBtnContainer button {
-  margin: initial;
-  margin-right: 4vw;
-  width: 25vw;
-  font-size: 3.5rem;
-  min-height: initial;
-  max-height: initial;
-  height: initial;
-  height: 10vh;
-}
+  .playBtnContainer button {
+    margin: initial;
+    margin-right: 4vw;
+    width: 25vw;
+    font-size: 3.5rem;
+    min-height: initial;
+    max-height: initial;
+    height: initial;
+    height: 10vh;
+  }
 }
