@@ -3,7 +3,7 @@ import "./CssComponents/Header.css";
 import homeWhite from "../assets/homeWhite3.png";
 import research from "../assets/loupeWhite.png";
 import quiz from "../assets/quizWhite4.png";
-import help from "../assets/envelope2.png";
+import help from "../assets/envelope4.png";
 
 export default function Header() {
   return (
