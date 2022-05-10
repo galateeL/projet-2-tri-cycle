@@ -122,6 +122,7 @@ div .emailone p {
     box-sizing: border-box;
     resize: vertical;
     background-color: rgb(216, 220, 224);
+    padding-left: 12px;
   }
 
   .inputaeraform {
