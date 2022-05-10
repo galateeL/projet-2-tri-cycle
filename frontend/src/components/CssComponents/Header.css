@@ -27,7 +27,6 @@
 }
 
 @media screen and (min-width: 320px) {
-
   .nav img {
     max-width: 9vw;
     max-height: 9vw;
@@ -35,13 +34,12 @@
 
   .second-container-nav img {
     margin: initial;
-    margin-top:6px;
+    margin-top: 6px;
     margin-right: 2vw;
     max-width: initial;
     width: 11vw;
     height: 8vw;
   }
-
 }
 @media screen and (min-width: 768px) {
   .second-container-nav img {

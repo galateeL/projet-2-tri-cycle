@@ -62,11 +62,7 @@ function CorrectAnswer(props) {
 }
 
 CorrectAnswer.propTypes = {
-  answer: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    className: PropTypes.string,
-  }),
+  answer: PropTypes.string,
   closeModal: PropTypes.func,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
@@ -76,11 +72,7 @@ CorrectAnswer.propTypes = {
 };
 
 CorrectAnswer.defaultProps = {
-  answer: {
-    src: "",
-    alt: "",
-    className: "",
-  },
+  answer: "",
   closeModal: () => {},
   correctAnswer: true,
   score: 0,
