@@ -30,35 +30,38 @@ export default function Home() {
           alt="triPoubelles"
         />
       </div>
-      <div className="divQuizz">
-        <div className="divButtonQuizz">
-          <ButtonQuizz />
-          <img
-            src="../src/assets/rubik-game.png"
-            className="imgQuizzButton"
-            alt="QuizzImg"
-          />
-        </div>
+      <div className="bottomPage">
+        <div className="divQuizz">
+          <div className="divButtonQuizz">
+            <ButtonQuizz />
+            <img
+              src="../src/assets/rubik-game.png"
+              className="imgQuizzButton"
+              alt="QuizzImg"
+            />
+          </div>
 
-        <p className="pQ">
-          Entrez dans notre quizz écologique, où de nombreuses questions sur le
-          tri des déchets vous attendent. Prêt à devenir imbattable sur le tri ?
-        </p>
-      </div>
-      <div className="divSearch">
-        <div className="divButtonSearch">
-          <ButtonSearch />
-          <img
-            src="../src/assets/glass-blue.png"
-            className="imgSearchButton"
-            alt="SearchImg"
-          />
+          <p className="pQ">
+            Entrez dans notre quizz écologique, où de nombreuses questions sur
+            le tri des déchets vous attendent. Prêt à devenir imbattable sur le
+            tri ?
+          </p>
         </div>
-        <p className="pS">
-          Vous voulez jeter votre bidon ou votre chaussette? Mais vous ne savez
-          plus très bien où vous en débarasser? Vous êtes au bon endroit!
-          Bienvenue dans la culture écologique du tri!
-        </p>
+        <div className="divSearch">
+          <div className="divButtonSearch">
+            <ButtonSearch />
+            <img
+              src="../src/assets/glass-blue.png"
+              className="imgSearchButton"
+              alt="SearchImg"
+            />
+          </div>
+          <p className="pS">
+            Vous voulez jeter votre bidon ou votre chaussette? Mais vous ne
+            savez plus très bien où vous en débarasser? Vous êtes au bon
+            endroit! Bienvenue dans la culture écologique du tri!
+          </p>
+        </div>
       </div>
     </div>
   );
