@@ -30,8 +30,8 @@ export default function Body() {
       <DataSheetContext.Provider value={foo}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="QuizHome" element={<QuizHome />} />
           <Route path="Quizz" element={<Quizz />} />
+          <Route path="QuizHome" element={<QuizHome />} />
           <Route path="Research" element={<Research />} />
           <Route path="ContactForm" element={<ContactForm />} />
           <Route path="WasteDataSheet/:id" element={<WasteDataSheet />} />
