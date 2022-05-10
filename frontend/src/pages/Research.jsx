@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import "../components/CssComponents/WasteTable.css";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import WasteTable from "../components/WasteTable";
 import Amount from "../components/Amount";
@@ -9,45 +8,50 @@ import DataSheetContext from "../contexts/DataSheetContext";
 
 export default function Research() {
   const { waste } = useContext(DataSheetContext);
+  const [search, setSearch] = useState("");
   return (
     <div className="Research">
-      <HeaderResearchBase />
+      <HeaderResearchBase filterInput={setSearch} />
       <div className="table">
         <table>
           <thead>
             <tr>
-              <th>name</th>
-              <th>amount</th>
-              <th>more</th>
+              <th>Objet</th>
+              <th> Lieu De Dêpot</th>
+              <th>Conseil Recyclage</th>
             </tr>
           </thead>
           <tbody>
-            {waste.map((items) => (
-              <tr>
-                <Link to={`/WasteDataSheet/${items.recordid}`}>
+            {waste
+              .filter((item) =>
+                item.fields.description.toLowerCase().includes(search)
+              )
+              .map((items) => (
+                <tr>
                   <td>
-                    <WasteTable
-                      key={`W_${items.recordid}`}
-                      object={items.fields.description}
+                    <Link to={`/WasteDataSheet/${items.recordid}`}>
+                      <WasteTable
+                        key={`W_${items.recordid}`}
+                        object={items.fields.description}
+                      />
+                    </Link>
+                  </td>
+
+                  <td>
+                    <Amount
+                      key={`A_${items.recordid}`}
+                      object={items.fields.reponse1}
                     />
                   </td>
-                </Link>
 
-                <td>
-                  <Amount
-                    key={`A_${items.recordid}`}
-                    object={items.fields.reponse1}
-                  />
-                </td>
-
-                <td>
-                  <More
-                    key={`M_${items.recordid}`}
-                    object={items.fields.conseil_zero_dechet}
-                  />
-                </td>
-              </tr>
-            ))}
+                  <td>
+                    <More
+                      key={`M_${items.recordid}`}
+                      object={items.fields.conseil_zero_dechet}
+                    />
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
