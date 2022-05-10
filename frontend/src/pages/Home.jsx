@@ -5,6 +5,8 @@ import ButtonQuizz from "../components/ButtonQuizz";
 import Header from "../components/Header";
 import logo from "../assets/logo-ss-fond.png";
 import "./PagesCss/Home.css";
+import glassBlue from "../assets/glass-blue.png";
+import rubikGame from "../assets/rubik-game.png";
 
 export default function Home() {
   return (
@@ -39,11 +41,7 @@ export default function Home() {
       <div className="divQuizz">
         <div className="divButtonQuizz">
           <ButtonQuizz />
-          <img
-            src="../src/assets/rubik-game.png"
-            className="imgQuizzButton"
-            alt="QuizzImg"
-          />
+          <img src={rubikGame} className="imgQuizzButton" alt="QuizzImg" />
         </div>
 
         <p className="pQ">
@@ -54,11 +52,7 @@ export default function Home() {
       <div className="divSearch">
         <div className="divButtonSearch">
           <ButtonSearch />
-          <img
-            src="../src/assets/glass-blue.png"
-            className="imgSearchButton"
-            alt="SearchImg"
-          />
+          <img src={glassBlue} className="imgSearchButton" alt="SearchImg" />
         </div>
         <p className="pS">
           Jeter votre bidon, ou votre chaussette? Oui, mais où?... Ici vous
