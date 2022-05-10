@@ -16,7 +16,7 @@ function DoubleBtn() {
       </div>
 
       <div className="retryBtnContainer">
-        <Link to="/QuizHome" style={{ textDecoration: "none" }}>
+        <Link to="/Quiz" style={{ textDecoration: "none" }}>
           <button type="button" className="btnWhite" onClick="retryBtn">
             <span className="retryTxt">Rejouer</span>
             <img src={nextWhite} alt="retry" className="retryImg" />
