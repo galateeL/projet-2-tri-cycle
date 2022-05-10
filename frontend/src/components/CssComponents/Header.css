@@ -34,8 +34,12 @@
   }
 
   .second-container-nav img {
+    margin: initial;
+    margin-top:6px;
     margin-right: 2vw;
-    width: 15vw;
+    max-width: initial;
+    width: 11vw;
+    height: 8vw;
   }
 
   .second-container-nav img {
@@ -44,10 +48,16 @@
 }
 @media screen and (min-width: 768px) {
   .second-container-nav img {
+    width: initial;
+    max-width: initial;
     margin-right: 0.5vw;
+    width: 9vw;
+    height: 6vw;
+    max-height: 50px;
+    max-width: 80px;
   }
 
-  .nav img {
+  .first-container-nav img {
     min-width: 50px;
     min-height: 50px;
     max-width: 50px;
