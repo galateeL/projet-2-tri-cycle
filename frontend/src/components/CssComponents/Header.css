@@ -34,11 +34,10 @@
   }
 }
 
-.second-container-nav img {
-  margin-right: 3vw;
-}
-
-@media screen and (min-width: 768px) {
+  @media
+  screen
+  and
+  (min-width: 768px) {
   .second-container-nav img {
     margin-right: 0.5vw;
   }
