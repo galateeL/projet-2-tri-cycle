@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(241, 246, 252);
+  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .inputform {
@@ -35,6 +38,7 @@
   max-width: 70vw;
   flex-direction: column;
 }
+
 .labelaeraform {
   margin: 5vw 0vw 10vw 0vw;
   border-radius: 5px;
@@ -45,6 +49,7 @@
   max-width: 100vw;
   flex-direction: column;
 }
+
 .inputaeraform {
   display: flex;
   flex-direction: column;
@@ -59,6 +64,7 @@
   resize: vertical;
   background-color: rgb(216, 220, 224);
 }
+
 .inputformsubmit {
   color: white;
   margin-top: 1vw;
@@ -96,12 +102,14 @@ div .emailone p {
   margin-bottom: 5vw;
   color: rgb(132, 134, 136);
 }
+
 .emailone span {
   color: #77df4aff;
   font-weight: bolder;
   font-size: 6vw;
   line-height: 2em;
 }
+
 .emailimg1 {
   height: 18vw;
   display: block;
@@ -139,6 +147,7 @@ div .emailone p {
     resize: vertical;
     background-color: rgb(216, 220, 224);
   }
+
   .labelform {
     margin: 0vw 5vw 5vw 5vw;
     display: block;
@@ -148,6 +157,7 @@ div .emailone p {
     max-width: 70vw;
     flex-direction: column;
   }
+
   .inputformsubmit {
     color: white;
     margin-top: 0vw;
@@ -166,6 +176,7 @@ div .emailone p {
     font-size: 3vw;
     background-color: #77df4aff;
   }
+
   .labelaeraform {
     margin: 0vw 0vw 0vw 0vw;
     border-radius: 5px;
@@ -176,26 +187,31 @@ div .emailone p {
     max-width: 100vw;
     flex-direction: column;
   }
+
   .emailimg1 {
     height: 12vw;
     display: block;
     justify-content: center;
     margin: 5vw 0vw 5vw 0vw;
   }
+
   .emailone span {
     color: #77df4aff;
     font-weight: bolder;
     font-size: 4vw;
     line-height: 2em;
   }
+
   .stringform {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3vw;
     color: #6097eeff;
   }
+
   .emailone p {
     line-height: 0em;
   }
+  
   div .emailone p {
     margin: 0vw 0vw 0vw 0vw;
     font-size: 3vw;
