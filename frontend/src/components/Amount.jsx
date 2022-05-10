@@ -29,19 +29,11 @@ function Amount({ object }) {
 }
 
 Amount.propTypes = {
-  object: PropTypes.shape({
-    reponse1: PropTypes.string,
-    description: PropTypes.string,
-    conseil_zero_dechet: PropTypes.string,
-  }),
+  object: PropTypes.string,
 };
 
 Amount.defaultProps = {
-  object: PropTypes.shape({
-    reponse1: "object",
-    description: "le nom de l'object",
-    conseil_zero_dechet: "conseil zero dechet",
-  }),
+  object: "",
 };
 
 export default Amount;

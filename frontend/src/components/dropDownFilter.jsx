@@ -9,9 +9,9 @@ export default function Dropdown() {
   };
   return (
     <div className="dropdown">
-      <bouton className="filter-menu" type="button" onClick={showDropDown}>
+      <button className="filter-menu" type="button" onClick={showDropDown}>
         Filtrer
-      </bouton>
+      </button>
       <div className="dropdown-menu">
         {dropdown ? (
           <ul className="list-filter">
