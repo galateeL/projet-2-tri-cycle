@@ -6,11 +6,11 @@
   width: 100%;
 }
 
-.filter-menu{
-  all:unset;
+.filter-menu {
+  all: unset;
 }
 
-.filter-menu:hover{
+.filter-menu:hover {
   cursor: pointer;
 }
 

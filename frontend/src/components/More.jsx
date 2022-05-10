@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./CssComponents/WasteTable.css";
+import tipAmpoule from "../assets/idea.png";
 
 function More({ object }) {
   if (object === "") {
@@ -8,7 +9,7 @@ function More({ object }) {
   }
   return (
     <div className="wasteTable">
-      <img src="/src/assets/idea.png" alt="helloodd" />
+      <img src={tipAmpoule} alt="conseil recyclage" />
     </div>
   );
 }

@@ -5,6 +5,10 @@
   padding: initial;
   all: unset;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .previousPageBtn {
