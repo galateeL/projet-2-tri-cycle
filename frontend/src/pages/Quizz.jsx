@@ -34,10 +34,10 @@ export default function Quizz() {
   function handleQuiz(e) {
     if (e.nativeEvent.target.value === randomObject.fields.reponse1) {
       setOpenModalQuizTrue(true);
-      setCounter(counter + 1);
+      // setCounter(counter + 1);
       setCounterScore(counterScore + 1);
     } else setOpenModalQuizFalse(true);
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
   }
   function handleQuiz1(e) {
     const buttonValue = e.nativeEvent.target.value;
@@ -47,9 +47,9 @@ export default function Quizz() {
       buttonValue === "Dans le sac d’ordures ménagères"
     ) {
       setOpenModalQuizFalse(true);
-      setCounter(counter + 1);
+      // setCounter(counter + 1);
     } else setOpenModalQuizTrue(true);
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
     setCounterScore(counterScore + 1);
   }
   const QuestRand = useMemo(() => randomQuizz, []);
@@ -93,6 +93,8 @@ export default function Quizz() {
                     questionNumber={counter}
                     tip={randomObject.fields.conseil_zero_dechet}
                     answer={randomObject.fields.reponse1}
+                    counter={counter}
+                    setCounter={setCounter}
                   />
                 ) : null}
 
@@ -109,6 +111,8 @@ export default function Quizz() {
                     questionNumber={counter}
                     tip={randomObject.fields.conseil_zero_dechet}
                     answer={randomObject.fields.reponse1}
+                    counter={counter}
+                    setCounter={setCounter}
                   />
                 ) : null}
               </div>

@@ -14,6 +14,8 @@ function CorrectAnswer(props) {
     tip,
     questionNumber,
     setIsFinished,
+    counter,
+    setCounter,
   } = props;
   return (
     <div>
@@ -31,6 +33,8 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       ) : (
@@ -52,6 +56,8 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       )}
@@ -67,6 +73,8 @@ CorrectAnswer.propTypes = {
   tip: PropTypes.string,
   questionNumber: PropTypes.number,
   setIsFinished: PropTypes.func,
+  counter: PropTypes.number,
+  setCounter: PropTypes.func,
 };
 
 CorrectAnswer.defaultProps = {
@@ -77,6 +85,8 @@ CorrectAnswer.defaultProps = {
   tip: "Recycling tip",
   questionNumber: 0,
   setIsFinished: () => {},
+  counter: 1,
+  setCounter: () => {},
 };
 
 export default CorrectAnswer;
