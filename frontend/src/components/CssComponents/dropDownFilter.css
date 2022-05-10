@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+.filter-menu{
+  all:unset;
+}
+
+.filter-menu:hover{
+  cursor: pointer;
+}
+
 .list-filter {
   position: absolute;
   list-style: none;

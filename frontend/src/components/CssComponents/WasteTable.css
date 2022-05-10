@@ -5,6 +5,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+tr,
+td {
+  max-height: 2vh;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 tr:nth-child(even) {
   background-color: rgba(249, 250, 252, 1);
@@ -13,13 +24,11 @@ tr:nth-child(even) {
   width: 10vw;
   height: 10vw;
 }
-.table {
-  display: flex;
-  margin-left: 20rem;
-}
+
 thead {
   background-color: rgba(127, 96, 0, 0.5);
   height: 10vw;
+  font-size: 1rem;
 }
 #yellow-container {
   width: 5vh;
@@ -27,5 +36,4 @@ thead {
 }
 .Research {
   display: flex;
-  justify-content: center;
 }
