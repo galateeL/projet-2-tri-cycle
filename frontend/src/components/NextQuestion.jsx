@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import QuizContext from "../contexts/QuizContext";
+import nextQuestionButton from "../assets/next-white.png";
 
 function NextQuestion(props) {
   const { closeModal, questionNumber, setIsFinished } = props;
@@ -20,7 +21,7 @@ function NextQuestion(props) {
           >
             <span>Question suivante</span>
             <img
-              src="src/assets/next-white.png"
+              src={nextQuestionButton}
               alt="next question"
               className="nextQuestionImg"
             />

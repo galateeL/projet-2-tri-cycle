@@ -5,6 +5,8 @@ import ButtonQuizz from "../components/ButtonQuizz";
 import Header from "../components/Header";
 import logo from "../assets/logo-ss-fond.png";
 import "./PagesCss/Home.css";
+// import glassBlue from "../assets/glass-blue.png";
+// import rubikGame from "../assets/rubik-game.png";
 
 export default function Home() {
   return (

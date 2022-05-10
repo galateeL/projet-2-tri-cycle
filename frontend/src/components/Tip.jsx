@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import tipAmpoule from "../assets/idea.png";
 
 function Tip({ tip }) {
   return (
     <div className="tip">
-      <img src="src/assets/idea.png" alt="tip" className="tipImg" />
+      <img src={tipAmpoule} alt="tip" className="tipImg" />
       <p className="tipDetail">{tip}</p>
     </div>
   );
