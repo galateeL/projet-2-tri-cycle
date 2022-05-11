@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Score from "./Score";
 import DoubleBtn from "./DoubleBtn";
+import trophee from "../assets/trophee.png";
+import tryAgain from "../assets/refresh.png";
 
 function EndGame({ score }) {
   return (
@@ -10,11 +12,7 @@ function EndGame({ score }) {
         <div>
           <div className="congratsContainer">
             <h4>Bravo !</h4>
-            <img
-              src="src/assets/trophee.png"
-              alt="congratulations"
-              className="congratsImg"
-            />
+            <img src={trophee} alt="congratulations" className="congratsImg" />
           </div>
           <Score score={score} />
           <div className="Essai appel composant 2 boutons">
@@ -25,11 +23,7 @@ function EndGame({ score }) {
         <div>
           <div className="tryAgainContainer">
             <h4>Tu y es presque, la prochaine fois sera la bonne !</h4>
-            <img
-              src="src/assets/refresh.png"
-              alt="try again"
-              className="tryAgainImg"
-            />
+            <img src={tryAgain} alt="try again" className="tryAgainImg" />
           </div>
           <Score score={score} />
           <div className="DoubleBtnContainer">

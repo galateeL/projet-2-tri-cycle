@@ -3,15 +3,14 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import "./CssComponents/HeaderResearch.css";
 import logo from "../assets/logo-ss-fond.png";
-import home from "../assets/home-white.png";
-import research from "../assets/search-white.png";
+import home from "../assets/homeWhite3.png";
+import research from "../assets/loupeWhite.png";
 import filter from "../assets/filter-white.png";
-import arrowMenu from "../assets/flechevertemenu.png";
+import arrowMenu from "../assets/double-arrow.png";
 import Dropdown from "./dropDownFilter";
 
-export default function HeaderResearchBase(props) {
+export default function HeaderResearchBase({ filterInput }) {
   const [inactive, setInactive] = useState(false);
-  const { filterWord, handleFilter } = props;
 
   const handleShowNav = () => {
     setInactive(!inactive);
@@ -41,19 +40,18 @@ export default function HeaderResearchBase(props) {
               <p>Accueil</p>
             </NavLink>
           </div>
-          <p>
+          <div className="searchinput">
             <img src={research} alt="home" />
             <div className="search">
               <input
-                value={filterWord}
                 type="text"
                 placeholder="Type here ..."
                 onChange={(event) => {
-                  handleFilter(event.target.value);
+                  filterInput(event.target.value.toLowerCase());
                 }}
               />
             </div>
-          </p>
+          </div>
           <div className="filter">
             <img src={filter} alt="home" />
             <div className="filter-inactive">
@@ -67,13 +65,9 @@ export default function HeaderResearchBase(props) {
 }
 
 HeaderResearchBase.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  filterWord: PropTypes.string,
-  handleFilter: PropTypes.func,
+  filterInput: PropTypes.func,
 };
 
 HeaderResearchBase.defaultProps = {
-  // eslint-disable-next-line react/require-default-props
-  filterWord: "word",
-  handleFilter: () => {},
+  filterInput: () => {},
 };

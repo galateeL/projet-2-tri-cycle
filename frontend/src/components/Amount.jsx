@@ -1,47 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./CssComponents/WasteTable.css";
+import decheterie from "../assets/bennes-decheterie.png";
+import colonneVerre from "../assets/glass-container.png";
+import ordureMenagere from "../assets/rubbish-bag.png";
+import yellowContainer from "../assets/yellow-container.png";
+import otherWaste from "../assets/other-waste-icon.png";
 
 function Amount({ object }) {
   function getdechet() {
     if (object === "En déchèterie ou écopoint") {
-      return <img src="/src/assets/bennes-decheterie.png" alt="decheterie" />;
+      return <img src={decheterie} alt="decheterie" />;
     }
     if (object === "En colonne à verre") {
-      return <img src="/src/assets/glass-container.png" alt="hello" />;
+      return <img src={colonneVerre} alt="colonne verre" />;
     }
     if (object === "Dans le sac d’ordures ménagères") {
-      return <img src="/src/assets/rubbish-bag.png" alt="hello" />;
+      return <img src={ordureMenagere} alt="sac ordure menagere" />;
     }
     if (object === "Dans le sac ou bac jaune") {
       return (
         <img
           id="yellow-container"
-          src="/src/assets/yellow-container.png"
-          alt="hello"
+          src={yellowContainer}
+          alt="container jaune"
         />
       );
     }
-    return <img src="/src/assets/other-waste-icon.png" alt="hello" />;
+    return <img src={otherWaste} alt="autre dechet" />;
   }
 
   return <div className="wasteTable">{getdechet()}</div>;
 }
 
 Amount.propTypes = {
-  object: PropTypes.shape({
-    reponse1: PropTypes.string,
-    description: PropTypes.string,
-    conseil_zero_dechet: PropTypes.string,
-  }),
+  object: PropTypes.string,
 };
 
 Amount.defaultProps = {
-  object: PropTypes.shape({
-    reponse1: "object",
-    description: "le nom de l'object",
-    conseil_zero_dechet: "conseil zero dechet",
-  }),
+  object: "",
 };
 
 export default Amount;

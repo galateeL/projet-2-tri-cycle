@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
+import wrongAnswer from "../assets/wrong.png";
 import NextQuestion from "./NextQuestion";
 import Score from "./Score";
 import Tip from "./Tip";
+import validate from "../assets/validate.png";
 
 function CorrectAnswer(props) {
   const {
@@ -12,16 +14,14 @@ function CorrectAnswer(props) {
     tip,
     questionNumber,
     setIsFinished,
+    counter,
+    setCounter,
   } = props;
   return (
     <div>
       {correctAnswer ? (
         <div className="correctAnswer">
-          <img
-            src="src/assets/validate.png"
-            alt="perfect"
-            className="perfectImg"
-          />
+          <img src={validate} alt="perfect" className="perfectImg" />
           <p className="goodGame">
             Bien joué ! <br />
             la bonne réponse est :
@@ -33,13 +33,15 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       ) : (
         <div className="wrongAnswerContainer">
           <div className="wrongAnswer">
             <img
-              src="src/assets/wrong.png"
+              src={wrongAnswer}
               alt="wrong answer"
               className="wrongAnswerImg"
             />
@@ -54,6 +56,8 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       )}
@@ -62,31 +66,27 @@ function CorrectAnswer(props) {
 }
 
 CorrectAnswer.propTypes = {
-  answer: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    className: PropTypes.string,
-  }),
+  answer: PropTypes.string,
   closeModal: PropTypes.func,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   tip: PropTypes.string,
   questionNumber: PropTypes.number,
   setIsFinished: PropTypes.func,
+  counter: PropTypes.number,
+  setCounter: PropTypes.func,
 };
 
 CorrectAnswer.defaultProps = {
-  answer: {
-    src: "",
-    alt: "",
-    className: "",
-  },
+  answer: "",
   closeModal: () => {},
   correctAnswer: true,
   score: 0,
   tip: "Recycling tip",
   questionNumber: 0,
   setIsFinished: () => {},
+  counter: 1,
+  setCounter: () => {},
 };
 
 export default CorrectAnswer;

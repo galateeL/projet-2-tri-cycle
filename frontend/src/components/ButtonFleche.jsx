@@ -1,4 +1,5 @@
 import React from "react";
+import flecheBas from "../assets/flecheBas1.png";
 
 export default function ButtonFleche() {
   function directionBas() {
@@ -16,7 +17,7 @@ export default function ButtonFleche() {
     >
       <img
         className="flecheImg"
-        src="/src/assets/flecheBas1.png"
+        src={flecheBas}
         alt="dechet"
         height="60"
         width="60"

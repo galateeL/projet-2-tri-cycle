@@ -1,14 +1,14 @@
 .wasteDataSheetPage {
   height: 100vh;
-  min-width: 350px;
+  width: 100%;
   margin: initial;
   padding: initial;
   all: unset;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .previousPageBtn {
