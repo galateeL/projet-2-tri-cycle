@@ -39,7 +39,7 @@
   opacity: 0;
 }
 
-@media screen and (min-width: 76px) {
+@media screen and (min-width: 1024px) {
   .menu {
     font-size: 1.3rem;
   }
