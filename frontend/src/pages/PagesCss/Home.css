@@ -303,6 +303,8 @@
   }
 
   .bottomPage {
+    margin-left: 2vw;
+    margin-right: 2vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -346,13 +348,13 @@
 
   .pQ {
     text-align: left;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 1rem;
     font-size: 200%;
   }
 
   .pS {
     margin: initial;
+    padding-left: 1rem;
     text-align: left;
     margin-right: 5%;
     font-size: 200%;

@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(241, 246, 252);
+  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .inputform {
