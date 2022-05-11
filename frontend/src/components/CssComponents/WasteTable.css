@@ -1,17 +1,13 @@
 .wasteTable {
   border-top: 1px solid;
-  width: 25vw;
-  height: 20vw;
+  width: 30vw;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-tr,
-td {
-  max-height: 2vh;
-}
 a {
   text-decoration: none;
   color: black;
@@ -21,19 +17,84 @@ tr:nth-child(even) {
   background-color: rgba(249, 250, 252, 1);
 }
 .wasteTable img {
-  width: 10vw;
-  height: 10vw;
+  width: 7vw;
+  height: 7vw;
 }
 
 thead {
   background-color: rgba(127, 96, 0, 0.5);
-  height: 10vw;
+  height: 10vh;
   font-size: 1rem;
 }
 #yellow-container {
-  width: 5vh;
-  height: 10vh;
+  width: 5vw;
+  height: 5vh;
 }
 .Research {
   display: flex;
 }
+
+@media screen and (min-width: 768px) {
+
+  thead {
+    height: 8vh;
+    min-height: 100px;
+    font-size: 1.2rem;
+  }
+
+  .wasteTable img {
+    min-width: 50px;
+    min-height: 50px;
+    width: 4vh;
+    height: 4vh;
+  }
+
+  #yellow-container {
+    min-width: initial;
+    min-width: 35px;
+    min-height: 50px;
+    width: 3.5vh;
+    height: 4.5vh;
+  }
+
+  .wasteTable p {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  thead {
+    height: 10vh;
+    font-size: 1.2rem;
+  }
+
+  .wasteTable {
+    min-height: 65px;
+    width: 25vw;
+    height: 6vh;
+
+  }
+
+  .wasteTable img {
+    min-width: 50px;
+    min-height: 50px;
+    width: 4vh;
+    height: 4vh;
+  }
+
+  #yellow-container {
+    min-width: initial;
+    min-width: 35px;
+    min-height: 50px;
+    width: 3.5vh;
+    height: 4.5vh;
+  }
+
+  .wasteTable p {
+    font-size: 1rem;
+  }
+
+}
+

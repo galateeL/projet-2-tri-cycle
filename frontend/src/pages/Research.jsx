@@ -18,13 +18,13 @@ export default function Research() {
             <tr>
               <th>Objet</th>
               <th> Lieu De Dêpot</th>
-              <th>Conseil Recyclage</th>
+              <th id="adviceRecyclage">Conseil Recyclage</th>
             </tr>
           </thead>
           <tbody>
             {waste
               .filter((item) =>
-                item.fields.description.toLowerCase().includes(search)
+                item.fields.description.toLowerCase().startsWith(search)
               )
               .map((items) => (
                 <tr>
