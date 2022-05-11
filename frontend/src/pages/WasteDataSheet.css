@@ -1,0 +1,87 @@
+.wasteDataSheetPage {
+  height: 100vh;
+  width: 100%;
+  margin: initial;
+  padding: initial;
+  all: unset;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.previousPageBtn {
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  min-width: 7rem;
+  min-height: 2.5rem;
+  margin: 1.8rem;
+  display: block;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.linkpreviousPage {
+  text-decoration: none;
+}
+
+.wasteDataSheetContainer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 1.5rem;
+  max-width: 500px;
+  min-height: 400px;
+}
+
+.wasteImgContainer {
+  margin-bottom: 2rem;
+}
+
+.wasteImg {
+  max-width: 60%;
+  max-height: 60%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.wasteName {
+  font-weight: lighter;
+  color: white;
+  font-size: 1.8rem;
+  min-height: 3rem;
+  max-width: 400px;
+  background-color: rgba(127, 96, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  border-radius: 0.6rem;
+  margin: auto;
+  max-width: 500px;
+}
+
+.matiereTitle,
+.disposeOfWasteTitle,
+.tipWasteTitle {
+  color: initial;
+  background-color: initial;
+  border: initial;
+  width: initial;
+  margin: initial;
+  padding: initial;
+  font-weight: normal;
+  margin-top: 0.6rem;
+  height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.matiere,
+.disposeOfWaste,
+.tipWaste {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}

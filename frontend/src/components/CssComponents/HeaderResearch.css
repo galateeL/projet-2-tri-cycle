@@ -1,0 +1,159 @@
+.menu {
+  width: 52vw;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: width 0.2s ease-in;
+  font-size: 1.2rem;
+}
+
+.menu.inactive {
+  width: 6.2rem;
+}
+
+.menu.inactive .open-close {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.menu .open-close {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.link-home a {
+  display: flex;
+  text-decoration: none;
+  width: 40%;
+}
+
+.menu.inactive .link-home p {
+  display: none;
+  outline: none;
+  opacity: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 40px;
+}
+
+.menu.inactive .filter-inactive {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    font-size: 1.3rem;
+  }
+  .menu.inactive {
+    width: 52vw;
+  }
+
+  .menu.inactive .link-home p {
+    display: block;
+    opacity: 1;
+  }
+
+  .menu.inactive .link-home a {
+    align-items: center;
+  }
+
+  .menu.inactive .filter-inactive {
+    opacity: 1;
+  }
+
+  .navbar_open {
+    display: none;
+  }
+}
+
+.navbar_open {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar_open img {
+  width: 100px;
+  height: 40px;
+}
+
+.vertical-menu {
+  position: relative;
+  max-width: 300px;
+  flex-direction: column;
+  background-color: rgba(65, 138, 34, 0.65);
+  border-radius: 30px;
+  height: 85vh;
+  top: 150px;
+}
+
+.vertical-menu p {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.searchinput {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-menu img {
+  width: 8vw;
+  max-width: 70px;
+  min-width: 70px;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  position: fixed;
+  max-width: 200px;
+  min-width: 100px;
+}
+.logo img {
+  width: 15vw;
+  min-width: 90px;
+  max-width: 130px;
+  min-height: 90px;
+}
+
+.open-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.open-close button {
+  margin: 0;
+  width: 3vw;
+  height: 3vh;
+  border: 0;
+  background-color: rgba(65, 138, 34, 0);
+}
+
+.open-close button img {
+  width: 2vw;
+  height: 2vw;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+}
+
+.vertical-menu .search input {
+  border: 0;
+  outline: none;
+  height: 35px;
+  background-color: rgb(208, 204, 204);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search {
+  margin-right: 2rem;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}

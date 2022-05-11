@@ -1,36 +1,62 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+import trioPoubelles from "../assets/recycling-color.png";
+import ButtonSearch from "../components/ButtonSearch";
+import ButtonFleche from "../components/ButtonFleche";
+import ButtonQuizz from "../components/ButtonQuizz";
+import Header from "../components/Header";
+import logo from "../assets/logo-ss-fond.png";
+import "./PagesCss/Home.css";
+import glassBlue from "../assets/glass-blue.png";
+import rubikGame from "../assets/rubik-game.png";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
+    <div>
+      <Header />
+      <div className="topPage">
+        <img className="logoImage" src={logo} alt="LOGO" />
+        <h1 className="triTitre">tri&apos;cycle</h1>
+        <p className="presentation">
+          Salut! Bienvenue sur Tri&apos;cycle! Vous pourrez apprendre sur
+          l&apos;écologie, tout en vous amusant en famille! Cliquez sur le jeux
+          pour commencer votre Quizz favori, ou bien, cliquez sur recherche pour
+          accéder directement aux fiches informatives et devenir un expert du
+          tri! A vous de jouer!
+        </p>
+        <ButtonFleche />
+      </div>
+      <div className="tripoubelles">
+        <h1>fais ton choix!</h1>
+        <img
+          className="logoTriPoubelles"
+          src={trioPoubelles}
+          alt="triPoubelles"
+        />
+      </div>
+      <div className="bottomPage">
+        <div className="divQuizz">
+          <div className="divButtonQuizz">
+            <ButtonQuizz />
+            <img src={rubikGame} className="imgQuizzButton" alt="QuizzImg" />
+          </div>
 
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+          <p className="pQ">
+            Entrez dans notre quizz écologique, où de nombreuses questions sur
+            le tri des déchets vous attendent. Prêt à devenir imbattable sur le
+            tri ?
+          </p>
+        </div>
+        <div className="divSearch">
+          <div className="divButtonSearch">
+            <ButtonSearch />
+            <img src={glassBlue} className="imgSearchButton" alt="SearchImg" />
+          </div>
+          <p className="pS">
+            Vous voulez jeter votre bidon ou votre chaussette? Mais vous ne
+            savez plus très bien où vous en débarasser? Vous êtes au bon
+            endroit! Bienvenue dans la culture écologique du tri!
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

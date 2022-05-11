@@ -1,0 +1,207 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 246, 252);
+  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.inputform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 7vw;
+  width: 68vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: rgb(216, 220, 224);
+}
+
+.stringform {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5vw;
+  color: #6097eeff;
+}
+
+.labelform {
+  margin: 0vw 5vw 5vw 5vw;
+  display: block;
+  height: 12vw;
+  width: 70vw;
+  max-height: 18vw;
+  max-width: 70vw;
+  flex-direction: column;
+}
+.labelaeraform {
+  margin: 5vw 0vw 10vw 0vw;
+  border-radius: 5px;
+  display: block;
+  height: 26vw;
+  width: 72vw;
+  max-height: 90vw;
+  max-width: 100vw;
+  flex-direction: column;
+}
+.inputaeraform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 18vw;
+  width: 70vw;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: rgb(216, 220, 224);
+}
+.inputformsubmit {
+  color: white;
+  margin-top: 1vw;
+  margin-right: 3vw;
+  margin-bottom: 22vw;
+  margin-left: 0vw;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40vw;
+  height: 18vw;
+  justify-content: center;
+  font-size: 5vw;
+  font-weight: bolder;
+  box-shadow: 10px 7px 7px rgb(0 0 0 / 25%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5vw;
+  background-color: #77df4aff;
+}
+
+.emailone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+
+div .emailone p {
+  margin: 1vw 0vw 0vw 5vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5vw;
+  line-height: 1em;
+  margin-bottom: 5vw;
+  color: rgb(132, 134, 136);
+}
+.emailone span {
+  color: #77df4aff;
+  font-weight: bolder;
+  font-size: 6vw;
+  line-height: 2em;
+}
+.emailimg1 {
+  height: 18vw;
+  display: block;
+  justify-content: center;
+  margin: 10vw 0vw 10vw 0vw;
+}
+
+@media screen and (min-width: 768px) {
+  .inputform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    width: 68vw;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: rgb(216, 220, 224);
+    padding-left: 12px;
+  }
+
+  .inputaeraform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 18vw;
+    width: 68vw;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: rgb(216, 220, 224);
+  }
+  .labelform {
+    margin: 0vw 5vw 5vw 5vw;
+    display: block;
+    height: 3vw;
+    width: 70vw;
+    max-height: 18vw;
+    max-width: 70vw;
+    flex-direction: column;
+  }
+  .inputformsubmit {
+    color: white;
+    margin-top: 0vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 0vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 15vw;
+    height: 6vw;
+    justify-content: center;
+    font-weight: bolder;
+    box-shadow: 10px 7px 7px rgb(0 0 0 / 25%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vw;
+    background-color: #77df4aff;
+  }
+  .labelaeraform {
+    margin: 0vw 0vw 0vw 0vw;
+    border-radius: 5px;
+    display: block;
+    height: 26vw;
+    width: 71vw;
+    max-height: 90vw;
+    max-width: 100vw;
+    flex-direction: column;
+  }
+  .emailimg1 {
+    height: 12vw;
+    display: block;
+    justify-content: center;
+    margin: 5vw 0vw 5vw 0vw;
+  }
+  .emailone span {
+    color: #77df4aff;
+    font-weight: bolder;
+    font-size: 4vw;
+    line-height: 2em;
+  }
+  .stringform {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vw;
+    color: #6097eeff;
+  }
+  .emailone p {
+    line-height: 0em;
+  }
+  div .emailone p {
+    margin: 0vw 0vw 0vw 0vw;
+    font-size: 3vw;
+    line-height: 0em;
+  }
+}
