@@ -99,6 +99,7 @@
     min-height: initial;
     max-height: initial;
     height: initial;
+    min-height: 80px;
     height: 10vh;
   }
 
@@ -110,6 +111,7 @@
     min-height: initial;
     max-height: initial;
     height: initial;
+    min-height: 80px;
     height: 10vh;
   }
 }

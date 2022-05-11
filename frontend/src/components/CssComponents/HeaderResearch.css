@@ -4,7 +4,6 @@
   box-sizing: border-box;
   transition: width 0.2s ease-in;
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .menu.inactive {
@@ -40,7 +39,7 @@
   opacity: 0;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 1024px) {
   .menu {
     font-size: 1.3rem;
   }
