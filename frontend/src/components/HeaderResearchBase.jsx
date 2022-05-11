@@ -10,7 +10,7 @@ import arrowMenu from "../assets/double-arrow.png";
 import Dropdown from "./dropDownFilter";
 
 export default function HeaderResearchBase({ filterInput }) {
-  const [inactive, setInactive] = useState(false);
+  const [inactive, setInactive] = useState(true);
 
   const handleShowNav = () => {
     setInactive(!inactive);
@@ -45,7 +45,7 @@ export default function HeaderResearchBase({ filterInput }) {
             <div className="search">
               <input
                 type="text"
-                placeholder="Type here ..."
+                placeholder="Rechercher ..."
                 onChange={(event) => {
                   filterInput(event.target.value.toLowerCase());
                 }}

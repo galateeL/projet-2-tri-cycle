@@ -8,7 +8,7 @@
 }
 
 .menu.inactive {
-  width: 5rem;
+  width: 6.2rem;
 }
 
 .menu.inactive .open-close {
@@ -39,7 +39,8 @@
 .menu.inactive .filter-inactive {
   opacity: 0;
 }
-@media screen and (min-width: 650px) {
+
+@media screen and (min-width: 780px) {
   .menu {
     font-size: 1.3rem;
   }
