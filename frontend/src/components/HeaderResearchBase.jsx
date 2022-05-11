@@ -45,7 +45,7 @@ export default function HeaderResearchBase({ filterInput }) {
             <div className="search">
               <input
                 type="text"
-                placeholder="Type here ..."
+                placeholder="Recherche"
                 onChange={(event) => {
                   filterInput(event.target.value.toLowerCase());
                 }}

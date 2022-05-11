@@ -24,7 +24,7 @@ export default function Research() {
           <tbody>
             {waste
               .filter((item) =>
-                item.fields.description.toLowerCase().includes(search)
+                item.fields.description.toLowerCase().startsWith(search)
               )
               .map((items) => (
                 <tr>
