@@ -8,7 +8,7 @@ function DoubleBtn() {
     <div className="doubleBtn">
       <div className="homeBtnContainer">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <button type="button" className="btnWhite" onClick="homeBtn">
+          <button type="button" className="btnWhite">
             <span className="homeTxt">Accueil</span>
             <img src={homeWhite} alt="home" className="homeImg" />
           </button>
@@ -17,7 +17,7 @@ function DoubleBtn() {
 
       <div className="retryBtnContainer">
         <Link to="/QuizHome" style={{ textDecoration: "none" }}>
-          <button type="button" className="btnWhite" onClick="retryBtn">
+          <button type="button" className="btnWhite">
             <span className="retryTxt">Rejouer</span>
             <img src={nextWhite} alt="retry" className="retryImg" />
           </button>

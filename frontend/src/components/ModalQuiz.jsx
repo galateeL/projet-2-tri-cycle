@@ -12,6 +12,8 @@ function ModalQuiz({
   questionNumber,
   tip,
   answer,
+  counter,
+  setCounter,
 }) {
   const [isFinished, setIsFinished] = useState(false);
 
@@ -31,6 +33,8 @@ function ModalQuiz({
               tip={tip}
               questionNumber={questionNumber}
               setIsFinished={setIsFinished}
+              counter={counter}
+              setCounter={setCounter}
             />
           )}
         </div>
@@ -45,11 +49,9 @@ ModalQuiz.propTypes = {
   score: PropTypes.number,
   questionNumber: PropTypes.number,
   tip: PropTypes.string,
-  answer: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    className: PropTypes.string,
-  }),
+  answer: PropTypes.string,
+  counter: PropTypes.number,
+  setCounter: PropTypes.func,
 };
 
 ModalQuiz.defaultProps = {
@@ -58,11 +60,9 @@ ModalQuiz.defaultProps = {
   score: 0,
   questionNumber: 0,
   tip: "",
-  answer: {
-    src: "",
-    alt: "",
-    className: "",
-  },
+  answer: "",
+  counter: 1,
+  setCounter: () => {},
 };
 
 export default ModalQuiz;

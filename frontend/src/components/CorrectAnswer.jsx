@@ -14,6 +14,8 @@ function CorrectAnswer(props) {
     tip,
     questionNumber,
     setIsFinished,
+    counter,
+    setCounter,
   } = props;
   return (
     <div>
@@ -31,6 +33,8 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       ) : (
@@ -52,6 +56,8 @@ function CorrectAnswer(props) {
             questionNumber={questionNumber}
             setIsFinished={setIsFinished}
             closeModal={closeModal}
+            counter={counter}
+            setCounter={setCounter}
           />
         </div>
       )}
@@ -60,31 +66,27 @@ function CorrectAnswer(props) {
 }
 
 CorrectAnswer.propTypes = {
-  answer: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string,
-    className: PropTypes.string,
-  }),
+  answer: PropTypes.string,
   closeModal: PropTypes.func,
   correctAnswer: PropTypes.bool,
   score: PropTypes.number,
   tip: PropTypes.string,
   questionNumber: PropTypes.number,
   setIsFinished: PropTypes.func,
+  counter: PropTypes.number,
+  setCounter: PropTypes.func,
 };
 
 CorrectAnswer.defaultProps = {
-  answer: {
-    src: "",
-    alt: "",
-    className: "",
-  },
+  answer: "",
   closeModal: () => {},
   correctAnswer: true,
   score: 0,
   tip: "Recycling tip",
   questionNumber: 0,
   setIsFinished: () => {},
+  counter: 1,
+  setCounter: () => {},
 };
 
 export default CorrectAnswer;
