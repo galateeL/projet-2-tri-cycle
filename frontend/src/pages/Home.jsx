@@ -51,7 +51,7 @@ export default function Home() {
             <img src={glassBlue} className="imgSearchButton" alt="SearchImg" />
           </div>
           <p className="pS">
-            Un interrogation sur la destination tri {`d'un`} déchet ? Explorez
+            Une interrogation sur la destination tri {`d'un`} déchet ? Explorez
             la page <span className="recherchePage">recherche</span> 🤓 !
           </p>
         </div>
