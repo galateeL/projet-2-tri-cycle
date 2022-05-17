@@ -21,14 +21,14 @@ export default function ContactForm() {
         <div className="contact">
           <div className="emailone">
             <img className="emailimg1" src={emailimg1} alt="emailimg1" />
-            <p>Une suggestion, une remarque ou une question?</p>
+            <p>Une suggestion, une remarque ou une question ?</p>
             <p>
               N&apos;hésitez pas à contacter l&apos;équipe{" "}
-              <span> tri&apos;cycle</span> !
+              <span className="triTitre2">tri&apos;cycle</span> !
             </p>
           </div>
           <label className="labelform" htmlFor="name">
-            <h2 className="stringform">Nom :</h2>
+            <h2 className="stringform">Nom</h2>
             <input
               className="inputform"
               id="name"
@@ -38,7 +38,7 @@ export default function ContactForm() {
             />
           </label>
           <label className="labelform" htmlFor="firstName">
-            <h2 className="stringform">Prénom :</h2>
+            <h2 className="stringform">Prénom</h2>
             <input
               className="inputform"
               id="firstName"
@@ -48,7 +48,7 @@ export default function ContactForm() {
             />
           </label>
           <label className="labelform" htmlFor="mail">
-            <h2 className="stringform">Email :</h2>
+            <h2 className="stringform">Email</h2>
             <input
               className="inputform"
               id="mail"
@@ -58,7 +58,7 @@ export default function ContactForm() {
             />
           </label>
           <label className="labelaeraform" htmlFor="message">
-            <h2 className="stringform">Message:</h2>
+            <h2 className="stringform">Votre message</h2>
             <input
               className="inputaeraform"
               id="message"

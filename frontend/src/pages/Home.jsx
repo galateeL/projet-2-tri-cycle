@@ -14,18 +14,18 @@ export default function Home() {
       <Header />
       <div className="topPage">
         <img className="logoImage" src={logo} alt="LOGO" />
-        <h1 className="triTitre">tri&apos;cycle</h1>
-        <p className="presentation">
-          Salut! Bienvenue sur Tri&apos;cycle! Vous pourrez apprendre sur
-          l&apos;écologie, tout en vous amusant en famille! Cliquez sur le jeux
-          pour commencer votre Quizz favori, ou bien, cliquez sur recherche pour
-          accéder directement aux fiches informatives et devenir un expert du
-          tri! A vous de jouer!
+        {/* <h1 className="triTitre">tri&apos;cycle</h1> */}
+        <p className="presentation1">
+          Bienvenue sur <span className="appName">tri&apos;cycle</span>
+          {` , l'application`} pour parfaire vos connaissances sur le tri et le
+          recyclage des déchets. Pensée pour toute la famille, apprenez en plus,
+          tout en vous amusant !
         </p>
+        <p className="presentation2">A vous de jouer ...</p>
         <ButtonFleche />
       </div>
       <div className="tripoubelles">
-        <h1>fais ton choix!</h1>
+        <h1>faites votre choix !</h1>
         <img
           className="logoTriPoubelles"
           src={trioPoubelles}
@@ -40,9 +40,9 @@ export default function Home() {
           </div>
 
           <p className="pQ">
-            Entrez dans notre quizz écologique, où de nombreuses questions sur
-            le tri des déchets vous attendent. Prêt à devenir imbattable sur le
-            tri ?
+            <span className="bigTri">Etes-vous prêt pour le grand tri ? </span>
+            Faites le point et testez vos connaissances grâce au{" "}
+            <span className="triQuiz">tri quiz</span> 😉 !
           </p>
         </div>
         <div className="divSearch">
@@ -51,9 +51,8 @@ export default function Home() {
             <img src={glassBlue} className="imgSearchButton" alt="SearchImg" />
           </div>
           <p className="pS">
-            Vous voulez jeter votre bidon ou votre chaussette? Mais vous ne
-            savez plus très bien où vous en débarasser? Vous êtes au bon
-            endroit! Bienvenue dans la culture écologique du tri!
+            Un interrogation sur la destination tri {`d'un`} déchet ? Explorez
+            la page <span className="recherchePage">recherche</span> 🤓 !
           </p>
         </div>
       </div>

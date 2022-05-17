@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -7,6 +10,14 @@
   height: 100vh;
   height: 100%;
   min-height: 100vh;
+}
+
+.triTitre2 {
+  font-size: 12vw;
+  font-family: var(--third-font);
+  color: var(--secondary-color);
+  line-height: 1.3em;
+  font-weight: 700;
 }
 
 .inputform {
@@ -24,9 +35,10 @@
 }
 
 .stringform {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 5vw;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 4vw;
   color: #6097eeff;
+  margin-bottom: 5px;
 }
 
 .labelform {
@@ -62,6 +74,7 @@
   resize: vertical;
   background-color: rgb(216, 220, 224);
 }
+
 .inputformsubmit {
   color: white;
   margin-top: 1vw;
@@ -77,7 +90,7 @@
   font-size: 5vw;
   font-weight: bolder;
   box-shadow: 10px 7px 7px rgb(0 0 0 / 25%);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 5vw;
   background-color: #77df4aff;
 }
@@ -93,18 +106,13 @@
 
 div .emailone p {
   margin: 1vw 0vw 0vw 5vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 5vw;
   line-height: 1em;
   margin-bottom: 5vw;
-  color: rgb(132, 134, 136);
+  color: rgb(139, 139, 139);
 }
-.emailone span {
-  color: #77df4aff;
-  font-weight: bolder;
-  font-size: 6vw;
-  line-height: 2em;
-}
+
 .emailimg1 {
   height: 18vw;
   display: block;
@@ -141,6 +149,7 @@ div .emailone p {
     box-sizing: border-box;
     resize: vertical;
     background-color: rgb(216, 220, 224);
+    font-family: "Roboto Flex", sans-serif;
   }
   .labelform {
     margin: 0vw 5vw 5vw 5vw;
@@ -165,7 +174,7 @@ div .emailone p {
     justify-content: center;
     font-weight: bolder;
     box-shadow: 10px 7px 7px rgb(0 0 0 / 25%);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
     font-size: 3vw;
     background-color: #77df4aff;
   }
@@ -192,7 +201,7 @@ div .emailone p {
     line-height: 2em;
   }
   .stringform {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
     font-size: 3vw;
     color: #6097eeff;
   }
